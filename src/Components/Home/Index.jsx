@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Spline from "@splinetool/react-spline";
 import "./Home.css";
 import { Parallax } from "react-scroll-parallax";
+import CloseIcon from "@mui/icons-material/Close";
 import Grid from "./Grid";
 import Icon from "./Icon";
 import SendIcon from "@mui/icons-material/Send";
@@ -12,6 +13,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import RedditIcon from "@mui/icons-material/Reddit";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
 export const fadeIn = (direction) => {
   return {
@@ -75,6 +77,8 @@ export const transition2 = () => {
 };
 
 const Home = () => {
+  const [videoDiv, setVideoDiv] = useState(false);
+
   // console.log('====================================');
   // console.log("jfjf");
   // console.log('====================================');
@@ -288,6 +292,9 @@ const Home = () => {
     },
   ];
   // const item = { hidden: { x: -10, opacity: 0 } };
+  const ToggleVideoDiv = () => {
+    setVideoDiv(!videoDiv);
+  };
   return (
     <div className="Home_div">
       <section className="home_div_section1">
@@ -317,11 +324,15 @@ const Home = () => {
                 </div>
               </div>
               <div className="home_div_section1_area_1_div2">
-                <a href="https://testnet.egoscan.io/" target="_blank">
-                  <button className="home_div_section1_area_1_div2_btn">
-                    Explorer
-                  </button>
-                </a>
+                {/* <a href="https://testnet.egoscan.io/" target="_blank"> */}
+                <button
+                  className="home_div_section1_area_1_div2_btn"
+                  onClick={ToggleVideoDiv}
+                >
+                  <PlayArrowIcon className="home_div_section1_area_1_div2_btn_icon" />{" "}
+                  Play Video
+                </button>
+                {/* </a> */}
                 <a href="https://egoswap.io" target="_blank">
                   <button className="home_div_section1_area_1_div2_btn2">
                     Get EGAX
@@ -1515,6 +1526,26 @@ const Home = () => {
       {/* ====== */}
       {/* ====== */}
       {/* ====== */}
+      {videoDiv ? (
+        <div className="YtVideoDiv">
+          <CloseIcon
+            className="YtVideoDiv_closeIcon"
+            onClick={ToggleVideoDiv}
+          />
+          <div className="YtVideoDiv_close_div"></div>
+
+          <iframe
+            width="1280"
+            height="720"
+            src="https://www.youtube.com/embed/ue8Ly6ri-OM"
+            title="What is Egochain?"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            // referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      ) : null}
     </div>
   );
 };
