@@ -311,16 +311,15 @@ const Home = () => {
               <div className="home_div_section1_area_1_div1">
                 <div className="home_div_section1_area_1_div1_txt1">
                   <span className="home_div_section1_area_1_div1_txt1_span">
-                    The High-Speed
-                    <br /> Parallel Blockchain for
+                    Tokenize
                   </span>
-                  Electric Vehicles.
+                  Everything.
                 </div>
                 <div className="home_div_section1_area_1_div1_txt2">
-                  Egochain is a public, permissionless Layer 1 blockchain
-                  protocol aimed at fast-tracking the global shift to EVs. It
-                  combines Cosmos' rapid transactions and compatibility with
-                  Ethereum's developer ecosystem.
+                  Egochain's public Layer 1 blockchain bridges the gap between
+                  DeFi and real-world assets. It tokenizes real assets as
+                  ERC404s, combining the rapid transactions of Cosmos with the
+                  familiar developer ecosystem of Ethereum.
                 </div>
               </div>
               <div className="home_div_section1_area_1_div2">

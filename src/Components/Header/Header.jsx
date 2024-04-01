@@ -8,6 +8,9 @@ import DescriptionIcon from "@mui/icons-material/Description";
 import DocumentScannerIcon from "@mui/icons-material/DocumentScanner";
 import JoinLeftIcon from "@mui/icons-material/JoinLeft";
 import WaterDropIcon from "@mui/icons-material/WaterDrop";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TelegramIcon from "@mui/icons-material/Telegram";
 import { motion } from "framer-motion";
 import "./header.css";
 
@@ -91,7 +94,7 @@ const Header = () => {
     <>
       <div className="header_partial_div">Egochain Mainnet is live</div>
       <div className={fixed ? "header_div" : "header_div_relative"}>
-        <div className="container">
+        <div className="container_fluid">
           <div className="header_div_area">
             <a href="/" className="header_div_area_1">
               <img
@@ -102,6 +105,29 @@ const Header = () => {
               Egochain
             </a>
             <div className="header_div_area_2">
+              <div className="header_social_links">
+                <a
+                  href="https://twitter.com/egochainHQ"
+                  className="footerDiv1_area1_cont2_links_link_tel"
+                  target="_blank"
+                >
+                  <TwitterIcon className="footerDiv1_area1_cont2_links_link1" />{" "}
+                  {/* <span className="footerDiv1_area1_cont2_links_link_tel_span">
+                      Twitter
+                    </span> */}
+                </a>
+
+                <a
+                  href="https://t.me/egochainHQ"
+                  className="footerDiv1_area1_cont2_links_link_tel"
+                  target="_blank"
+                >
+                  <TelegramIcon className="footerDiv1_area1_cont2_links_link1" />{" "}
+                  {/* <span className="footerDiv1_area1_cont2_links_link_tel_span">
+                      Telegram
+                    </span> */}
+                </a>
+              </div>
               <div className="header_div_area_2_div">
                 Resources{" "}
                 <KeyboardArrowDownIcon className="header_div_area_2_div_icon" />
