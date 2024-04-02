@@ -1142,6 +1142,11 @@ p {
     font-size: 32px;
     margin-bottom: 1em;
   }
+  .erc404_section_area {
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+  }
 }
 @media (max-width: 600px) {
   .home_div_section1_area_1_div1_txt1 {
