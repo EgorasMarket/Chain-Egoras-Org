@@ -59,10 +59,10 @@
   align-items: center;
 }
 .home_div_section1_area_1_div1_txt2 {
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
   color: #fff;
-  width: 90%;
+  width: 85%;
 }
 .home_div_section1_area_1_div2 {
   width: 100%;
@@ -279,7 +279,51 @@ p {
   color: #ffffff;
   line-height: 1;
   margin-bottom: 1em;
+  width: 70%;
 }
+/* ========== */
+/* ========== */
+/* ========== */
+/* ========== */
+/* ========== */
+/* ========== */
+/* ========== */
+/* ========== */
+.erc404_section_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.erc404_section_area1 {
+  font-size: 72px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 1em;
+  width: 70%;
+}
+.erc404_section_area2 {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #b8d6d4;
+}
+.erc404_section_area_img {
+  width: 100%;
+  margin-top: 4em;
+}
+/* ========== */
+/* ========== */
+/* ========== */
+/* ========== */
+/* ========== */
+/* ========== */
+/* ========== */
+/* ========== */
+/* ========== */
 .home_div_section3_area_body {
   display: grid;
   /* justify-content: space-between; */
@@ -624,7 +668,7 @@ p {
   margin-top: 6em;
 }
 .ego_chain_stat_section_body_1_cont2_txt {
-  font-size: 142px;
+  font-size: 98px;
   display: flex;
   align-items: center;
   font-weight: 700;
@@ -965,6 +1009,7 @@ p {
   .home_div_section3_area_title {
     font-size: 32px;
     margin-bottom: 1em;
+    width: 100%;
   }
   .ego_chain_stat_section_body_1_cont1 {
     font-size: 18px;
@@ -1089,6 +1134,13 @@ p {
   .backed_by_div_img {
     margin-left: 10px;
     width: 120px;
+  }
+  .erc404_section_area2 {
+    font-size: 14px;
+  }
+  .erc404_section_area1 {
+    font-size: 32px;
+    margin-bottom: 1em;
   }
 }
 @media (max-width: 600px) {

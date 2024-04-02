@@ -14,6 +14,7 @@ import RedditIcon from "@mui/icons-material/Reddit";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import Typewriter from "typewriter-effect";
 
 export const fadeIn = (direction) => {
   return {
@@ -311,16 +312,34 @@ const Home = () => {
               <div className="home_div_section1_area_1_div1">
                 <div className="home_div_section1_area_1_div1_txt1">
                   <span className="home_div_section1_area_1_div1_txt1_span">
-                    The High-Speed
-                    <br /> Parallel Blockchain for
+                    Tokenize
+                    <br />
                   </span>
-                  Electric Vehicles.
+                  <Typewriter
+                    options={{
+                      strings: [
+                        "Anything",
+                        "Electric Vehicles",
+                        "Charging Stations",
+                        "Private Equity",
+                        "Commodities",
+                        "Electronics",
+                      ],
+                      autoStart: true,
+                      loop: true,
+                    }}
+                  />
+                  <span className="home_div_section1_area_1_div1_txt1_span">
+                    On Egochain.
+                  </span>
                 </div>
                 <div className="home_div_section1_area_1_div1_txt2">
                   Egochain is a public, permissionless Layer 1 blockchain
-                  protocol aimed at fast-tracking the global shift to EVs. It
-                  combines Cosmos' rapid transactions and compatibility with
-                  Ethereum's developer ecosystem.
+                  designed to bridge the gap between Cosmos's high-throughput,
+                  interoperable network and Ethereum's robust developer
+                  ecosystem. This fosters a scalable and user-friendly
+                  environment for onboarding the next billion users onto the
+                  blockchain.
                 </div>
               </div>
               <div className="home_div_section1_area_1_div2">
@@ -403,106 +422,136 @@ const Home = () => {
       {/* ====== */}
       {/* ====== */}
       {/* ====== */}
+
+      {/* ====== */}
+      {/* ====== */}
+      {/* ====== */}
       <section className="home_div_section4">
         <div className="container">
           <div className="home_div_section4_area">
-            <div className="home_div_section3_area_title">
-              Why Egochain
-              <div className="home_div_section3_area_para">
-                Electric vehicles (EVs) hold potential for sustainable
-                transportation, but face obstacles like high costs, sparse
-                charging infrastructure, and pricey charging. Egochain utilizes
-                blockchain to tackle these hurdles and advance the global EV
-                movement.
-              </div>
-            </div>
-            <div className="home_div_section4_area_body_2">
-              <div className="home_div_section4_area_body_2_cont1">
-                <div className="home_div_section4_area_body_2_cont1_icon">
-                  <svg
-                    data-v-44de1e4b=""
-                    width="15"
-                    height="15"
-                    viewBox="0 0 15 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="crosshair z-2 p-relative"
-                  >
-                    <path d="M15 7.5H0M7.5 15V0" stroke="currentColor"></path>
-                  </svg>
+            <div className="home_div_section4_area_tile">Why Egochain</div>
+            <div className="home_div_section4_area_body">
+              {/* =========== */}
+              <motion.div
+                variants={fadeIn("Up")}
+                transition={transition()}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false }}
+                className="home_div_section4_area_body_cont"
+              >
+                <div className="home_div_section4_area_body_cont1_img_div">
+                  <Icon />
                 </div>
-                <div className="home_div_section4_area_body_2_cont1_txt">
-                  <div className="home_div_section4_area_body_2_cont1_txt_title">
-                    Affordable EV Production
+                <div className="home_div_section4_area_body_cont2">
+                  <div className="home_div_section4_area_body_cont2_title">
+                    Tokenization of Physical Assets with ERC-404
                   </div>
-                  Egochain's track-and-trace features enable manufacturers to
-                  fight counterfeit parts and prevent diversion in their supply
-                  chains. This ensures product quality, reduces waste, and cuts
-                  costs related to fraudulent components, leading to more
-                  affordable electric vehicles (EVs).
-                </div>
-              </div>
-              <div className="home_div_section4_area_body_2_cont1">
-                <div className="home_div_section4_area_body_2_cont1_icon">
-                  <svg
-                    data-v-44de1e4b=""
-                    width="15"
-                    height="15"
-                    viewBox="0 0 15 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="crosshair z-2 p-relative"
-                  >
-                    <path d="M15 7.5H0M7.5 15V0" stroke="currentColor"></path>
-                  </svg>
-                </div>
-                <div className="home_div_section4_area_body_2_cont1_txt">
-                  <div className="home_div_section4_area_body_2_cont1_txt_title">
-                    Enhanced Charging Infrastructure
+                  <div className="home_div_section4_area_body_cont2_para">
+                    ERC-404 facilitates the tokenization of physical assets.
+                    These tokens can then be traded on exchanges like ERC-20
+                    tokens, while also retaining the functionality of NFTs
+                    (Non-Fungible Tokens) for trading on platforms like OpenSea.
+                    This provides greater flexibility in how investors can
+                    participate.
                   </div>
-                  Egochain offers a solution through an open-source network of
-                  charging stations built on blockchain technology. This
-                  decentralized approach enables ownership for anyone, including
-                  local businesses like grocery stores. Securely recorded
-                  transactions on the blockchain minimize fraud and streamline
-                  operations, further enhancing the charging infrastructure.
                 </div>
-              </div>
-              <div className="home_div_section4_area_body_2_cont1">
-                <div className="home_div_section4_area_body_2_cont1_icon">
-                  <svg
-                    data-v-44de1e4b=""
-                    width="15"
-                    height="15"
-                    viewBox="0 0 15 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="crosshair z-2 p-relative"
-                  >
-                    <path d="M15 7.5H0M7.5 15V0" stroke="currentColor"></path>
-                  </svg>
-                </div>
-                <div className="home_div_section4_area_body_2_cont1_txt">
-                  <div className="home_div_section4_area_body_2_cont1_txt_title">
-                    Reduced Charging Costs
+              </motion.div>
+
+              {/* ========== */}
+              {/* ========== */}
+              {/* ========== */}
+              {/* ========== */}
+              <motion.div
+                variants={fadeIn("Up")}
+                transition={transition()}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false }}
+                className="home_div_section4_area_body_cont2a"
+              >
+                <div className="home_div_section4_area_body_cont2">
+                  <div className="home_div_section4_area_body_cont2_title">
+                    Fractional Ownership of Real-World Assets
                   </div>
-                  Egochain incentivizes green transportation by rewarding EV
-                  owners with tokens for using less popular charging stations.
-                  This approach balances the electrical grid load, promotes
-                  energy efficiency, and contributes to a cleaner transportation
-                  ecosystem. By reducing charging costs, Egochain tackles range
-                  anxiety, a crucial step towards a successful transition to
-                  sustainable mobility.
+                  <div className="home_div_section4_area_body_cont2_para">
+                    ERC-404 enables the fractionalization of physical assets,
+                    allowing them to be traded in smaller portions on exchanges.
+                    This significantly increases liquidity for these assets,
+                    making them more accessible to a wider range of investors.
+                  </div>
                 </div>
-              </div>
+                <div className="home_div_section4_area_body_cont1_img_div2">
+                  <Icon />
+                </div>
+              </motion.div>
+
+              {/* ============ */}
+              {/* ============ */}
+              {/* ============ */}
+              <motion.div
+                variants={fadeIn("Up")}
+                transition={transition()}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false }}
+                className="home_div_section4_area_body_cont3"
+              >
+                <div className="home_div_section4_area_body_cont1_img_div">
+                  <Icon />
+                </div>
+                <div className="home_div_section4_area_body_cont2">
+                  <div className="home_div_section4_area_body_cont2_title">
+                    Enhanced Supply Chain Management
+                  </div>
+                  <div className="home_div_section4_area_body_cont2_para">
+                    By storing inventory data on the blockchain in real-time,
+                    ERC-404 offers a comprehensive and up-to-date view of
+                    product stock levels. This transparency helps prevent costly
+                    overstocking and optimizes inventory management.
+                  </div>
+                </div>
+              </motion.div>
+              {/* ================= */}
+              {/* ================= */}
+              {/* ================= */}
+              <motion.div
+                variants={fadeIn("Up")}
+                transition={transition()}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false }}
+                className="home_div_section4_area_body_cont2a"
+              >
+                <div className="home_div_section4_area_body_cont2">
+                  <div className="home_div_section4_area_body_cont2_title">
+                    Streamlined Automated Payments
+                  </div>
+                  <div className="home_div_section4_area_body_cont2_para">
+                    The decentralized nature of ERC-404 allows for the
+                    automation of payments, reducing errors and improving
+                    efficiency. For instance, maintenance providers can receive
+                    automatic payments from a designated treasury upon
+                    completing work on factory equipment.
+                  </div>
+                </div>
+                <div className="home_div_section4_area_body_cont1_img_div2">
+                  <Icon />
+                </div>
+              </motion.div>
             </div>
           </div>
         </div>
         <img src="/img/grains_ellipse.png" alt="" className="grains_ellipse" />
         <img
-          src="/img/test_hero_light2.svg"
+          src="/img/test_hero_light4.svg"
           alt=""
-          className="home_div_section1_bg_light2"
+          className="home_div_section1_bg_light4"
+        />
+        <img
+          src="/img/test_hero_light3.svg"
+          alt=""
+          className="home_div_section1_bg_light3"
         />
       </section>
       {/* ====== */}
@@ -512,12 +561,14 @@ const Home = () => {
         <div className="container">
           <div className="home_div_section3_area">
             <div className="home_div_section3_area_title">
-              Build on the fastest blockchain in the industry.
-              <div className="home_div_section3_area_para">
-                Build interoperable decentralized applications with the combined
-                power of Ethereum's swift smart contract development and Cosmos
-                SDK's seamless interoperability.
-              </div>
+              Challenges in Integrating Real-World Assets
+              {/* <div className="home_div_section3_area_para">
+                The decentralized nature of ERC-404 allows for the automation of
+                payments, reducing errors and improving efficiency. For
+                instance, maintenance providers can receive automatic payments
+                from a designated treasury upon completing work on factory
+                equipment.
+              </div> */}
             </div>
 
             <div className="home_div_section3_area_body">
@@ -530,16 +581,15 @@ const Home = () => {
                 className="home_div_section3_area_body_cont1"
               >
                 <div className="home_div_section3_area_body_cont1_title">
-                  Secure Network
+                  Liquidity
                 </div>
                 <div className="home_div_section3_area_body_cont1_body_text">
                   <div className="home_div_section3_area_body_cont1_body_text_title">
-                    Powered by EGAX's Secure Network
+                    Limited Liquidity of Physical Assets
                   </div>
                   <div className="home_div_section3_area_body_cont1_body_text_para">
-                    Node validators actively safeguard the EGOCHAIN by securing
-                    consensus, earning EGAX tokens as their well-deserved
-                    reward.
+                    This emphasizes the difficulty of quickly converting
+                    physical assets into cash.
                   </div>
                 </div>
                 <div className="home_div_section3_area_body_cont1_icon">
@@ -617,16 +667,15 @@ const Home = () => {
               >
                 {" "}
                 <div className="home_div_section3_area_body_cont1_title">
-                  Unleashing
+                  Vulnerability
                 </div>
                 <div className="home_div_section3_area_body_cont1_body_text">
                   <div className="home_div_section3_area_body_cont1_body_text_title">
-                    Unleashing Interoperability
+                    Vulnerability to Intellectual Property Infringement
                   </div>
                   <div className="home_div_section3_area_body_cont1_body_text_para">
-                    Powered by the robust Cosmos SDK, Egochain seamlessly
-                    connects to the vibrant Cosmos ecosystem (20+ chains, $40B+)
-                    through the IBC protocol.
+                    This refers to the risk of unauthorized copying of assets
+                    like designs, patents, or trademarks.
                   </div>
                 </div>
                 <div className="home_div_section3_area_body_cont1_icon">
@@ -703,17 +752,15 @@ const Home = () => {
                 className="home_div_section3_area_body_cont1"
               >
                 <div className="home_div_section3_area_body_cont1_title">
-                  Unleash
+                  Supply Chain
                 </div>
                 <div className="home_div_section3_area_body_cont1_body_text">
                   <div className="home_div_section3_area_body_cont1_body_text_title">
-                    Unleash the Full Potential of Solidity
+                    Supply Chain Disruption Risks
                   </div>
                   <div className="home_div_section3_area_body_cont1_body_text_para">
-                    Egochain's EVM compatibility empowers developers to leverage
-                    the familiar Solidity language and existing dApps, while
-                    reaping the benefits of Egochain's superior scalability and
-                    security.
+                    This highlights the potential for fraud or other issues to
+                    interrupt the flow of goods and materials.
                   </div>
                 </div>
                 <div className="home_div_section3_area_body_cont1_icon">
@@ -790,17 +837,15 @@ const Home = () => {
                 className="home_div_section3_area_body_cont1"
               >
                 <div className="home_div_section3_area_body_cont1_title">
-                  Transactions
+                  Security
                 </div>
                 <div className="home_div_section3_area_body_cont1_body_text">
                   <div className="home_div_section3_area_body_cont1_body_text_title">
-                    Transactions by the Millions
+                    Financial Reporting Integrity Concerns
                   </div>
                   <div className="home_div_section3_area_body_cont1_body_text_para">
-                    Tendermint Consensus delivers single-block finality and
-                    unmatched scalability, ensuring Egochain can handle the
-                    demands of thousands of protocols and millions of users –
-                    effortlessly.
+                    This expresses the worry about the accuracy of financial
+                    records.
                   </div>
                 </div>
                 <div className="home_div_section3_area_body_cont1_icon">
@@ -877,124 +922,39 @@ const Home = () => {
       {/* ====== */}
       {/* ====== */}
       {/* ====== */}
-
-      <section className="home_div_section4">
+      <section className="home_div_section2">
         <div className="container">
-          <div className="home_div_section4_area">
-            <div className="home_div_section4_area_tile">
-              The most adopted scaling technology
+          <div className="erc404_section_area">
+            <div className="erc404_section_area1">
+              ERC-404: Fractionalized Asset Ownership
             </div>
-            <div className="home_div_section4_area_body">
-              {/* =========== */}
-              <motion.div
-                variants={fadeIn("Up")}
-                transition={transition()}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false }}
-                className="home_div_section4_area_body_cont"
-              >
-                <div className="home_div_section4_area_body_cont1_img_div">
-                  <Icon />
-                </div>
-                <div className="home_div_section4_area_body_cont2">
-                  <div className="home_div_section4_area_body_cont2_title">
-                    Power the future of Web3 with next-generation dApps
-                  </div>
-                  <div className="home_div_section4_area_body_cont2_para">
-                    At Egochain, we see dApps as the engine driving Web3's
-                    revolution. That's why we built Egochain OS, a streamlined
-                    3-step program empowering developers to launch innovative
-                    dApps directly onto the next generation of electric
-                    vehicles.
-                  </div>
-                  <div className="home_div_section4_area_body_cont2_button_div">
-                    <button className="home_div_section4_area_body_cont2_btn">
-                      Open Docs
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* ========== */}
-              {/* ========== */}
-              {/* ========== */}
-              {/* ========== */}
-              <motion.div
-                variants={fadeIn("Up")}
-                transition={transition()}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false }}
-                className="home_div_section4_area_body_cont2a"
-              >
-                <div className="home_div_section4_area_body_cont2">
-                  <div className="home_div_section4_area_body_cont2_title">
-                    The Blockchain Paving the Way for Real-World Adoption
-                  </div>
-                  <div className="home_div_section4_area_body_cont2_para">
-                    Built on the robust Cosmos SDK and leveraging the secure
-                    Ethermint consensus mechanism, Egochain is an EVM-compatible
-                    blockchain designed for mass adoption. Its human-readable
-                    addresses simplify user interactions, making the transition
-                    to blockchain technology seamless for millions.
-                  </div>
-                  <div className="home_div_section4_area_body_cont2_button_div">
-                    <button className="home_div_section4_area_body_cont2_btn">
-                      Open Docs
-                    </button>
-                  </div>
-                </div>
-                <div className="home_div_section4_area_body_cont1_img_div2">
-                  <Icon />
-                </div>
-              </motion.div>
-              {/* ============ */}
-              {/* ============ */}
-              {/* ============ */}
-              <motion.div
-                variants={fadeIn("Up")}
-                transition={transition()}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false }}
-                className="home_div_section4_area_body_cont3"
-              >
-                <div className="home_div_section4_area_body_cont1_img_div">
-                  <Icon />
-                </div>
-                <div className="home_div_section4_area_body_cont2">
-                  <div className="home_div_section4_area_body_cont2_title">
-                    Revolutionizing Smart Contracts
-                  </div>
-                  <div className="home_div_section4_area_body_cont2_para">
-                    Launch dynamic dApps with Egoras's powerful CosmWasm smart
-                    contract layer. Egoras is the first blockchain to offer
-                    auto-executing smart contracts which empower faster, more
-                    innovative and groundbreaking applications.
-                  </div>
-                  <div className="home_div_section4_area_body_cont2_button_div">
-                    <button className="home_div_section4_area_body_cont2_btn">
-                      Open Docs
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
+            <div className="erc404_section_area2">
+              The ERC-404 token standard is an innovative approach that merges
+              the fungibility of ERC-20 tokens with the unique properties of
+              ERC-721 NFTs. This empowers businesses to create and distribute
+              fractionalized ownership of real-world or digital assets. These
+              fractions can be freely traded on cryptocurrency exchanges as
+              ERC-20 tokens, while the underlying asset remains represented as a
+              whole on NFT marketplaces using ERC-721.
             </div>
+            <img
+              src="/img/diagram.png"
+              alt=""
+              className="erc404_section_area_img"
+            />
           </div>
         </div>
-        <img src="/img/grains_ellipse.png" alt="" className="grains_ellipse" />
-        <img
-          src="/img/test_hero_light4.svg"
-          alt=""
-          className="home_div_section1_bg_light4"
-        />
+        <img src="/img/grains_bottom.png" alt="" className="grains_ellipse" />
         <img
           src="/img/test_hero_light3.svg"
           alt=""
           className="home_div_section1_bg_light3"
         />
       </section>
+      {/* ====== */}
+      {/* ====== */}
+      {/* ====== */}
+
       {/* ====== */}
       {/* ====== */}
       {/* ====== */}
@@ -1009,7 +969,7 @@ const Home = () => {
             className="ego_chain_stat_section_area"
           >
             <div className="home_div_section3_area_title">
-              The Blockchain Built for Real-World Businesses
+              The Blockchain Built for Real-World Assets
             </div>
             <div className="ego_chain_stat_section_body">
               <div className="ego_chain_stat_section_body_1">
@@ -1056,7 +1016,7 @@ const Home = () => {
                   </div>
 
                   <div className="ego_chain_stat_section_body_1_cont2_txt">
-                    $0.01
+                    $0.0001
                   </div>
                   <div className="ego_chain_stat_section_body_1_cont2_last_text">
                     Enjoy the lowest fees – almost zero.
@@ -1085,7 +1045,6 @@ const Home = () => {
           className="home_div_section1_bg_light5"
         />
       </section>
-
       {/* <section className="home_div_section2">
         <div className="container">
           <div className="home_div_section2_area">
@@ -1161,7 +1120,6 @@ const Home = () => {
       {/* ====== */}
       {/* ====== */}
       {/* ====== */}
-
       <section className="home_div_section5">
         <div className="container">
           <div className="home_div_section5_area">
