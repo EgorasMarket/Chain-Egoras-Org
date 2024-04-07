@@ -59,11 +59,11 @@ const Egax = () => {
             <div className="egox_token_div_section1area_cont1">
               <div className="egox_token_div_section1area1">
                 <div className="egox_token_div_section1area1_title">
-                  Egochain (EGAX) coin
+                  Egochain (EGAX) Coin
                 </div>
                 <div className="egox_token_div_section1area1_para">
                   Egochain's robust fee structure ensures network sustainability
-                  and incentivizes participation through token distribution.
+                  and incentivizes participation through coin distribution.
                 </div>
               </div>
               <div className="egox_token_div_section1area2">
@@ -74,10 +74,10 @@ const Egax = () => {
                 />
               </div>
             </div>
-            {/* <div className="egox_token_div_section1area_cont2">
+            <div className="egox_token_div_section1area_cont2">
               <div className="home_div_section1_area_stats_div1">
                 <div className="home_div_section1_area_stats_div1_title">
-                  $6.00
+                  $12.00
                 </div>
                 <div className="home_div_section1_area_stats_div1_para">
                   Current Price
@@ -85,7 +85,7 @@ const Egax = () => {
               </div>
               <div className="home_div_section1_area_stats_div1">
                 <div className="home_div_section1_area_stats_div1_title">
-                  25k
+                  28k
                 </div>
                 <div className="home_div_section1_area_stats_div1_para">
                   Circulating Supply
@@ -93,21 +93,21 @@ const Egax = () => {
               </div>
               <div className="home_div_section1_area_stats_div1">
                 <div className="home_div_section1_area_stats_div1_title">
-                  50M
-                </div>
-                <div className="home_div_section1_area_stats_div1_para">
-                  Total Supply
-                </div>
-              </div>
-              <div className="home_div_section1_area_stats_div1">
-                <div className="home_div_section1_area_stats_div1_title">
-                  $150,000.00
+                  $336,000
                 </div>
                 <div className="home_div_section1_area_stats_div1_para">
                   Market Cap
                 </div>
               </div>
-            </div> */}
+              <div className="home_div_section1_area_stats_div1">
+                <div className="home_div_section1_area_stats_div1_title">
+                  50k
+                </div>
+                <div className="home_div_section1_area_stats_div1_para">
+                  Holders
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         {/* <img
@@ -135,113 +135,75 @@ const Egax = () => {
       {/* ========================= */}
       {/* ========================= */}
       {/* ========================= */}
+
+      {/* ========================= */}
+      {/* ========================= */}
+      {/* ========================= */}
       <section className="egox_token_div_section3b">
         <div className="container">
           <div className="egox_token_div_section3_area">
             <div className="egox_token_div_section3_area_titleb">
-              Tokenomics
-              {/* <div className="egox_token_div_section3_area_title_para">
-                A total of 280 million XIFY tokens have been allocated to
-                various stakeholders, ensuring a robust and sustainable
-                ecosystem
-              </div> */}
-            </div>
-            <div className="egox_token_div_section3_area_body">
-              <AmChart4Wrapper
-                config={config}
-                id="amcharts-4"
-                chartTypeClass={PieChart}
-              />
-              <div className="supply_div">
-                <div className="supply_div_title">Token Supply</div>
-                <div className="supply_div_amnt">50,000,000</div>
+              Core Components of the Egochain Economy
+              <div className="egox_token_div_section3_area_para">
+                Five key elements underpin the Egochain economic structure
               </div>
             </div>
-            <div className="mobile_supply_div">
-              Total Supply{" "}
-              <div className="mobile_supply_div_span">50,000,000</div>
-            </div>
-          </div>
-        </div>
-        <img src="/img/grains_ellipse.png" alt="" className="grains_ellipse" />
 
-        <img
-          src="/img/test_hero_light2.svg"
-          alt=""
-          className="home_div_section1_bg_light2"
-        />
-      </section>
-      {/* ========================= */}
-      {/* ========================= */}
-      {/* ========================= */}
-      <section className="egox_token_div_section3b">
-        <div className="container">
-          <div className="egox_token_div_section3_area">
-            <div className="egox_token_div_section3_area_titleb">
-              Token Distribution Schedule
-            </div>
             <div className="distribution_div_area">
               <div className="distribution_div_area_cont1">
                 <div className="distribution_div_area_cont1_title">
-                  Public Sale
+                  EGAX Coin
                 </div>
                 <div className="distribution_div_area_cont1_body">
-                  <li className="distribution_div_area_cont1_body_cont1">
-                    100% of tokens unlocked at purchase.
-                  </li>
+                  <div className="distribution_div_area_cont1_body_para">
+                    The native asset of the Egochain platform, EGAX tokens are
+                    used for various purposes within the ecosystem.
+                  </div>
                 </div>
               </div>
               <div className="distribution_div_area_cont1">
                 <div className="distribution_div_area_cont1_title">
-                  Private Sale
+                  Gas Fees
                 </div>
                 <div className="distribution_div_area_cont1_body">
-                  <li className="distribution_div_area_cont1_body_cont1">
-                    40% of tokens unlocked at purchase.
-                  </li>
-                  <li className="distribution_div_area_cont1_body_cont1">
-                    3 months lockup period followed by 10% of tokens unlocked
-                    monthly for the remaining period
-                  </li>
+                  <div className="distribution_div_area_cont1_body_para">
+                    Network operations incur gas fees (egax coin), which are
+                    used to incentivize proof-of-stake participants and mitigate
+                    spam or denial-of-service attacks.
+                  </div>
                 </div>
               </div>
               <div className="distribution_div_area_cont1">
                 <div className="distribution_div_area_cont1_title">
-                  Team, Partnerships & Advisory
+                  Storage Fund
                 </div>
                 <div className="distribution_div_area_cont1_body">
-                  <li className="distribution_div_area_cont1_body_cont1">
-                    18 months full lockup period
-                  </li>
-                  <li className="distribution_div_area_cont1_body_cont1">
-                    15% of tokens unlocked quarterly thereafter.
-                  </li>
+                  <div className="distribution_div_area_cont1_body_para">
+                    This fund serves a dual purpose: distributing staking
+                    rewards over time and compensating future validators for
+                    storing historical on-chain data.
+                  </div>
                 </div>
               </div>
               <div className="distribution_div_area_cont1">
                 <div className="distribution_div_area_cont1_title">
-                  Marketing
+                  Proof-of-Stake
                 </div>
                 <div className="distribution_div_area_cont1_body">
-                  <li className="distribution_div_area_cont1_body_cont1">
-                    5% of tokens unlocked at purchase
-                  </li>
-                  <li className="distribution_div_area_cont1_body_cont1">
-                    6 months lockup period followed by 5% of tokens unlocked
-                    quarterly thereafter.
-                  </li>
+                  <div className="distribution_div_area_cont1_body_para">
+                    Egochain utilizes a delegated proof-of-stake mechanism to
+                    select validators, reward their contributions, and encourage
+                    honest behavior within the network.
+                  </div>
                 </div>
               </div>
               <div className="distribution_div_area_cont1">
-                <div className="distribution_div_area_cont1_title">
-                  Ecosystem
-                </div>
+                <div className="distribution_div_area_cont1_title">Voting</div>
                 <div className="distribution_div_area_cont1_body">
-                  <li className="distribution_div_area_cont1_body_cont1">
-                    80% of the total token supply (40 million tokens) will be
-                    distributed for ecosystem growth over a 10-year period
-                    according to pre-defined limitations.
-                  </li>
+                  <div className="distribution_div_area_cont1_body_para">
+                    On-chain voting empowers Egochain coin holders to
+                    participate in platform governance and protocol upgrades.
+                  </div>
                 </div>
               </div>
             </div>
@@ -264,9 +226,14 @@ const Egax = () => {
       <section className="home_div_section4">
         <div className="container">
           <div className="home_div_section4_area">
-            {/* <div className="home_div_section4_area_tile">
-              The most adopted scaling technology
-            </div> */}
+            <div className="home_div_section4_area_tile">
+              Participants in the Egochain Economy
+              <div className="home_div_section4_area_tile_para">
+                The Egochain ecosystem comprises three primary participant
+                groups
+              </div>
+            </div>
+
             <div className="home_div_section4_area_body">
               <div className="home_div_section4_area_body_cont">
                 <div className="home_div_section4_area_body_cont1_img_div">
@@ -274,12 +241,14 @@ const Egax = () => {
                 </div>
                 <div className="home_div_section4_area_body_cont2">
                   <div className="home_div_section4_area_body_cont2_title">
-                    Transaction fees (EGAX)
+                    Users
                   </div>
                   <div className="home_div_section4_area_body_cont2_para">
-                    Cover operational costs and prevent resource abuse. System
-                    fees are burned, while network fees reward consensus
-                    nodes, driving their commitment.
+                    These individuals interact with the Egochain platform by
+                    submitting transactions to create, modify, and transfer
+                    digital assets. They can also leverage smart contracts,
+                    interoperability, and composability features to engage with
+                    more complex applications.
                   </div>
                   {/* <div className="home_div_section4_area_body_cont2_button_div">
                     <button className="home_div_section4_area_body_cont2_btn">
@@ -295,18 +264,13 @@ const Egax = () => {
               <div className="home_div_section4_area_body_cont2a">
                 <div className="home_div_section4_area_body_cont2">
                   <div className="home_div_section4_area_body_cont2_title">
-                    Accessibility and Ease of Use
+                    Egochain Coin Holders
                   </div>
                   <div className="home_div_section4_area_body_cont2_para">
-                    * Minimal EGaX Unit: 0.00 000001 EGAX, enabling
-                    microtransactions and fostering affordability.
-                    <br />
-                    <br />
-                    * Staking-Free Token Claiming: No EGAX staking required to
-                    receive earned tokens.
-                    <br />
-                    <br />* Seamless EGAX Claiming : Apex EVs integrate a
-                    built-in claim function for effortless token acquisition.
+                    Coin holders have the ability to stake their EGAX tokens
+                    with validators and contribute to the network's
+                    proof-of-stake consensus mechanism. Additionally, they hold
+                    voting rights within the Egochain governance system.
                   </div>
                   {/* <div className="home_div_section4_area_body_cont2_button_div">
                     <button className="home_div_section4_area_body_cont2_btn">
@@ -318,6 +282,32 @@ const Egax = () => {
                   <Icon />
                 </div>
               </div>
+              {/* =========== */}
+              {/* =========== */}
+              {/* =========== */}
+              {/* =========== */}
+              <div className="home_div_section4_area_body_cont">
+                <div className="home_div_section4_area_body_cont1_img_div">
+                  <Icon />
+                </div>
+                <div className="home_div_section4_area_body_cont2">
+                  <div className="home_div_section4_area_body_cont2_title">
+                    Validators
+                  </div>
+                  <div className="home_div_section4_area_body_cont2_para">
+                    Validators are responsible for processing and executing
+                    transactions on the Egochain platform. They are selected and
+                    rewarded for their contributions through the proof-of-stake
+                    mechanism.
+                  </div>
+                  {/* <div className="home_div_section4_area_body_cont2_button_div">
+                    <button className="home_div_section4_area_body_cont2_btn">
+                      Open Docs
+                    </button>
+                  </div> */}
+                </div>
+              </div>
+
               {/* =========== */}
               {/* =========== */}
               {/* =========== */}

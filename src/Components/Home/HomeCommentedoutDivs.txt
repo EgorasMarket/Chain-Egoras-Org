@@ -1,0 +1,390 @@
+      <section className="home_div_section2">
+        <div className="container">
+          <div className="home_div_section3_area">
+            <div className="home_div_section3_area_title">
+              Challenges in Integrating Real-World Assets
+        
+            </div>
+
+            <div className="home_div_section3_area_body">
+              <motion.div
+                variants={fadeIn("Up")}
+                transition={transition()}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false }}
+                className="home_div_section3_area_body_cont1"
+              >
+                <div className="home_div_section3_area_body_cont1_title">
+                  Liquidity
+                </div>
+                <div className="home_div_section3_area_body_cont1_body_text">
+                  <div className="home_div_section3_area_body_cont1_body_text_title">
+                    Limited Liquidity of Physical Assets
+                  </div>
+                  <div className="home_div_section3_area_body_cont1_body_text_para">
+                    This emphasizes the difficulty of quickly converting
+                    physical assets into cash.
+                  </div>
+                </div>
+                <div className="home_div_section3_area_body_cont1_icon">
+                  <svg
+                    data-v-25ecef37=""
+                    data-v-706ceafa=""
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      cx="4.08823"
+                      cy="27.0335"
+                      r="3.08824"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></circle>{" "}
+                    <circle
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      cx="27.9115"
+                      cy="27.0335"
+                      r="3.08824"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></circle>{" "}
+                    <circle
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      cx="16.0003"
+                      cy="4.97105"
+                      r="3.08824"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></circle>{" "}
+                    <path
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      d="M14.0242 8.49609L5.62305 23.4981"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></path>{" "}
+                    <path
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      d="M17.9756 8.49609L26.3767 23.4981"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></path>{" "}
+                    <path
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      d="M8.05859 27.0273H23.9409"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></path>
+                  </svg>
+                </div>
+              </motion.div>
+
+              {/* =========== */}
+              {/* =========== */}
+              {/* =========== */}
+              <motion.div
+                variants={fadeIn("Up")}
+                transition={transition()}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false }}
+                className="home_div_section3_area_body_cont1"
+              >
+                {" "}
+                <div className="home_div_section3_area_body_cont1_title">
+                  Vulnerability
+                </div>
+                <div className="home_div_section3_area_body_cont1_body_text">
+                  <div className="home_div_section3_area_body_cont1_body_text_title">
+                    Vulnerability to Intellectual Property Infringement
+                  </div>
+                  <div className="home_div_section3_area_body_cont1_body_text_para">
+                    This refers to the risk of unauthorized copying of assets
+                    like designs, patents, or trademarks.
+                  </div>
+                </div>
+                <div className="home_div_section3_area_body_cont1_icon">
+                  <svg
+                    data-v-25ecef37=""
+                    data-v-706ceafa=""
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      cx="4.08823"
+                      cy="27.0335"
+                      r="3.08824"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></circle>{" "}
+                    <circle
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      cx="27.9115"
+                      cy="27.0335"
+                      r="3.08824"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></circle>{" "}
+                    <circle
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      cx="16.0003"
+                      cy="4.97105"
+                      r="3.08824"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></circle>{" "}
+                    <path
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      d="M14.0242 8.49609L5.62305 23.4981"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></path>{" "}
+                    <path
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      d="M17.9756 8.49609L26.3767 23.4981"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></path>{" "}
+                    <path
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      d="M8.05859 27.0273H23.9409"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></path>
+                  </svg>
+                </div>
+              </motion.div>
+
+              {/* ========= */}
+              {/* ========= */}
+              {/* ========= */}
+              <motion.div
+                variants={fadeIn("Up")}
+                transition={transition()}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false }}
+                className="home_div_section3_area_body_cont1"
+              >
+                <div className="home_div_section3_area_body_cont1_title">
+                  Supply Chain
+                </div>
+                <div className="home_div_section3_area_body_cont1_body_text">
+                  <div className="home_div_section3_area_body_cont1_body_text_title">
+                    Supply Chain Disruption Risks
+                  </div>
+                  <div className="home_div_section3_area_body_cont1_body_text_para">
+                    This highlights the potential for fraud or other issues to
+                    interrupt the flow of goods and materials.
+                  </div>
+                </div>
+                <div className="home_div_section3_area_body_cont1_icon">
+                  <svg
+                    data-v-25ecef37=""
+                    data-v-706ceafa=""
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      cx="4.08823"
+                      cy="27.0335"
+                      r="3.08824"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></circle>{" "}
+                    <circle
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      cx="27.9115"
+                      cy="27.0335"
+                      r="3.08824"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></circle>{" "}
+                    <circle
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      cx="16.0003"
+                      cy="4.97105"
+                      r="3.08824"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></circle>{" "}
+                    <path
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      d="M14.0242 8.49609L5.62305 23.4981"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></path>{" "}
+                    <path
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      d="M17.9756 8.49609L26.3767 23.4981"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></path>{" "}
+                    <path
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      d="M8.05859 27.0273H23.9409"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></path>
+                  </svg>
+                </div>
+              </motion.div>
+
+              {/* ======== */}
+              {/* ======== */}
+              {/* ======== */}
+              <motion.div
+                variants={fadeIn("Up")}
+                transition={transition()}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false }}
+                className="home_div_section3_area_body_cont1"
+              >
+                <div className="home_div_section3_area_body_cont1_title">
+                  Security
+                </div>
+                <div className="home_div_section3_area_body_cont1_body_text">
+                  <div className="home_div_section3_area_body_cont1_body_text_title">
+                    Financial Reporting Integrity Concerns
+                  </div>
+                  <div className="home_div_section3_area_body_cont1_body_text_para">
+                    This expresses the worry about the accuracy of financial
+                    records.
+                  </div>
+                </div>
+                <div className="home_div_section3_area_body_cont1_icon">
+                  <svg
+                    data-v-25ecef37=""
+                    data-v-706ceafa=""
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      cx="4.08823"
+                      cy="27.0335"
+                      r="3.08824"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></circle>{" "}
+                    <circle
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      cx="27.9115"
+                      cy="27.0335"
+                      r="3.08824"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></circle>{" "}
+                    <circle
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      cx="16.0003"
+                      cy="4.97105"
+                      r="3.08824"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></circle>{" "}
+                    <path
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      d="M14.0242 8.49609L5.62305 23.4981"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></path>{" "}
+                    <path
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      d="M17.9756 8.49609L26.3767 23.4981"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></path>{" "}
+                    <path
+                      data-v-25ecef37=""
+                      data-v-706ceafa=""
+                      d="M8.05859 27.0273H23.9409"
+                      stroke="white"
+                      stroke-width="1.5"
+                    ></path>
+                  </svg>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+        <img src="/img/grains_bottom.png" alt="" className="grains_ellipse" />
+        <img
+          src="/img/test_hero_light3.svg"
+          alt=""
+          className="home_div_section1_bg_light3"
+        />
+      </section>
+
+
+
+
+
+         <section className="home_div_section2">
+        <div className="container">
+          <div className="erc404_section_area">
+            <div className="erc404_section_area1">
+              ERC-404: Fractionalized Asset Ownership
+            </div>
+            <div className="erc404_section_area2">
+              The ERC-404 token standard is an innovative approach that merges
+              the fungibility of ERC-20 tokens with the unique properties of
+              ERC-721 NFTs. This empowers businesses to create and distribute
+              fractionalized ownership of real-world or digital assets. These
+              fractions can be freely traded on cryptocurrency exchanges as
+              ERC-20 tokens, while the underlying asset remains represented as a
+              whole on NFT marketplaces using ERC-721.
+            </div>
+            <img
+              src="/img/diagram.png"
+              alt=""
+              className="erc404_section_area_img"
+            />
+          </div>
+        </div>
+        <img src="/img/grains_bottom.png" alt="" className="grains_ellipse" />
+        <img
+          src="/img/test_hero_light3.svg"
+          alt=""
+          className="home_div_section1_bg_light3"
+        />
+      </section>

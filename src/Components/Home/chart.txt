@@ -1,0 +1,36 @@
+     <section className="egox_token_div_section3b">
+        <div className="container">
+          <div className="egox_token_div_section3_area">
+            <div className="egox_token_div_section3_area_titleb">
+              Tokenomics
+              {/* <div className="egox_token_div_section3_area_title_para">
+                A total of 280 million XIFY tokens have been allocated to
+                various stakeholders, ensuring a robust and sustainable
+                ecosystem
+              </div> */}
+            </div>
+            <div className="egox_token_div_section3_area_body">
+              <AmChart4Wrapper
+                config={config}
+                id="amcharts-4"
+                chartTypeClass={PieChart}
+              />
+              <div className="supply_div">
+                <div className="supply_div_title">Token Supply</div>
+                <div className="supply_div_amnt">50,000,000</div>
+              </div>
+            </div>
+            <div className="mobile_supply_div">
+              Total Supply{" "}
+              <div className="mobile_supply_div_span">50,000,000</div>
+            </div>
+          </div>
+        </div>
+        <img src="/img/grains_ellipse.png" alt="" className="grains_ellipse" />
+
+        <img
+          src="/img/test_hero_light2.svg"
+          alt=""
+          className="home_div_section1_bg_light2"
+        />
+      </section>

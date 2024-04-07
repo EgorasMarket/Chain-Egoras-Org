@@ -334,12 +334,12 @@ const Home = () => {
                   </span>
                 </div>
                 <div className="home_div_section1_area_1_div1_txt2">
-                  Egochain is a public, permissionless Layer 1 blockchain
-                  designed to bridge the gap between Cosmos's high-throughput,
-                  interoperable network and Ethereum's robust developer
-                  ecosystem. This fosters a scalable and user-friendly
-                  environment for onboarding the next billion users onto the
-                  blockchain.
+                  Egochain is a permissionless, parallel blockchain protocol
+                  designed for the tokenization of real-world assets, such as
+                  electric vehicles. This facilitates the fractional ownership
+                  and frictionless trading of these assets, aiming to unlock
+                  their liquidity and stimulate global adoption, particularly
+                  for underperforming assets in the traditional market.
                 </div>
               </div>
               <div className="home_div_section1_area_1_div2">
@@ -445,15 +445,13 @@ const Home = () => {
                 </div>
                 <div className="home_div_section4_area_body_cont2">
                   <div className="home_div_section4_area_body_cont2_title">
-                    Tokenization of Physical Assets with ERC-404
+                    Fractional Ownership of Physical Assets.
                   </div>
                   <div className="home_div_section4_area_body_cont2_para">
-                    ERC-404 facilitates the tokenization of physical assets.
-                    These tokens can then be traded on exchanges like ERC-20
-                    tokens, while also retaining the functionality of NFTs
-                    (Non-Fungible Tokens) for trading on platforms like OpenSea.
-                    This provides greater flexibility in how investors can
-                    participate.
+                    Egochain's innovative EGO-404 token standard empowers the
+                    creation of security tokens representing real-world assets.
+                    These tokens offer investors greater flexibility and
+                    accessibility compared to traditional ownership structures.
                   </div>
                 </div>
               </motion.div>
@@ -472,13 +470,14 @@ const Home = () => {
               >
                 <div className="home_div_section4_area_body_cont2">
                   <div className="home_div_section4_area_body_cont2_title">
-                    Fractional Ownership of Real-World Assets
+                    Streamlined Trading Through Tokenization
                   </div>
                   <div className="home_div_section4_area_body_cont2_para">
-                    ERC-404 enables the fractionalization of physical assets,
-                    allowing them to be traded in smaller portions on exchanges.
-                    This significantly increases liquidity for these assets,
-                    making them more accessible to a wider range of investors.
+                    EGO-404 facilitates the tokenization of physical assets,
+                    enabling them to be traded on secondary markets similar to
+                    widely-recognized tokens like Ego-20. This streamlines the
+                    trading process and opens up new avenues for investor
+                    participation.
                   </div>
                 </div>
                 <div className="home_div_section4_area_body_cont1_img_div2">
@@ -502,43 +501,21 @@ const Home = () => {
                 </div>
                 <div className="home_div_section4_area_body_cont2">
                   <div className="home_div_section4_area_body_cont2_title">
-                    Enhanced Supply Chain Management
+                    Enhanced Liquidity via Fractionalization
                   </div>
                   <div className="home_div_section4_area_body_cont2_para">
-                    By storing inventory data on the blockchain in real-time,
-                    ERC-404 offers a comprehensive and up-to-date view of
-                    product stock levels. This transparency helps prevent costly
-                    overstocking and optimizes inventory management.
+                    Egochain EGO-404 unlocks the potential for fractional
+                    ownership of physical assets. By dividing ownership into
+                    smaller, tradable tokens, EGO-404 significantly increases
+                    liquidity for these assets. This makes them more accessible
+                    to a broader range of investors, democratizing participation
+                    in the ownership of traditionally illiquid assets.
                   </div>
                 </div>
               </motion.div>
               {/* ================= */}
               {/* ================= */}
               {/* ================= */}
-              <motion.div
-                variants={fadeIn("Up")}
-                transition={transition()}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false }}
-                className="home_div_section4_area_body_cont2a"
-              >
-                <div className="home_div_section4_area_body_cont2">
-                  <div className="home_div_section4_area_body_cont2_title">
-                    Streamlined Automated Payments
-                  </div>
-                  <div className="home_div_section4_area_body_cont2_para">
-                    The decentralized nature of ERC-404 allows for the
-                    automation of payments, reducing errors and improving
-                    efficiency. For instance, maintenance providers can receive
-                    automatic payments from a designated treasury upon
-                    completing work on factory equipment.
-                  </div>
-                </div>
-                <div className="home_div_section4_area_body_cont1_img_div2">
-                  <Icon />
-                </div>
-              </motion.div>
             </div>
           </div>
         </div>
@@ -557,400 +534,11 @@ const Home = () => {
       {/* ====== */}
       {/* ====== */}
       {/* ====== */}
-      <section className="home_div_section2">
-        <div className="container">
-          <div className="home_div_section3_area">
-            <div className="home_div_section3_area_title">
-              Challenges in Integrating Real-World Assets
-              {/* <div className="home_div_section3_area_para">
-                The decentralized nature of ERC-404 allows for the automation of
-                payments, reducing errors and improving efficiency. For
-                instance, maintenance providers can receive automatic payments
-                from a designated treasury upon completing work on factory
-                equipment.
-              </div> */}
-            </div>
 
-            <div className="home_div_section3_area_body">
-              <motion.div
-                variants={fadeIn("Up")}
-                transition={transition()}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false }}
-                className="home_div_section3_area_body_cont1"
-              >
-                <div className="home_div_section3_area_body_cont1_title">
-                  Liquidity
-                </div>
-                <div className="home_div_section3_area_body_cont1_body_text">
-                  <div className="home_div_section3_area_body_cont1_body_text_title">
-                    Limited Liquidity of Physical Assets
-                  </div>
-                  <div className="home_div_section3_area_body_cont1_body_text_para">
-                    This emphasizes the difficulty of quickly converting
-                    physical assets into cash.
-                  </div>
-                </div>
-                <div className="home_div_section3_area_body_cont1_icon">
-                  <svg
-                    data-v-25ecef37=""
-                    data-v-706ceafa=""
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      cx="4.08823"
-                      cy="27.0335"
-                      r="3.08824"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></circle>{" "}
-                    <circle
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      cx="27.9115"
-                      cy="27.0335"
-                      r="3.08824"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></circle>{" "}
-                    <circle
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      cx="16.0003"
-                      cy="4.97105"
-                      r="3.08824"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></circle>{" "}
-                    <path
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      d="M14.0242 8.49609L5.62305 23.4981"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></path>{" "}
-                    <path
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      d="M17.9756 8.49609L26.3767 23.4981"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></path>{" "}
-                    <path
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      d="M8.05859 27.0273H23.9409"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></path>
-                  </svg>
-                </div>
-              </motion.div>
-
-              {/* =========== */}
-              {/* =========== */}
-              {/* =========== */}
-              <motion.div
-                variants={fadeIn("Up")}
-                transition={transition()}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false }}
-                className="home_div_section3_area_body_cont1"
-              >
-                {" "}
-                <div className="home_div_section3_area_body_cont1_title">
-                  Vulnerability
-                </div>
-                <div className="home_div_section3_area_body_cont1_body_text">
-                  <div className="home_div_section3_area_body_cont1_body_text_title">
-                    Vulnerability to Intellectual Property Infringement
-                  </div>
-                  <div className="home_div_section3_area_body_cont1_body_text_para">
-                    This refers to the risk of unauthorized copying of assets
-                    like designs, patents, or trademarks.
-                  </div>
-                </div>
-                <div className="home_div_section3_area_body_cont1_icon">
-                  <svg
-                    data-v-25ecef37=""
-                    data-v-706ceafa=""
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      cx="4.08823"
-                      cy="27.0335"
-                      r="3.08824"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></circle>{" "}
-                    <circle
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      cx="27.9115"
-                      cy="27.0335"
-                      r="3.08824"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></circle>{" "}
-                    <circle
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      cx="16.0003"
-                      cy="4.97105"
-                      r="3.08824"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></circle>{" "}
-                    <path
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      d="M14.0242 8.49609L5.62305 23.4981"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></path>{" "}
-                    <path
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      d="M17.9756 8.49609L26.3767 23.4981"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></path>{" "}
-                    <path
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      d="M8.05859 27.0273H23.9409"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></path>
-                  </svg>
-                </div>
-              </motion.div>
-
-              {/* ========= */}
-              {/* ========= */}
-              {/* ========= */}
-              <motion.div
-                variants={fadeIn("Up")}
-                transition={transition()}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false }}
-                className="home_div_section3_area_body_cont1"
-              >
-                <div className="home_div_section3_area_body_cont1_title">
-                  Supply Chain
-                </div>
-                <div className="home_div_section3_area_body_cont1_body_text">
-                  <div className="home_div_section3_area_body_cont1_body_text_title">
-                    Supply Chain Disruption Risks
-                  </div>
-                  <div className="home_div_section3_area_body_cont1_body_text_para">
-                    This highlights the potential for fraud or other issues to
-                    interrupt the flow of goods and materials.
-                  </div>
-                </div>
-                <div className="home_div_section3_area_body_cont1_icon">
-                  <svg
-                    data-v-25ecef37=""
-                    data-v-706ceafa=""
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      cx="4.08823"
-                      cy="27.0335"
-                      r="3.08824"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></circle>{" "}
-                    <circle
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      cx="27.9115"
-                      cy="27.0335"
-                      r="3.08824"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></circle>{" "}
-                    <circle
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      cx="16.0003"
-                      cy="4.97105"
-                      r="3.08824"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></circle>{" "}
-                    <path
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      d="M14.0242 8.49609L5.62305 23.4981"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></path>{" "}
-                    <path
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      d="M17.9756 8.49609L26.3767 23.4981"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></path>{" "}
-                    <path
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      d="M8.05859 27.0273H23.9409"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></path>
-                  </svg>
-                </div>
-              </motion.div>
-
-              {/* ======== */}
-              {/* ======== */}
-              {/* ======== */}
-              <motion.div
-                variants={fadeIn("Up")}
-                transition={transition()}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false }}
-                className="home_div_section3_area_body_cont1"
-              >
-                <div className="home_div_section3_area_body_cont1_title">
-                  Security
-                </div>
-                <div className="home_div_section3_area_body_cont1_body_text">
-                  <div className="home_div_section3_area_body_cont1_body_text_title">
-                    Financial Reporting Integrity Concerns
-                  </div>
-                  <div className="home_div_section3_area_body_cont1_body_text_para">
-                    This expresses the worry about the accuracy of financial
-                    records.
-                  </div>
-                </div>
-                <div className="home_div_section3_area_body_cont1_icon">
-                  <svg
-                    data-v-25ecef37=""
-                    data-v-706ceafa=""
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      cx="4.08823"
-                      cy="27.0335"
-                      r="3.08824"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></circle>{" "}
-                    <circle
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      cx="27.9115"
-                      cy="27.0335"
-                      r="3.08824"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></circle>{" "}
-                    <circle
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      cx="16.0003"
-                      cy="4.97105"
-                      r="3.08824"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></circle>{" "}
-                    <path
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      d="M14.0242 8.49609L5.62305 23.4981"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></path>{" "}
-                    <path
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      d="M17.9756 8.49609L26.3767 23.4981"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></path>{" "}
-                    <path
-                      data-v-25ecef37=""
-                      data-v-706ceafa=""
-                      d="M8.05859 27.0273H23.9409"
-                      stroke="white"
-                      stroke-width="1.5"
-                    ></path>
-                  </svg>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-        <img src="/img/grains_bottom.png" alt="" className="grains_ellipse" />
-        <img
-          src="/img/test_hero_light3.svg"
-          alt=""
-          className="home_div_section1_bg_light3"
-        />
-      </section>
       {/* ====== */}
       {/* ====== */}
       {/* ====== */}
-      <section className="home_div_section2">
-        <div className="container">
-          <div className="erc404_section_area">
-            <div className="erc404_section_area1">
-              ERC-404: Fractionalized Asset Ownership
-            </div>
-            <div className="erc404_section_area2">
-              The ERC-404 token standard is an innovative approach that merges
-              the fungibility of ERC-20 tokens with the unique properties of
-              ERC-721 NFTs. This empowers businesses to create and distribute
-              fractionalized ownership of real-world or digital assets. These
-              fractions can be freely traded on cryptocurrency exchanges as
-              ERC-20 tokens, while the underlying asset remains represented as a
-              whole on NFT marketplaces using ERC-721.
-            </div>
-            <img
-              src="/img/diagram.png"
-              alt=""
-              className="erc404_section_area_img"
-            />
-          </div>
-        </div>
-        <img src="/img/grains_bottom.png" alt="" className="grains_ellipse" />
-        <img
-          src="/img/test_hero_light3.svg"
-          alt=""
-          className="home_div_section1_bg_light3"
-        />
-      </section>
+
       {/* ====== */}
       {/* ====== */}
       {/* ====== */}

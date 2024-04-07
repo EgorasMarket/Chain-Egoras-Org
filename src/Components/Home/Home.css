@@ -63,6 +63,7 @@
   text-align: center;
   color: #fff;
   width: 85%;
+  line-height: 1.5;
 }
 .home_div_section1_area_1_div2 {
   width: 100%;
@@ -131,6 +132,7 @@
   height: 550px !important;
   transform: scale(1.6);
   pointer-events: none;
+  opacity: 0.8;
 }
 .home_div_section1_bg_light {
   position: absolute;
@@ -464,6 +466,7 @@ p {
   font-size: 32px;
   font-weight: 600;
   margin-bottom: 15px;
+  width: 80%;
 }
 .home_div_section4_area_body_cont2_para {
   font-size: 18px;
