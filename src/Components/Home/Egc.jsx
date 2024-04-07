@@ -28,7 +28,7 @@ const Egc = () => {
             <div className="egox_token_div_section1area_cont1">
               <div className="egox_token_div_section1area1">
                 <div className="egox_token_div_section1area1_title">
-                  Egochain (EGC) coin
+                  Egoras Credit (EGC) coin
                 </div>
                 <div className="egox_token_div_section1area1_para">
                   A Powerhouse for Innovation.

@@ -103,7 +103,7 @@ const Footer = () => {
                   >
                     EGAX Coin
                   </a>
-                  <a
+                  {/* <a
                     href={
                       window.location.protocol === "http:"
                         ? `http://localhost:${window.location.port}/egc/coin/info`
@@ -112,7 +112,7 @@ const Footer = () => {
                     className="footerDiv1_area2_title_subLinks_div_link1"
                   >
                     EGC Coin
-                  </a>
+                  </a> */}
                   <a
                     href="https://github.com/EgorasMarket"
                     className="footerDiv1_area2_title_subLinks_div_link1"

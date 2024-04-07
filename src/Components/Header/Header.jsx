@@ -155,7 +155,7 @@ const Header = () => {
                     />{" "}
                     EGAX Coin
                   </a>
-                  <a
+                  {/* <a
                     href={
                       window.location.protocol === "http:"
                         ? `http://localhost:${window.location.port}/egc/coin/info`
@@ -169,7 +169,7 @@ const Header = () => {
                       className="header_div_area_2_link1Img"
                     />{" "}
                     EGC Coin
-                  </a>
+                  </a> */}
                   <a
                     href={
                       window.location.protocol === "http:"
@@ -287,7 +287,7 @@ const Header = () => {
                 >
                   EGAX Coin
                 </a>
-                <a
+                {/* <a
                   href={
                     window.location.protocol === "http:"
                       ? `http://localhost:${window.location.port}/egc/coin/info`
@@ -296,7 +296,7 @@ const Header = () => {
                   className="headerMenuDiv_cont_body_link1"
                 >
                   EGC Coin
-                </a>
+                </a> */}
                 <a
                   href={
                     window.location.protocol === "http:"
