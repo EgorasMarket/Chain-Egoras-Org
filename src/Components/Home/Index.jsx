@@ -352,7 +352,7 @@ const Home = () => {
                   Play Video
                 </button>
                 {/* </a> */}
-                <a href="https://egoswap.io" target="_blank">
+                <a href="https://www.pluto.ag/swap" target="_blank">
                   <button className="home_div_section1_area_1_div2_btn2">
                     Get EGAX
                   </button>
