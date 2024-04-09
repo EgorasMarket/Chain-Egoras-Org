@@ -179,7 +179,7 @@ const WhitePaper = () => {
                   : "whitePaper_div_area_body_side_list"
               }
             >
-              <a href="#The EGC Coin (EGC)">The EGC Coin (EGC)</a>
+              <a href="#The EGC Coin (EGC)">Ego Station (ESTA)</a>
             </div>
             <div
               className={
@@ -1111,35 +1111,38 @@ const WhitePaper = () => {
               className="whitePaper_div_area_body_area_section"
             >
               <div className="whitePaper_div_area_body_area_section_title">
-                The EGC Coin (EGC)
+                Ego Station (ESTA)
               </div>{" "}
               <br />
-              Start-ups thrive on patient capital commitment. Investors
-              recognize the years-long journey before reaping returns from their
-              stakes. Short-term exits pose a significant challenge. New capital
-              raised to fuel growth competes with existing shareholders seeking
-              to cash out. Savvy investors prioritize capital contributions that
-              propel company expansion, not appease those aiming for a quick
-              escape.
+              Egostation (ESTA) is a novel token built on the ERC404 standard
+              within the Egochain and Ethereum ecosystems. This unique design
+              unlocks a range of functionalities for ESTA users.
               <br />
               <br />
-              Long-term commitment unlocks immense value. It empowers
-              communities to chart future-focused plans. Stakeholder dedication
-              aligns voting and decision-making with sustainable growth, rather
-              than fleeting spikes. Conversely, the cryptocurrency landscape
-              often witnesses speculators flitting between digital assets based
-              on anticipated short-term gains.
+              Trading Flexibility: ESTA offers exceptional trading flexibility.
+              It can be seamlessly traded on cryptocurrency exchanges as a
+              standard ERC20 token, providing easy access for investors.
+              Additionally, ESTA can be acquired as Non-Fungible Tokens (NFTs)
+              on OpenSea, catering to a wider audience.
               <br />
               <br />
-              Egochain envisions a community deeply invested in its long-term
-              vision. Its unique model empowers users to commit their EGC COIN
-              to lockup periods – one month, six months, or even a year –
-              garnering platform benefits in return. Staked EGC balances remain
-              non-transferable and non-divisible, effectively taking them off
-              the open market. This deliberate design discourages short-term
-              trading and fosters commitment. Stakers reap daily rewards, with
-              EGC holders receiving 15% of the annual returns directly
-              proportional to their locked stakes.
+              NFT-Powered Charging Station Ownership: Businesses looking to
+              establish charging stations can leverage ESTA's NFT functionality.
+              By purchasing ESTA NFTs on OpenSea, businesses can redeem them for
+              a physical charging station setup, streamlining the acquisition
+              process.
+              <br />
+              <br />
+              Staking Rewards: ESTA offers a compelling staking program. Similar
+              to businesses establishing charging stations, token holders can
+              benefit from block rewards in the form of EGAX tokens.
+              <br />
+              <br />
+              Profit Sharing: ESTA goes beyond just rewards. Holders are
+              entitled to a significant share of the profits generated. They
+              receive 50% of the charging fees collected from stations
+              established through redeemed NFTs, creating a passive income
+              stream.
             </section>
             {/* =============== */}
             {/* =============== */}
