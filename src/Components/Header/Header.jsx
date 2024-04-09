@@ -128,8 +128,22 @@ const Header = () => {
                     </span> */}
                 </a>
               </div>
+
+              <a
+                href={
+                  window.location.protocol === "http:"
+                    ? `http://localhost:${window.location.port}/egax/coin/info`
+                    : `https://egochain.org/egax/coin/info`
+                }
+                className="header_div_area_2_link1"
+              >
+                EGAX Coin
+              </a>
+              <a href="/station" className="header_div_area_2_link1">
+                Ego Station
+              </a>
               <div className="header_div_area_2_div">
-                Resources{" "}
+                Products{" "}
                 <KeyboardArrowDownIcon className="header_div_area_2_div_icon" />
                 <motion.div
                   variants={fadeIn("Up")}
@@ -139,37 +153,6 @@ const Header = () => {
                   viewport={{ once: false }}
                   className="header_div_area_2_div_drop"
                 >
-                  {" "}
-                  <a
-                    href={
-                      window.location.protocol === "http:"
-                        ? `http://localhost:${window.location.port}/egax/coin/info`
-                        : `https://egochain.org/egax/coin/info`
-                    }
-                    className="header_div_area_2_link1"
-                  >
-                    <img
-                      src="/egax_logo.png"
-                      alt=""
-                      className="header_div_area_2_link1Img"
-                    />{" "}
-                    EGAX Coin
-                  </a>
-                  {/* <a
-                    href={
-                      window.location.protocol === "http:"
-                        ? `http://localhost:${window.location.port}/egc/coin/info`
-                        : `https://egochain.org/egc/coin/info`
-                    }
-                    className="header_div_area_2_link1"
-                  >
-                    <img
-                      src="/egc_icon2.svg"
-                      alt=""
-                      className="header_div_area_2_link1Img"
-                    />{" "}
-                    EGC Coin
-                  </a> */}
                   <a
                     href={
                       window.location.protocol === "http:"
@@ -191,35 +174,6 @@ const Header = () => {
                     <DescriptionIcon className="header_div_area_2_link1_icon" />{" "}
                     Whitepaper
                   </a>
-                </motion.div>
-                {/* <div className="header_div_area_2_div_drop"></div> */}
-              </div>
-
-              <a href="/wallet" className="header_div_area_2_link1">
-                Ego Wallet
-              </a>
-              <a href="/station" className="header_div_area_2_link1">
-                Ego Station
-              </a>
-              <a
-                href="https://github.com/EgorasMarket"
-                className="header_div_area_2_link1"
-                target="_blank"
-              >
-                Developers
-                <CallMadeIcon className="header_div_area_2_link1_icon" />
-              </a>
-              <div className="header_div_area_2_div">
-                Products{" "}
-                <KeyboardArrowDownIcon className="header_div_area_2_div_icon" />
-                <motion.div
-                  variants={fadeIn("Up")}
-                  transition={transition()}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: false }}
-                  className="header_div_area_2_div_drop"
-                >
                   <a
                     href="https://egoswap.io"
                     className="header_div_area_2_link1"
@@ -253,6 +207,18 @@ const Header = () => {
                   </a>
                 </motion.div>
               </div>
+              <a href="/wallet" className="header_div_area_2_link1">
+                Ego Wallet
+              </a>
+
+              <a
+                href="https://github.com/EgorasMarket"
+                className="header_div_area_2_link1"
+                target="_blank"
+              >
+                Developers
+                <CallMadeIcon className="header_div_area_2_link1_icon" />
+              </a>
 
               <MenuIcon
                 className="header_div_area_2_menu_icon"
