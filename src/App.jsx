@@ -13,8 +13,11 @@ import WhitePaper from "./Components/Home/WhitePaper/WhitePaper";
 import Faucet from "./Components/Faucet/Faucet";
 import Wallet from "./Components/Wallet/Wallet";
 import Egostation from "./Components/Home/EgoStation/Egostation";
+import Event from "./Components/EventComp/Event";
 
 function App() {
+  const currentPage = window.location.pathname;
+  const myArr = currentPage.split("/");
   if (window.location.host.split(".")[0] === "faucet") {
     return (
       <>
@@ -25,19 +28,25 @@ function App() {
     );
   }
   return (
-    <div className="App">
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/wallet" element={<Wallet />} />
-        <Route path="/station" element={<Egostation />} />
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="/whitepaper" element={<WhitePaper />} />
-        <Route path="/terms" element={<TermsAndConditions />} />
-        <Route path="/egc/coin/info" element={<Egc />} />
-        <Route path="/egax/coin/info" element={<Egax />} />
-        <Route path="/about" element={<RoadMapPage />} />
-      </Routes>
+    <div className="App  dark">
+      {myArr[1] === "event" ? null : <Header />}
+      {myArr[1] === "event" ? (
+        <Event />
+      ) : (
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/wallet" element={<Wallet />} />
+          <Route path="/event" element={<Event />} />
+          <Route path="/station" element={<Egostation />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/whitepaper" element={<WhitePaper />} />
+          <Route path="/terms" element={<TermsAndConditions />} />
+          <Route path="/egc/coin/info" element={<Egc />} />
+          <Route path="/egax/coin/info" element={<Egax />} />
+          <Route path="/about" element={<RoadMapPage />} />
+        </Routes>
+      )}
+
       <Footer />
     </div>
   );

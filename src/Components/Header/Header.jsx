@@ -90,170 +90,191 @@ const Header = () => {
   };
 
   window.addEventListener("scroll", handleScroll);
+  const linksActive = window.location.pathname;
+  const urlArr = linksActive.split("/");
   return (
     <>
-      <div className="header_partial_div">Egochain Mainnet is live</div>
-      <div className={fixed ? "header_div" : "header_div_relative"}>
-        <div className="container_fluid">
-          <div className="header_div_area">
-            <a href="/" className="header_div_area_1">
-              <img
-                src="/img/egax_logo.png"
-                alt=""
-                className="header_div_area_1_img"
-              />
-              Egochain
-            </a>
-            <div className="header_div_area_2">
-              <div className="header_social_links">
-                <a
-                  href="https://twitter.com/egochainHQ"
-                  className="footerDiv1_area1_cont2_links_link_tel"
-                  target="_blank"
-                >
-                  <TwitterIcon className="footerDiv1_area1_cont2_links_link1" />{" "}
-                  {/* <span className="footerDiv1_area1_cont2_links_link_tel_span">
+      {linksActive === "/event" ? null : (
+        <div className="header_partial_div">
+          Egochain Mainnet Airdrop is live{" "}
+          <button className="header_partial_div_btn">Get started</button>
+        </div>
+      )}
+      {linksActive === "/event" ? null : (
+        <div className={fixed ? "header_div" : "header_div_relative"}>
+          <div className="container_fluid">
+            <div className="header_div_area">
+              <a href="/" className="header_div_area_1">
+                <img
+                  src="/img/egax_logo.png"
+                  alt=""
+                  className="header_div_area_1_img"
+                />
+                Egochain
+              </a>
+              <div className="header_div_area_2">
+                <div className="header_social_links">
+                  <a
+                    href="https://twitter.com/egochainHQ"
+                    className="footerDiv1_area1_cont2_links_link_tel"
+                    target="_blank"
+                  >
+                    <TwitterIcon className="footerDiv1_area1_cont2_links_link1" />{" "}
+                    {/* <span className="footerDiv1_area1_cont2_links_link_tel_span">
                       Twitter
                     </span> */}
-                </a>
+                  </a>
 
-                <a
-                  href="https://t.me/egochainHQ"
-                  className="footerDiv1_area1_cont2_links_link_tel"
-                  target="_blank"
-                >
-                  <TelegramIcon className="footerDiv1_area1_cont2_links_link1" />{" "}
-                  {/* <span className="footerDiv1_area1_cont2_links_link_tel_span">
+                  <a
+                    href="https://t.me/egochainHQ"
+                    className="footerDiv1_area1_cont2_links_link_tel"
+                    target="_blank"
+                  >
+                    <TelegramIcon className="footerDiv1_area1_cont2_links_link1" />{" "}
+                    {/* <span className="footerDiv1_area1_cont2_links_link_tel_span">
                       Telegram
                     </span> */}
-                </a>
-              </div>
-
-              <a
-                href={
-                  window.location.protocol === "http:"
-                    ? `http://localhost:${window.location.port}/egax/coin/info`
-                    : `https://egochain.org/egax/coin/info`
-                }
-                className="header_div_area_2_link1"
-              >
-                EGAX Coin
-              </a>
-              <a href="/station" className="header_div_area_2_link1">
-                Ego Station
-              </a>
-              <div className="header_div_area_2_div">
-                Products{" "}
-                <KeyboardArrowDownIcon className="header_div_area_2_div_icon" />
-                <motion.div
-                  variants={fadeIn("Up")}
-                  transition={transition()}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: false }}
-                  className="header_div_area_2_div_drop"
-                >
-                  <a
-                    href={
-                      window.location.protocol === "http:"
-                        ? `http://localhost:${window.location.port}/about`
-                        : `https://egochain.org/about`
-                    }
-                    className="header_div_area_2_link1"
-                  >
-                    <InfoIcon className="header_div_area_2_link1_icon" /> About
                   </a>
-                  <a
-                    href={
-                      window.location.protocol === "http:"
-                        ? `http://localhost:${window.location.port}/whitepaper`
-                        : `https://egochain.org/whitepaper`
-                    }
-                    className="header_div_area_2_link1"
-                  >
-                    <DescriptionIcon className="header_div_area_2_link1_icon" />{" "}
-                    Whitepaper
-                  </a>
-                  <a
-                    href="https://egoswap.io"
-                    className="header_div_area_2_link1"
-                    target="_blank"
-                  >
-                    <JoinLeftIcon className="header_div_area_2_link1_icon" />{" "}
-                    Egoswap{" "}
-                    <CallMadeIcon className="header_div_area_2_link1_icon2" />
-                  </a>
-                  <a
-                    href="https://testnet.egoscan.io/"
-                    className="header_div_area_2_link1"
-                    target="_blank"
-                  >
-                    <DocumentScannerIcon className="header_div_area_2_link1_icon" />{" "}
-                    Explorer{" "}
-                    <CallMadeIcon className="header_div_area_2_link1_icon2" />
-                  </a>
-                  <a
-                    href={
-                      window.location.protocol === "http:"
-                        ? `http://faucet.localhost:${window.location.port}/`
-                        : `https://faucet.egochain.org/`
-                    }
-                    target="_blank"
-                    className="header_div_area_2_link1"
-                  >
-                    <WaterDropIcon className="header_div_area_2_link1_icon" />{" "}
-                    Faucet{" "}
-                    <CallMadeIcon className="header_div_area_2_link1_icon2" />
-                  </a>
-                </motion.div>
-              </div>
-              <a href="/wallet" className="header_div_area_2_link1">
-                Ego Wallet
-              </a>
-
-              <a
-                href="https://github.com/EgorasMarket"
-                className="header_div_area_2_link1"
-                target="_blank"
-              >
-                Developers
-                <CallMadeIcon className="header_div_area_2_link1_icon" />
-              </a>
-
-              <MenuIcon
-                className="header_div_area_2_menu_icon"
-                onClick={ToggleHeaderMenu}
-              />
-            </div>
-          </div>
-        </div>
-        {headerMenu ? (
-          <div className="headerMenuDiv">
-            <div className="headerMenuDiv_cont">
-              <div className="headerMenuDiv_cont_1">
-                <CloseIcon
-                  className="headerMenuDiv_cont_1_icon"
-                  onClick={ToggleHeaderMenu}
-                />
-              </div>
-              <div className="headerMenuDiv_cont_body">
-                <a href="/wallet" className="headerMenuDiv_cont_body_link1">
-                  Ego Wallet
-                </a>
-                <a href="/station" className="headerMenuDiv_cont_body_link1">
-                  Ego Station
-                </a>
+                </div>
                 <a
                   href={
                     window.location.protocol === "http:"
                       ? `http://localhost:${window.location.port}/egax/coin/info`
                       : `https://egochain.org/egax/coin/info`
                   }
-                  className="headerMenuDiv_cont_body_link1"
+                  className="header_div_area_2_link1"
                 >
                   EGAX Coin
                 </a>
-                {/* <a
+                <a href="/station" className="header_div_area_2_link1">
+                  Ego Station
+                </a>
+                <div className="header_div_area_2_div">
+                  Products{" "}
+                  <KeyboardArrowDownIcon className="header_div_area_2_div_icon" />
+                  <motion.div
+                    variants={fadeIn("Up")}
+                    transition={transition()}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false }}
+                    className="header_div_area_2_div_drop"
+                  >
+                    <a
+                      href={
+                        window.location.protocol === "http:"
+                          ? `http://localhost:${window.location.port}/about`
+                          : `https://egochain.org/about`
+                      }
+                      className="header_div_area_2_link1"
+                    >
+                      <InfoIcon className="header_div_area_2_link1_icon" />{" "}
+                      About
+                    </a>
+                    <a
+                      href={
+                        window.location.protocol === "http:"
+                          ? `http://localhost:${window.location.port}/whitepaper`
+                          : `https://egochain.org/whitepaper`
+                      }
+                      className="header_div_area_2_link1"
+                    >
+                      <DescriptionIcon className="header_div_area_2_link1_icon" />{" "}
+                      Whitepaper
+                    </a>
+                    <a
+                      href="/wallet"
+                      className="header_div_area_2_link1"
+                      target="_blank"
+                    >
+                      <JoinLeftIcon className="header_div_area_2_link1_icon" />{" "}
+                      Ego Wallet
+                      <CallMadeIcon className="header_div_area_2_link1_icon2" />
+                    </a>
+                    <a
+                      href="https://egoswap.io"
+                      className="header_div_area_2_link1"
+                      target="_blank"
+                    >
+                      <JoinLeftIcon className="header_div_area_2_link1_icon" />{" "}
+                      Egoswap{" "}
+                      <CallMadeIcon className="header_div_area_2_link1_icon2" />
+                    </a>
+                    <a
+                      href="https://testnet.egoscan.io/"
+                      className="header_div_area_2_link1"
+                      target="_blank"
+                    >
+                      <DocumentScannerIcon className="header_div_area_2_link1_icon" />{" "}
+                      Explorer{" "}
+                      <CallMadeIcon className="header_div_area_2_link1_icon2" />
+                    </a>
+                    <a
+                      href={
+                        window.location.protocol === "http:"
+                          ? `http://faucet.localhost:${window.location.port}/`
+                          : `https://faucet.egochain.org/`
+                      }
+                      target="_blank"
+                      className="header_div_area_2_link1"
+                    >
+                      <WaterDropIcon className="header_div_area_2_link1_icon" />{" "}
+                      Faucet{" "}
+                      <CallMadeIcon className="header_div_area_2_link1_icon2" />
+                    </a>
+                  </motion.div>
+                </div>
+                <a
+                  href="https://egoswap.io"
+                  target="_blank"
+                  className="header_div_area_2_link1"
+                >
+                  Bridge
+                </a>
+
+                <a
+                  href="https://github.com/EgorasMarket"
+                  className="header_div_area_2_link1"
+                  target="_blank"
+                >
+                  Developers
+                  <CallMadeIcon className="header_div_area_2_link1_icon" />
+                </a>
+                <button className="Airdrop_head_btn">Join Airdrop</button>
+                <MenuIcon
+                  className="header_div_area_2_menu_icon"
+                  onClick={ToggleHeaderMenu}
+                />
+              </div>
+            </div>
+          </div>
+          {headerMenu ? (
+            <div className="headerMenuDiv">
+              <div className="headerMenuDiv_cont">
+                <div className="headerMenuDiv_cont_1">
+                  <CloseIcon
+                    className="headerMenuDiv_cont_1_icon"
+                    onClick={ToggleHeaderMenu}
+                  />
+                </div>
+                <div className="headerMenuDiv_cont_body">
+                  <a href="/wallet" className="headerMenuDiv_cont_body_link1">
+                    Ego Wallet
+                  </a>
+                  <a href="/station" className="headerMenuDiv_cont_body_link1">
+                    Ego Station
+                  </a>
+                  <a
+                    href={
+                      window.location.protocol === "http:"
+                        ? `http://localhost:${window.location.port}/egax/coin/info`
+                        : `https://egochain.org/egax/coin/info`
+                    }
+                    className="headerMenuDiv_cont_body_link1"
+                  >
+                    EGAX Coin
+                  </a>
+                  {/* <a
                   href={
                     window.location.protocol === "http:"
                       ? `http://localhost:${window.location.port}/egc/coin/info`
@@ -263,76 +284,76 @@ const Header = () => {
                 >
                   EGC Coin
                 </a> */}
-                <a
-                  href={
-                    window.location.protocol === "http:"
-                      ? `http://localhost:${window.location.port}/about`
-                      : `https://egochain.org/about`
-                  }
-                  className="headerMenuDiv_cont_body_link1"
-                >
-                  About
-                </a>
-                <a
-                  href={
-                    window.location.protocol === "http:"
-                      ? `http://localhost:${window.location.port}/whitepaper`
-                      : `https://egochain.org/whitepaper`
-                  }
-                  className="headerMenuDiv_cont_body_link1"
-                >
-                  White paper
-                </a>
-                <a
-                  href={
-                    window.location.protocol === "http:"
-                      ? `http://faucet.localhost:${window.location.port}/`
-                      : `https://faucet.egochain.org/`
-                  }
-                  className="headerMenuDiv_cont_body_link1"
-                  target="_blank"
-                >
-                  {" "}
-                  Faucet
-                  <CallMadeIcon className="header_div_area_2_link1_icon" />
-                </a>
-                <a
-                  href="https://github.com/EgorasMarket"
-                  target="_blank"
-                  className="headerMenuDiv_cont_body_link1"
-                >
-                  {" "}
-                  Developer
-                  <CallMadeIcon className="header_div_area_2_link1_icon" />
-                </a>
-                <a
-                  href="https://egoswap.io"
-                  className="headerMenuDiv_cont_body_link1"
-                  target="_blank"
-                >
-                  {" "}
-                  Egoswap
-                  <CallMadeIcon className="header_div_area_2_link1_icon" />
-                </a>
-                <a
-                  href="https://testnet.egoscan.io/"
-                  className="headerMenuDiv_cont_body_link1"
-                  target="_blank"
-                >
-                  {" "}
-                  Explorer
-                  <CallMadeIcon className="header_div_area_2_link1_icon" />
-                </a>
-                <a
-                  href="https://egodao.org/"
-                  className="headerMenuDiv_cont_body_link1"
-                  target="_blank"
-                >
-                  {" "}
-                  Stake
-                  <CallMadeIcon className="header_div_area_2_link1_icon" />
-                </a>
-                {/* <div className="headerMenuDiv_cont_body_div">
+                  <a
+                    href={
+                      window.location.protocol === "http:"
+                        ? `http://localhost:${window.location.port}/about`
+                        : `https://egochain.org/about`
+                    }
+                    className="headerMenuDiv_cont_body_link1"
+                  >
+                    About
+                  </a>
+                  <a
+                    href={
+                      window.location.protocol === "http:"
+                        ? `http://localhost:${window.location.port}/whitepaper`
+                        : `https://egochain.org/whitepaper`
+                    }
+                    className="headerMenuDiv_cont_body_link1"
+                  >
+                    White paper
+                  </a>
+                  <a
+                    href={
+                      window.location.protocol === "http:"
+                        ? `http://faucet.localhost:${window.location.port}/`
+                        : `https://faucet.egochain.org/`
+                    }
+                    className="headerMenuDiv_cont_body_link1"
+                    target="_blank"
+                  >
+                    {" "}
+                    Faucet
+                    <CallMadeIcon className="header_div_area_2_link1_icon" />
+                  </a>
+                  <a
+                    href="https://github.com/EgorasMarket"
+                    target="_blank"
+                    className="headerMenuDiv_cont_body_link1"
+                  >
+                    {" "}
+                    Developer
+                    <CallMadeIcon className="header_div_area_2_link1_icon" />
+                  </a>
+                  <a
+                    href="https://egoswap.io"
+                    className="headerMenuDiv_cont_body_link1"
+                    target="_blank"
+                  >
+                    {" "}
+                    Egoswap
+                    <CallMadeIcon className="header_div_area_2_link1_icon" />
+                  </a>
+                  <a
+                    href="https://testnet.egoscan.io/"
+                    className="headerMenuDiv_cont_body_link1"
+                    target="_blank"
+                  >
+                    {" "}
+                    Explorer
+                    <CallMadeIcon className="header_div_area_2_link1_icon" />
+                  </a>
+                  <a
+                    href="https://egodao.org/"
+                    className="headerMenuDiv_cont_body_link1"
+                    target="_blank"
+                  >
+                    {" "}
+                    Stake
+                    <CallMadeIcon className="header_div_area_2_link1_icon" />
+                  </a>
+                  {/* <div className="headerMenuDiv_cont_body_div">
                 <a
                   href="https://play.google.com/store/apps/details?id=io.egox.dex&hl=be&gl=US"
                   target="_blank"
@@ -357,11 +378,12 @@ const Header = () => {
                   />
                 </button>
               </div> */}
+                </div>
               </div>
             </div>
-          </div>
-        ) : null}
-      </div>
+          ) : null}
+        </div>
+      )}
     </>
   );
 };

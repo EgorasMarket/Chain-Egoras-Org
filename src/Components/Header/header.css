@@ -10,6 +10,17 @@
   padding: 1em 0em;
   border-bottom: solid 1px #3cd19a54;
 }
+button.Airdrop_head_btn {
+  margin-left: 2em;
+  padding: 15px 10px;
+  width: 150px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  background: #fff;
+  border: none;
+  color: #000;
+}
 .header_social_links {
   display: flex;
   align-items: center;
@@ -37,13 +48,29 @@
   z-index: 10000;
 }
 .header_partial_div {
-  color: #fff;
+  color: #ffffff;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 15px 0px;
-  background: linear-gradient(45deg, #2fa277, #0b4727);
+  /* background: linear-gradient(45deg, #2fa277, #0b4727); */
+  background: #9dffdb;
+  background: #329745;
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.header_partial_div_btn {
+  margin-left: 2em;
+  padding: 13px 7px;
+  width: 150px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 500;
+  background: #fff;
+  color: #153c37;
   font-size: 18px;
 }
 .header_div_area {

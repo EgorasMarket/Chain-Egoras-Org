@@ -85,6 +85,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
 }
 .YtVideoDiv {
   position: fixed;
@@ -125,7 +127,10 @@
   border: solid 1px;
   backdrop-filter: blur(2px);
   margin-left: 1em;
+  font-size: 16px;
+  font-weight: 500;
 }
+
 .home_div_section1_area_2_spline_scene {
   display: block;
   width: 550px !important;

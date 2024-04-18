@@ -343,18 +343,21 @@ const Home = () => {
                 </div>
               </div>
               <div className="home_div_section1_area_1_div2">
+                <button className="home_div_section1_area_1_div2_btn">
+                  Bridge to Egochain
+                </button>
                 {/* <a href="https://testnet.egoscan.io/" target="_blank"> */}
-                <button
+                {/* <button
                   className="home_div_section1_area_1_div2_btn"
                   onClick={ToggleVideoDiv}
                 >
                   <PlayArrowIcon className="home_div_section1_area_1_div2_btn_icon" />{" "}
                   Play Video
-                </button>
+                </button> */}
                 {/* </a> */}
                 <a href="https://www.pluto.ag/swap" target="_blank">
                   <button className="home_div_section1_area_1_div2_btn2">
-                    Get EGAX
+                    Explore DEX
                   </button>
                 </a>
                 {/* <a
