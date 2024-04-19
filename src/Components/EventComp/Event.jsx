@@ -6,6 +6,7 @@ import Grid from "../Home/Grid";
 import EventHome from "./EventHome";
 import EventSideBar from "./EventSideBar";
 import DashboardReferral from "./Referral/DashboardReferral";
+import LeaderBoard from "./LeaderBoard/LeaderBoard";
 const Event = () => {
   return (
     <div className="event_div">
@@ -18,6 +19,7 @@ const Event = () => {
               <Routes>
                 <Route path="/event" element={<EventHome />} />
                 <Route path="/event/referral" element={<DashboardReferral />} />
+                <Route path="/event/leaderBoard" element={<LeaderBoard />} />
               </Routes>
             </div>
           </div>
@@ -33,7 +35,7 @@ const Event = () => {
           className="home_div_section1_bg_light2"
         />
 
-        <Grid />
+        {/* <Grid /> */}
         <img src="/img/grains_ellipse.png" alt="" className="grains_ellipse" />
       </section>
     </div>

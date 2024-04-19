@@ -78,7 +78,7 @@ button:focus {
   background: #000000;
 }
 .container {
-  width: auto;
+  width: -webkit-fill-available;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
@@ -95,7 +95,14 @@ button:focus {
   margin: 0 auto;
   padding: 0 15px;
 }
-
+.dark .shimmer {
+  background-image: linear-gradient(
+    to right,
+    #383838 8%,
+    #6a6a6a 18%,
+    #393939 33%
+  ) !important;
+}
 @media (max-width: 999px) {
   .container {
     max-width: 720px;

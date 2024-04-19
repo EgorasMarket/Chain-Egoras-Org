@@ -44,7 +44,10 @@ const EventSideBar = () => {
               <div className="event_sideBar_div_area_body_cont1_txt">Home</div>
             </div>
           </Link>
-          <div className="event_sideBar_div_area_body_cont1">
+          <Link
+            to="/event/leaderboard"
+            className="event_sideBar_div_area_body_cont1"
+          >
             <div
               id="rank"
               onClick={ToggleActiveTab}
@@ -62,7 +65,7 @@ const EventSideBar = () => {
                 Leaderboard
               </div>
             </div>
-          </div>
+          </Link>
           <div className="event_sideBar_div_area_body_cont1">
             <div
               id="bridge"
