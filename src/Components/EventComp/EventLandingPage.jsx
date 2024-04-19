@@ -2,15 +2,32 @@ import React, { useState, useEffect } from "react";
 import "./eventlanding.css";
 import Grid from "../Home/Grid";
 import Spline from "@splinetool/react-spline";
+import { CasinoSharp } from "@mui/icons-material";
+import { ENROLL_EVENT } from "../../constants/api";
+import { useNavigate } from "react-router-dom";
 
 const EventLandingPage = () => {
+  const navigate = useNavigate();
   const [eventModal, setEventModal] = useState(false);
+  const [wallet, setWallet] = useState("");
   const ToggleEventModal = () => {
     setEventModal(!eventModal);
   };
+
+  const enrollInEvent = async () => {
+    if (wallet === "") {
+      return;
+    }
+    const res = await ENROLL_EVENT({ address: wallet });
+    localStorage.setItem("wallet", wallet);
+
+    // navigate("/event.localhost:5173/");
+    window.location.href = "http://event.localhost:5173";
+    console.log(res, "maggi");
+  };
+
   return (
     <div className="EventLandingPage_div">
-      {" "}
       <section className="EventLandingPage_div_section">
         <div className="container">
           <div className="EventLandingPage_div_cont">
@@ -113,9 +130,14 @@ const EventLandingPage = () => {
               Enter your egochain wallet address
             </div>
             <div className="eventModal_cont_input_div">
-              <input type="text" className="eventModal_cont_input" />
+              <input
+                type="text"
+                className="eventModal_cont_input"
+                value={wallet}
+                onChange={(e) => setWallet(e.target.value)}
+              />
             </div>
-            <button>Enter</button>
+            <button onClick={enrollInEvent}>Enter</button>
             <div className="eventModal_cont_last_para">
               Enter ypur egochain wallet address to view your points based off
               of volume of transactions your wallet has done on the egochain

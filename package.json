@@ -16,7 +16,7 @@
     "@mui/material": "^5.15.5",
     "@splinetool/react-spline": "^2.2.6",
     "@szhsin/react-accordion": "^1.2.3",
-    "axios": "^1.6.7",
+    "axios": "^1.6.8",
     "framer-motion": "^10.18.0",
     "hugeicons-react": "^0.2.0",
     "lottie-react": "^2.4.0",
@@ -30,6 +30,7 @@
     "react-scroll-parallax": "^3.4.5",
     "react-shimmer-effects-18": "^1.0.4",
     "react-spinners": "^0.13.8",
+    "react-toastify": "^10.0.5",
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {

@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { FETCH_EVENT_STAT } from "../../constants/api";
 
 const EventHome = () => {
+  const fetchEventStat = async () => {
+    const res = await FETCH_EVENT_STAT(localStorage.getItem("wallet"));
+    console.log(res, "agba");
+  };
+
+  useEffect(() => {
+    fetchEventStat();
+  }, []);
   return (
     <div className="eventHome_div">
       <section className="eventHome_div_section1">
