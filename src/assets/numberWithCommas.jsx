@@ -1,11 +1,10 @@
 import React from "react";
 // import { NumericFormat } from "react-number-format";
-import NumericFormat from "react-number-format";
+// import NumericFormat from "react-number-format";
 
 export const numberWithCommas = (x) => {
-  return (
-    <NumericFormat value={x} displayType="text" thousandSeparator={true} />
-  );
+  return ",";
+  // <NumericFormat value={x} displayType="text" thousandSeparator={true} />
 };
 
 export const colors = {
