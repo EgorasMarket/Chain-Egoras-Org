@@ -14,6 +14,7 @@ import Faucet from "./Components/Faucet/Faucet";
 import Wallet from "./Components/Wallet/Wallet";
 import Egostation from "./Components/Home/EgoStation/Egostation";
 import Event from "./Components/EventComp/Event";
+import EventLandingPage from "./Components/EventComp/EventLandingPage";
 
 function App() {
   const currentPage = window.location.pathname;
@@ -27,6 +28,14 @@ function App() {
       </>
     );
   }
+  if (window.location.host.split(".")[0] === "event") {
+    return (
+      <div className="App  dark">
+        <Event />
+        <Footer />
+      </div>
+    );
+  }
   return (
     <div className="App  dark">
       {myArr[1] === "event" ? null : <Header />}
@@ -36,7 +45,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/wallet" element={<Wallet />} />
-          <Route path="/event" element={<Event />} />
+          <Route path="/join/event" element={<EventLandingPage />} />
           <Route path="/station" element={<Egostation />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/whitepaper" element={<WhitePaper />} />

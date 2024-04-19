@@ -12,9 +12,9 @@ const EventHome = () => {
             <p className="eventHome_div_section1_image_txt_para">
               Bridge to Egochain, Use Egochain dapps and earn points.
             </p>
-            <button className="home_div_section1_area_1_div2_btn">
+            {/* <button className="home_div_section1_area_1_div2_btn">
               Bridge to Egochain
-            </button>
+            </button> */}
           </div>
           <svg
             width="284"
