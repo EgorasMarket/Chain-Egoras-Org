@@ -28,14 +28,14 @@ function App() {
       </>
     );
   }
-  if (window.location.host.split(".")[0] === "event") {
-    return (
-      <div className="App  dark">
-        <Event />
-        <Footer />
-      </div>
-    );
-  }
+  // if (window.location.host.split(".")[0] === "event") {
+  //   return (
+  //     <div className="App  dark">
+
+  //       <Footer />
+  //     </div>
+  //   );
+  // }
   return (
     <div className="App  dark">
       {myArr[1] === "event" ? null : <Header />}

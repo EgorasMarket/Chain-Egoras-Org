@@ -1,15 +1,27 @@
-import React, { useEffect } from "react";
-import { FETCH_EVENT_STAT } from "../../constants/api";
+import React, { useEffect, useState } from "react";
+import { FETCH_EVENT_STAT, FETCH_REFERRAL_STAT } from "../../constants/api";
 
 const EventHome = () => {
+  const [userInfo, setUserInfo] = useState(null);
+  const [refCount, setRefCount] = useState(0);
   const fetchEventStat = async () => {
     const res = await FETCH_EVENT_STAT(localStorage.getItem("wallet"));
     console.log(res, "agba");
+    console.log(res.data.allEvents, "maggi");
+    setUserInfo(res.data.allEvents);
+  };
+  const fetchRefStat = async () => {
+    const res = await FETCH_REFERRAL_STAT(localStorage.getItem("wallet"));
+    console.log(res, "agba");
+    setRefCount(res.data.resMain.count);
+    // console.log(res.data.allEvents, "maggi");
+    // setUserInfo(res.data.allEvents);
   };
 
   useEffect(() => {
     fetchEventStat();
-  }, []);
+    fetchRefStat();
+  }, [localStorage.getItem("wallet")]);
   return (
     <div className="eventHome_div">
       <section className="eventHome_div_section1">
@@ -81,7 +93,7 @@ const EventHome = () => {
                   alt=""
                   className="event_sideBar_div_area_last_div_cont1_title_gif"
                 />{" "}
-                1,000{" "}
+                {userInfo === null ? 0 : userInfo.points}
               </div>
               <span className="eventHome_div_section2_area_cont1_sub_div_span">
                 xp
@@ -94,7 +106,7 @@ const EventHome = () => {
               Total Volume
             </div>
             <div className="eventHome_div_section2_area_cont1_sub_div">
-              1,000,000{" "}
+              {userInfo === null ? 0 : parseFloat(userInfo.volume).toFixed(2)}
               <span className="eventHome_div_section2_area_cont1_sub_div_span">
                 usd
               </span>
@@ -106,7 +118,7 @@ const EventHome = () => {
               Total Referrals
             </div>
             <div className="eventHome_div_section2_area_cont1_sub_div">
-              100{" "}
+              {refCount}
               <span className="eventHome_div_section2_area_cont1_sub_div_span">
                 refs
               </span>

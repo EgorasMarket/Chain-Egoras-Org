@@ -2,12 +2,14 @@ import React, { useEffect, useState, useRef } from "react";
 import ScaleLoader from "react-spinners/ScaleLoader";
 import MilitaryTechIcon from "@mui/icons-material/MilitaryTech";
 import Blockies from "react-blockies";
-
+// import { FETCH_LEADERBOARD_STAT } from "../../constants/api";
+import { FETCH_LEADERBOARD_STAT } from "../../../constants/api";
 import "./leaderBoard.css";
 import Staticdata from "../Static";
 const LeaderBoard = () => {
   const [itemsToShow, setItemsToShow] = useState(10);
   const [isLoading2, setIsLoading2] = useState(false);
+  const [leaderBoard, setLeaderBoard] = useState([]);
 
   const containerRef = useRef(null);
   const scrollToBottom = () => {
@@ -32,6 +34,16 @@ const LeaderBoard = () => {
       setIsLoading2(false);
     }, 2000); // Adjust the delay duration as needed (e.g., 1000 milliseconds or 1 second)
   };
+  const fetchEventStat = async () => {
+    const res = await FETCH_LEADERBOARD_STAT();
+    console.log(res, "agba");
+    console.log(res.data.allEvents, "maggi");
+    setLeaderBoard(res.data.allEvents);
+  };
+
+  useEffect(() => {
+    fetchEventStat();
+  }, []);
   return (
     <div className="LeaderBoardDiv">
       <div className="LeaderBoardDiv_1">
@@ -44,14 +56,15 @@ const LeaderBoard = () => {
         <div className="LeaderBoardDiv_1_body_title">
           <div className="LeaderBoardDiv_1_body_title_cont_first">Rank</div>
           <div className="LeaderBoardDiv_1_body_title_cont">Name</div>
+          <div className="LeaderBoardDiv_1_body_title_cont">Volume</div>
           <div className="LeaderBoardDiv_1_body_title_cont_second_last">
             Points
           </div>
         </div>
         <div className="LeaderBoardDiv_1_body_cont_body">
-          {Staticdata.referralLeaderBoard
+          {leaderBoard
             .slice(0, itemsToShow)
-            .sort((a, b) => b.refEarning - a.refEarning)
+            .sort((a, b) => b.points - a.points)
             .map((data, index) => (
               <div className="LeaderBoardDiv_1_body_cont_body_div" id={data.id}>
                 <div className="LeaderBoardDiv_1_body_cont_body_div_cont_first">
@@ -80,12 +93,18 @@ const LeaderBoard = () => {
                 </div>
                 <div className="LeaderBoardDiv_1_body_cont_body_div_cont">
                   <Blockies
-                    seed={"0xa5ff0Fd1a84D004649E97b465779499546654feD"}
+                    seed={data.address}
                     size={8}
                     scale={4}
                     className="blockies_icon"
                   />{" "}
-                  @{data.userName}
+                  {`${data.address.slice(0, 4)}...${data.address.slice(
+                    38,
+                    42
+                  )}`}
+                </div>
+                <div className="LeaderBoardDiv_1_body_cont_body_div_cont">
+                  {parseFloat(data.volume).toFixed(2)} usd
                 </div>
                 <div className="LeaderBoardDiv_1_body_cont_body_div_last">
                   <img
@@ -93,7 +112,7 @@ const LeaderBoard = () => {
                     alt=""
                     className="event_sideBar_div_area_last_div_cont1_title_gif"
                   />{" "}
-                  {data.refEarning}{" "}
+                  {data.points}{" "}
                   <span className="LeaderBoardDiv_1_body_cont_body_div_last_span">
                     xp
                   </span>
@@ -101,7 +120,7 @@ const LeaderBoard = () => {
               </div>
             ))}
         </div>
-        {itemsToShow < Staticdata.referralLeaderBoard.length && (
+        {itemsToShow < leaderBoard.length && (
           <button
             onClick={displayNextItems}
             className="dashBoard_ref_area2_cont1_body_cont_btn"

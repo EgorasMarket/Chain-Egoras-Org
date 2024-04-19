@@ -7,9 +7,21 @@ import { AddTeamIcon } from "hugeicons-react";
 import { CoinsSwapIcon } from "hugeicons-react";
 import Blockies from "react-blockies";
 import { Link } from "react-router-dom";
+import { FETCH_EVENT_STAT } from "../../constants/api";
 
 const EventSideBar = () => {
   const [activeTab, setActiveTab] = useState("home");
+  const [userInfo, setUserInfo] = useState(null);
+  const fetchEventStat = async () => {
+    const res = await FETCH_EVENT_STAT(localStorage.getItem("wallet"));
+    console.log(res, "agba");
+    console.log(res.data.allEvents, "maggi");
+    setUserInfo(res.data.allEvents);
+  };
+
+  useEffect(() => {
+    fetchEventStat();
+  }, [localStorage.getItem("wallet")]);
   const ToggleActiveTab = (e) => {
     setActiveTab(e.currentTarget.id);
   };
@@ -66,7 +78,7 @@ const EventSideBar = () => {
               </div>
             </div>
           </Link>
-          <div className="event_sideBar_div_area_body_cont1">
+          {/*         <div className="event_sideBar_div_area_body_cont1">
             <div
               id="bridge"
               onClick={ToggleActiveTab}
@@ -84,8 +96,8 @@ const EventSideBar = () => {
                 Bridge
               </div>
             </div>
-          </div>
-          <div className="event_sideBar_div_area_body_cont1">
+          </div> */}
+          {/*         <div className="event_sideBar_div_area_body_cont1">
             <div
               id="dex"
               onClick={ToggleActiveTab}
@@ -101,7 +113,7 @@ const EventSideBar = () => {
               />
               <div className="event_sideBar_div_area_body_cont1_txt">Dex</div>
             </div>
-          </div>
+          </div> */}
           <Link
             to="/event/referral"
             className="event_sideBar_div_area_body_cont1"
@@ -133,7 +145,7 @@ const EventSideBar = () => {
               alt=""
               className="event_sideBar_div_area_last_div_cont1_title_gif"
             />{" "}
-            100,000{" "}
+            {userInfo === null ? 0 : userInfo.points}
             <span className="event_sideBar_div_area_last_div_cont1_title_span">
               xp
             </span>
@@ -141,12 +153,14 @@ const EventSideBar = () => {
           {/* </div> */}
           <div className="event_sideBar_div_area_last_div_cont1_address">
             <Blockies
-              seed={"0xa5ff0Fd1a84D004649E97b465779499546654feD"}
+              seed={localStorage.getItem("wallet")}
               size={8}
               scale={4}
               className="blockies_icon"
             />{" "}
-            0xa5f...4feD
+            {`${localStorage.getItem("wallet").slice(0, 4)}...${localStorage
+              .getItem("wallet")
+              .slice(38, 42)}`}
           </div>
         </div>
       </div>

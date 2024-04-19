@@ -3,6 +3,7 @@ import "./eventlanding.css";
 import Grid from "../Home/Grid";
 import Spline from "@splinetool/react-spline";
 import { CasinoSharp } from "@mui/icons-material";
+import CloseIcon from "@mui/icons-material/Close";
 import { ENROLL_EVENT } from "../../constants/api";
 import { useNavigate } from "react-router-dom";
 
@@ -20,9 +21,7 @@ const EventLandingPage = () => {
     }
     const res = await ENROLL_EVENT({ address: wallet });
     localStorage.setItem("wallet", wallet);
-
-    // navigate("/event.localhost:5173/");
-    window.location.href = "http://event.localhost:5173";
+    window.location.href = "http://event.localhost:5173/event";
     console.log(res, "maggi");
   };
 
@@ -122,6 +121,10 @@ const EventLandingPage = () => {
       </section>
       {eventModal ? (
         <div className="eventModal">
+          <CloseIcon
+            className="eventModal_close_icon"
+            onClick={ToggleEventModal}
+          />
           <div className="eventModal_cont">
             <div className="eventModal_cont_title">
               EGOCHAIN MAINNET AIRDROP
@@ -130,16 +133,34 @@ const EventLandingPage = () => {
               Enter your egochain wallet address
             </div>
             <div className="eventModal_cont_input_div">
+              <div className="eventModal_cont_input_div_span">
+                Wallet address*
+              </div>
               <input
                 type="text"
+                placeholder="Wallet address"
                 className="eventModal_cont_input"
                 value={wallet}
                 onChange={(e) => setWallet(e.target.value)}
               />
             </div>
-            <button onClick={enrollInEvent}>Enter</button>
+            <div className="eventModal_cont_input_div">
+              <div className="eventModal_cont_input_div_span">
+                Referral code (optional)
+              </div>
+              <input
+                type="text"
+                placeholder="Referral code"
+                className="eventModal_cont_input"
+                value={wallet}
+                onChange={(e) => setWallet(e.target.value)}
+              />
+            </div>
+            <button onClick={enrollInEvent} className="eventModal_cont_btn">
+              Enter
+            </button>
             <div className="eventModal_cont_last_para">
-              Enter ypur egochain wallet address to view your points based off
+              Enter your egochain wallet address to view your points based off
               of volume of transactions your wallet has done on the egochain
               blockchain.
             </div>
