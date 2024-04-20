@@ -343,9 +343,11 @@ const Home = () => {
                 </div>
               </div>
               <div className="home_div_section1_area_1_div2">
-                <button className="home_div_section1_area_1_div2_btn">
-                  Bridge to Egochain
-                </button>
+                <a href="https://egoswap.io" target="_blank">
+                  <button className="home_div_section1_area_1_div2_btn">
+                    Bridge to Egochain
+                  </button>
+                </a>
                 {/* <a href="https://testnet.egoscan.io/" target="_blank"> */}
                 {/* <button
                   className="home_div_section1_area_1_div2_btn"
