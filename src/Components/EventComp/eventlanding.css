@@ -91,7 +91,9 @@
   backdrop-filter: blur(10px);
   flex-direction: column;
 }
-
+.EventLandingPage_div_area_2_icon {
+  width: 100%;
+}
 .eventModal_close_icon {
   color: #ffff;
   margin-bottom: 1em;

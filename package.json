@@ -17,6 +17,7 @@
     "@splinetool/react-spline": "^2.2.6",
     "@szhsin/react-accordion": "^1.2.3",
     "axios": "^1.6.8",
+    "date-fns": "^2.30.0",
     "framer-motion": "^10.18.0",
     "hugeicons-react": "^0.2.0",
     "lottie-react": "^2.4.0",

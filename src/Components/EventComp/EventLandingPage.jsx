@@ -6,11 +6,12 @@ import { CasinoSharp } from "@mui/icons-material";
 import CloseIcon from "@mui/icons-material/Close";
 import { ENROLL_EVENT } from "../../constants/api";
 import { useNavigate } from "react-router-dom";
-
+import Timer from "./Timer";
 const EventLandingPage = () => {
   const navigate = useNavigate();
   const [eventModal, setEventModal] = useState(false);
   const [wallet, setWallet] = useState("");
+  const [refCode, setRefCode] = useState("");
   const ToggleEventModal = () => {
     setEventModal(!eventModal);
   };
@@ -24,6 +25,10 @@ const EventLandingPage = () => {
     window.location.href = "http://event.localhost:5173/event";
     console.log(res, "maggi");
   };
+
+  const deadline = new Date();
+  deadline.setHours(14); // 2 PM
+  deadline.setMinutes(30); // 30 minutes
 
   return (
     <div className="EventLandingPage_div">
@@ -39,10 +44,18 @@ const EventLandingPage = () => {
                   Bridge to egochain, trade on egochain dapps & refer to earn
                   points and rank up the leaderboard.
                 </div>
+                {deadline < new Date() ? null : (
+                  <div className="timer_div">
+                    <div className="timer_div_txt">Countdown to event</div>
+                    <Timer deadline={deadline} />
+                  </div>
+                )}
+
                 <div className="EventLandingPage_div_area_1_title_btns_div">
                   <button
                     className="home_div_section1_area_1_div2_btn"
                     onClick={ToggleEventModal}
+                    disabled={deadline > new Date() ? false : true}
                   >
                     Join Event
                   </button>
@@ -58,9 +71,10 @@ const EventLandingPage = () => {
                 </div>
               </div>
               <div className="EventLandingPage_div_area_2">
-                <Spline
-                  scene="https://prod.spline.design/jt3OnSPHsTgtwQKh/scene.splinecode"
-                  className="EventLandingPage_div_area_2_scene"
+                <img
+                  src="/img/egochain_airdrop_img.png"
+                  alt=""
+                  className="EventLandingPage_div_area_2_icon"
                 />
               </div>
             </div>
@@ -152,8 +166,8 @@ const EventLandingPage = () => {
                 type="text"
                 placeholder="Referral code"
                 className="eventModal_cont_input"
-                value={wallet}
-                onChange={(e) => setWallet(e.target.value)}
+                value={refCode}
+                onChange={(e) => setRefCode(e.target.value)}
               />
             </div>
             <button onClick={enrollInEvent} className="eventModal_cont_btn">
