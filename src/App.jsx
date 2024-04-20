@@ -55,8 +55,7 @@ function App() {
           <Route path="/about" element={<RoadMapPage />} />
         </Routes>
       )}
-
-      <Footer />
+      {myArr[1] === "event" ? null : <Footer />}
     </div>
   );
 }

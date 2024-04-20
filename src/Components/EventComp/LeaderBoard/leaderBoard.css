@@ -10,6 +10,7 @@
   padding: 2em 0em;
   /* position: sticky; */
   /* top: 0; */
+  padding-top: 0;
 }
 .LeaderBoardDiv_1_title {
   font-size: 42px;
@@ -91,4 +92,42 @@
   font-weight: 400;
   font-size: 16px;
   margin-left: 4px;
+}
+
+@media (max-width: 750px) {
+  .LeaderBoardDiv_1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .LeaderBoardDiv_1_body_cont_body_div {
+    display: grid;
+    width: -webkit-fill-available;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .LeaderBoardDiv_1_body_cont_body_div_cont {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .LeaderBoardDiv_1_body_cont_body_div > :last-child {
+    grid-column: 1 / -1; /* This spans the entire width of the grid */
+  }
+  .LeaderBoardDiv_1_body_cont_body_div_cont_first {
+    width: max-content;
+  }
+  .LeaderBoardDiv_1_body_cont_body_div_cont {
+    font-size: 14px;
+  }
+  .blockies_icon {
+    border-radius: 50%;
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 5px;
+  }
+  .LeaderBoardDiv_1_body_title {
+    font-size: 14px;
+  }
 }
