@@ -87,6 +87,7 @@
   justify-content: center;
   font-size: 16px;
   font-weight: 500;
+  color: #000;
 }
 .YtVideoDiv {
   position: fixed;
@@ -1084,7 +1085,7 @@ p {
   }
   .home_div_section1 {
     height: 70dvh;
-    padding-top: 0em;
+    padding-top: 2em;
     padding-bottom: 4em;
   }
   .home_div_section1_area {
@@ -1127,6 +1128,9 @@ p {
   .home_div_section1_area_1_div2_btn2 {
     margin-left: 0;
     margin-top: 1em;
+    width: 100%;
+  }
+  .home_div_section1_area_1_div2_btn {
     width: 100%;
   }
   .backed_by_div {
