@@ -10,6 +10,10 @@ import { numberWithCommas } from "../../../assets/numberWithCommas";
 import Staticdata from "../Static";
 import { ShimmerButton } from "react-shimmer-effects-18";
 import DasboardMember from "./DasboardMember";
+import {
+  FETCH_REFERRAL_STAT,
+  FETCH_Referral_LEADERBOARD_STAT,
+} from "../../../constants/api";
 
 const DashboardReferral = () => {
   const [componentLoading, setComponentLoading] = useState(true);
@@ -37,7 +41,12 @@ const DashboardReferral = () => {
   const [successModal, setSuccessModal] = useState(false);
   const [errorModal, setErrorModal] = useState(false);
   const [tableData, setTableData] = useState([]);
+  // const [refLeaderboard, setRefLeaderboard] = useState([]);
   const [contentLoadingTable, setContentLoadingTable] = useState(true);
+  const [referalStat, setReferalStat] = useState({});
+  let [inactiveCount, setInactiveCount] = useState(0);
+  let [activeCount, setActiveCount] = useState(0);
+  let [refPoint, setRefPoint] = useState(0);
 
   const containerRef = useRef(null);
   const copyText = () => {
@@ -78,6 +87,43 @@ const DashboardReferral = () => {
     }, 2000); // Adjust the delay duration as needed (e.g., 1000 milliseconds or 1 second)
   };
 
+  // let inactiveCount = 0;
+  // let activeCount = 0;
+
+  const fetchReferalStat = async () => {
+    const res = await FETCH_REFERRAL_STAT(localStorage.getItem("wallet"));
+    // console.log(res, "agba");
+    // console.log(res.data, "maggi");
+    setReferalStat(res.data.resMain);
+    res.data.resMain.rows.forEach((item) => {
+      if (item.state === "INACTIVE") {
+        inactiveCount++;
+        setInactiveCount(inactiveCount++);
+      } else if (item.state === "ACTIVE") {
+        activeCount++;
+        setActiveCount(activeCount++);
+      }
+    });
+
+    setRefPoint(activeCount * 10);
+    setComponentLoading(!componentLoading);
+    setComponentLoading3(!componentLoading3);
+  };
+
+  const fetchLeaderBoard = async () => {
+    const res = await FETCH_Referral_LEADERBOARD_STAT();
+    // console.log(res, "agba");
+    console.log(res.data, "maggi");
+    setLeaderBoard(res.data.leaderboard);
+
+    setComponentLoading2(!componentLoading2);
+  };
+
+  useEffect(() => {
+    fetchReferalStat();
+    fetchLeaderBoard();
+  }, []);
+
   return (
     <section className="ex_section">
       <div className="container">
@@ -86,7 +132,7 @@ const DashboardReferral = () => {
             <DasboardMember
               refCode={"345672hdt62"}
               componentLoading={componentLoading}
-              refAmount={"100,000"}
+              refAmount={refPoint}
             />
           </div>
           <div className="dashBoard_ref_area1">
@@ -107,7 +153,7 @@ const DashboardReferral = () => {
                           <ShimmerButton size="sm" className="custom_shimmer" />
                         ) : (
                           <>
-                            {activeReferrals.length}
+                            {activeCount}
                             {"   "}
                             <span className="dashBoard_ref_area1_cont1_div1_cont2_span">
                               {" "}
@@ -133,7 +179,7 @@ const DashboardReferral = () => {
                           <ShimmerButton size="sm" className="custom_shimmer" />
                         ) : (
                           <>
-                            {inactiveReferral.length}{" "}
+                            {inactiveCount}{" "}
                             <span className="dashBoard_ref_area1_cont1_div1_cont2_span">
                               {" "}
                               ref(s){" "}
@@ -160,7 +206,7 @@ const DashboardReferral = () => {
                       <ShimmerButton size="sm" className="custom_shimmer" />
                     ) : (
                       <>
-                        {myReferrals.length}{" "}
+                        {referalStat.count}{" "}
                         <span className="dashBoard_ref_area1_cont1_div1_cont2_span">
                           {" "}
                           ref(s){" "}
@@ -307,7 +353,7 @@ const DashboardReferral = () => {
                               {index + 1}
                             </div>
                             <div className="dashBoard_ref_area2_cont1_body_div1_cont1 ">
-                              @{data.username.slice(0, 4) + "..."}
+                              @{data.address.slice(0, 4) + "..."}
                             </div>
 
                             <div className="dashBoard_ref_area2_cont1_body_div1_cont1 dashBoard_ref_area2_cont1_body_div1_cont1_last">
@@ -346,7 +392,7 @@ const DashboardReferral = () => {
                   <div className="dashBoard_ref_area2_cont1_body">
                     <div className="dashBoard_ref_area2_cont1_body_div_head">
                       <div className="dashBoard_ref_area2_cont1_body_div_head_cont1_first">
-                        Username
+                        Address
                       </div>
                       <div className="dashBoard_ref_area2_cont1_body_div_head_cont1_last">
                         Status
@@ -395,26 +441,26 @@ const DashboardReferral = () => {
                         Status
                       </div>
                       <div className="dashBoard_ref_area2_cont1_body_div_head_cont1_last">
-                        Amount
+                        Volume
                       </div>
                     </div>
-                    {myReferrals.length <= 0 ? (
+                    {referalStat.rows.length <= 0 ? (
                       <div className="no_loans_div">
                         <div className="no_loans_div_cont">
                           <NodataComp />
                         </div>{" "}
                       </div>
                     ) : (
-                      myReferrals.slice(0, 5).map((data) => (
+                      referalStat.rows.slice(0, 5).map((data) => (
                         <div className="dashBoard_ref_area2_cont1_body_div1">
                           <div className="dashBoard_ref_area2_cont1_body_div1_cont1_first">
-                            @{data.username}
+                            @{data.address}
                           </div>
                           <div className="dashBoard_ref_area2_cont1_body_div1_cont1_last">
-                            {data.status}
+                            {data.state}
                           </div>
                           <div className="dashBoard_ref_area2_cont1_body_div1_cont1_last">
-                            {parseFloat(data.amount).toFixed(2)} egax
+                            {parseFloat(data.volume).toFixed(2)}
                           </div>
                         </div>
                       ))
