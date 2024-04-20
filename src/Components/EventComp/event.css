@@ -385,3 +385,105 @@
   margin-left: 3px;
   color: #b9b9b9;
 }
+
+@media (max-width: 1115px) {
+  .event_sideBar_div_area_body_cont1_area {
+    padding: 0.5em 0.5em;
+    font-size: 16px;
+  }
+  .event_sideBar_div_area_body_cont1_area:hover {
+    padding-left: 0.5em;
+  }
+  .event_sideBar_div {
+    width: 205px;
+  }
+  .event_sideBar_div_area_body_cont1_area_active {
+    padding: 0.5em 0.5em;
+    font-size: 16px;
+    padding-left: 0.5em;
+  }
+  .eventHome_div_section3_area_cont1 {
+    margin: 0em 0.5em;
+    height: 150px;
+    padding: 2em 2em;
+  }
+  .eventHome_div_section3_area_cont1_tile {
+    position: relative;
+    z-index: 1;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .eventHome_div_section3_area_cont1_para {
+    font-size: 14px;
+    width: 100%;
+  }
+  .home_div_section1_area_1_div2_btn {
+    width: 150px;
+    font-size: 14px;
+  }
+  .eventHome_div_section1_image_txt_txt {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 999px) {
+  .event_div_area {
+    flex-direction: column-reverse;
+  }
+  .event_sideBar_div {
+    width: 100%;
+    border: none;
+    position: sticky;
+    bottom: 0;
+  }
+  .event_sideBar_div_area {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .event_sideBar_div_area_1 {
+    display: none;
+  }
+  .event_sideBar_div_area_body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 1em;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .event_sideBar_div_area_last_div {
+    display: none;
+  }
+  .event_sideBar_div_area_body_cont1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .event_sideBar_div_area_body_cont1_area_active {
+    padding: 0.5em 0.5em;
+    font-size: 14px;
+    padding-left: 0.5em;
+    justify-content: center;
+  }
+  .event_sideBar_div_area_body_cont1_area_active::before {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 4px;
+    background: #fff;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 10px;
+  }
+  .event_sideBar_div_area_body_cont1_area {
+    padding: 0.5em 0.5em;
+    font-size: 14px;
+    justify-content: center;
+  }
+}
