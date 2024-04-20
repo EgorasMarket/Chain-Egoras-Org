@@ -19,12 +19,8 @@ const DashboardReferral = () => {
   const [componentLoading, setComponentLoading] = useState(true);
   const [componentLoading2, setComponentLoading2] = useState(true);
   const [componentLoading3, setComponentLoading3] = useState(true);
-  const [inactiveReferral, setInactiveReferral] = useState([]);
-  const [activeReferrals, setActiveReferrals] = useState([]);
-  const [refEarn, setRefEarn] = useState(0);
-  const [refEarnings, setRefEarnings] = useState(0.0);
-  const [refEarnings2, setRefEarnings2] = useState(0.0);
-  const [refCount, setRefCount] = useState(0);
+
+  const [refCode, setRefCode] = useState(localStorage.getItem("refCode"));
   const [leaderBoard, setLeaderBoard] = useState([]);
   const [myReferrals, setMyReferrals] = useState([]);
   const [refLink, setRefLink] = useState("");
@@ -130,7 +126,7 @@ const DashboardReferral = () => {
         <div className="swapDivCont">
           <div className="pool_deatail_area_member_div">
             <DasboardMember
-              refCode={"345672hdt62"}
+              refCode={refCode}
               componentLoading={componentLoading}
               refAmount={refPoint}
             />
@@ -474,7 +470,7 @@ const DashboardReferral = () => {
                 </div>
                 <input
                   type="text"
-                  value="54623ytyg"
+                  value={refCode}
                   className="referral_default_value"
                   id="myInput"
                 />
