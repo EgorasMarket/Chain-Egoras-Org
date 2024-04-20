@@ -32,8 +32,9 @@ const EventLandingPage = () => {
     if (res.code === 200) {
       setIsloading(false);
       localStorage.setItem("wallet", wallet);
-      window.location.href = "http://localhost:5173/event";
 
+      window.location.href = "http://localhost:5173/event";
+      localStorage.setItem("refCode", res.data.userInfo.referralId);
       return;
     }
     if (res.code !== 200) {
