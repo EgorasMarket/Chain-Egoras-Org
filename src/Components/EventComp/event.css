@@ -388,6 +388,19 @@
 .event_mobile_header {
   display: none;
 }
+.logout_divs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.header_div_area_cont3_div2_icon {
+  font-size: 25px !important;
+  border: solid 1px #ffffff63;
+  padding: 3px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-left: 0.5em;
+}
 @media (max-width: 1115px) {
   .event_sideBar_div_area_body_cont1_area {
     padding: 0.5em 0.5em;

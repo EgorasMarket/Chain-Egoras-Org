@@ -8,6 +8,7 @@ import { CoinsSwapIcon } from "hugeicons-react";
 import Blockies from "react-blockies";
 import { Link } from "react-router-dom";
 import { FETCH_EVENT_STAT } from "../../constants/api";
+import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew";
 
 const EventSideBar = () => {
   const [activeTab, setActiveTab] = useState("home");
@@ -41,6 +42,11 @@ const EventSideBar = () => {
     }
   }, [currentPage]);
 
+  const logout = () => {
+    localStorage.removeItem("wallet");
+    localStorage.removeItem("refCode");
+    window.location.href = "/join/event";
+  };
   return (
     <div className="event_sideBar_div">
       <div className="event_sideBar_div_area">
@@ -167,16 +173,23 @@ const EventSideBar = () => {
             </span>
           </div>
           {/* </div> */}
-          <div className="event_sideBar_div_area_last_div_cont1_address">
-            <Blockies
-              seed={localStorage.getItem("wallet")}
-              size={8}
-              scale={4}
-              className="blockies_icon"
-            />{" "}
-            {`${localStorage.getItem("wallet").slice(0, 4)}...${localStorage
-              .getItem("wallet")
-              .slice(38, 42)}`}
+          <div className="logout_divs">
+            <div className="event_sideBar_div_area_last_div_cont1_address">
+              <Blockies
+                seed={localStorage.getItem("wallet")}
+                size={8}
+                scale={4}
+                className="blockies_icon"
+              />{" "}
+              {`${localStorage.getItem("wallet").slice(0, 4)}...${localStorage
+                .getItem("wallet")
+                .slice(38, 42)}`}
+            </div>
+            <PowerSettingsNewIcon
+              className="header_div_area_cont3_div2_icon"
+              style={{ color: "red" }}
+              onClick={logout}
+            />
           </div>
         </div>
       </div>

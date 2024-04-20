@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Blockies from "react-blockies";
 import { FETCH_EVENT_STAT } from "../../constants/api";
+import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew";
 
 const EventHeader = () => {
   const [userInfo, setUserInfo] = useState(null);
@@ -14,6 +15,11 @@ const EventHeader = () => {
   useEffect(() => {
     fetchEventStat();
   }, [localStorage.getItem("wallet")]);
+  const logout = () => {
+    localStorage.removeItem("wallet");
+    localStorage.removeItem("refCode");
+    window.location.href = "/join/event";
+  };
   return (
     <div className="event_header_div">
       <div className="event_header_div_1">
@@ -47,6 +53,11 @@ const EventHeader = () => {
             .getItem("wallet")
             .slice(40, 42)}`}
         </div>
+        <PowerSettingsNewIcon
+          className="header_div_area_cont3_div2_icon"
+          style={{ color: "red" }}
+          onClick={logout}
+        />
       </div>
     </div>
   );
