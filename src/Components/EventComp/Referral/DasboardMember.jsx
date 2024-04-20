@@ -41,11 +41,6 @@ const DasboardMember = ({ refCode, componentLoading, refAmount }) => {
             </>
           )}
         </div>
-        <img
-          src="/img/cards_bg_line.svg"
-          alt=""
-          class="ProductCheckoutPage_div_section_area_1_area3_body_card1_bg"
-        />
       </div>
       <div className="memberRefCode_div">
         <div className="memberRefCode_div_title">Referral Code</div>
