@@ -81,7 +81,7 @@
   top: 0;
   left: 0;
   background: #000000a8;
-  width: 100vw;
+  width: -webkit-fill-available;
   height: 100dvh;
   z-index: 10000;
   display: flex;

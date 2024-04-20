@@ -45,8 +45,8 @@ const EventLandingPage = () => {
   };
 
   const deadline = new Date();
-  deadline.setHours(14); // 2 PM
-  deadline.setMinutes(30); // 30 minutes
+  deadline.setHours(15); // 2 PM
+  deadline.setMinutes(0); // 30 minutes
   const fetchEventStat = async () => {
     const res = await FETCH_ALL_EVENT_STAT();
     console.log(res, "agba");
@@ -85,7 +85,7 @@ const EventLandingPage = () => {
                   <button
                     className="home_div_section1_area_1_div2_btn"
                     onClick={ToggleEventModal}
-                    disabled={deadline > new Date() ? false : true}
+                    disabled={deadline < new Date() ? false : true}
                   >
                     Join Event
                   </button>

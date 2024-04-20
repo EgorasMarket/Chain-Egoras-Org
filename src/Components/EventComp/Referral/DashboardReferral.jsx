@@ -122,432 +122,431 @@ const DashboardReferral = () => {
 
   return (
     <section className="ex_section">
-      <div className="container">
-        <div className="swapDivCont">
-          <div className="pool_deatail_area_member_div">
-            <DasboardMember
-              refCode={refCode}
-              componentLoading={componentLoading}
-              refAmount={refPoint}
-            />
-          </div>
-          <div className="dashBoard_ref_area1">
-            <div className="dashBoard_ref_area1_cont1">
-              <div className="dashBoard_ref_area1_cont1__cont1_div1">
-                <div className="dashBoard_ref_area1_cont1_cont1">
-                  {" "}
-                  <div className="dashBoard_ref_area1_cont1_icon_div">
-                    <GroupAddIcon className="stackedCoin_icon" />
-                  </div>
-                  <div className="dashBoard_ref_area1_cont1_div1 dashBoard_ref_area1_cont1_div1_b">
-                    <div className="dashBoard_ref_area1_cont1_div1_1">
-                      <div className="dashBoard_ref_area1_cont1_div1_cont1">
-                        Active Referral(s)
-                      </div>
-                      <div className="dashBoard_ref_area1_cont1_div1_cont2">
-                        {componentLoading ? (
-                          <ShimmerButton size="sm" className="custom_shimmer" />
-                        ) : (
-                          <>
-                            {activeCount}
-                            {"   "}
-                            <span className="dashBoard_ref_area1_cont1_div1_cont2_span">
-                              {" "}
-                              ref(s){" "}
-                            </span>
-                          </>
-                        )}
-                      </div>
+      <div className="swapDivCont">
+        <div className="pool_deatail_area_member_div">
+          <DasboardMember
+            refCode={refCode}
+            componentLoading={componentLoading}
+            refAmount={refPoint}
+          />
+        </div>
+        <div className="dashBoard_ref_area1">
+          <div className="dashBoard_ref_area1_cont1">
+            <div className="dashBoard_ref_area1_cont1__cont1_div1">
+              <div className="dashBoard_ref_area1_cont1_cont1">
+                {" "}
+                <div className="dashBoard_ref_area1_cont1_icon_div">
+                  <GroupAddIcon className="stackedCoin_icon" />
+                </div>
+                <div className="dashBoard_ref_area1_cont1_div1 dashBoard_ref_area1_cont1_div1_b">
+                  <div className="dashBoard_ref_area1_cont1_div1_1">
+                    <div className="dashBoard_ref_area1_cont1_div1_cont1">
+                      Active Referral(s)
+                    </div>
+                    <div className="dashBoard_ref_area1_cont1_div1_cont2">
+                      {componentLoading ? (
+                        <ShimmerButton size="sm" className="custom_shimmer" />
+                      ) : (
+                        <>
+                          {activeCount}
+                          {"   "}
+                          <span className="dashBoard_ref_area1_cont1_div1_cont2_span">
+                            {" "}
+                            ref(s){" "}
+                          </span>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
-                <div className="dashBoard_ref_area1_cont1_cont1">
-                  <div className="dashBoard_ref_area1_cont1_icon_div">
-                    <GroupAddIcon className="stackedCoin_icon" />
-                  </div>
-                  <div className="dashBoard_ref_area1_cont1_div1">
-                    <div className="dashBoard_ref_area1_cont1_div1_1">
-                      <div className="dashBoard_ref_area1_cont1_div1_cont1">
-                        Inactive Referral(s)
-                      </div>
-                      <div className="dashBoard_ref_area1_cont1_div1_cont2">
-                        {componentLoading ? (
-                          <ShimmerButton size="sm" className="custom_shimmer" />
-                        ) : (
-                          <>
-                            {inactiveCount}{" "}
-                            <span className="dashBoard_ref_area1_cont1_div1_cont2_span">
-                              {" "}
-                              ref(s){" "}
-                            </span>
-                          </>
-                        )}
-                      </div>
+              </div>
+              <div className="dashBoard_ref_area1_cont1_cont1">
+                <div className="dashBoard_ref_area1_cont1_icon_div">
+                  <GroupAddIcon className="stackedCoin_icon" />
+                </div>
+                <div className="dashBoard_ref_area1_cont1_div1">
+                  <div className="dashBoard_ref_area1_cont1_div1_1">
+                    <div className="dashBoard_ref_area1_cont1_div1_cont1">
+                      Inactive Referral(s)
+                    </div>
+                    <div className="dashBoard_ref_area1_cont1_div1_cont2">
+                      {componentLoading ? (
+                        <ShimmerButton size="sm" className="custom_shimmer" />
+                      ) : (
+                        <>
+                          {inactiveCount}{" "}
+                          <span className="dashBoard_ref_area1_cont1_div1_cont2_span">
+                            {" "}
+                            ref(s){" "}
+                          </span>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="dashBoard_ref_area1_cont2">
-              <div className="dashBoard_ref_area1_cont1_icon_div">
-                <GroupAddIcon className="stackedCoin_icon" />
+          </div>
+          <div className="dashBoard_ref_area1_cont2">
+            <div className="dashBoard_ref_area1_cont1_icon_div">
+              <GroupAddIcon className="stackedCoin_icon" />
+            </div>
+            <div className="dashBoard_ref_area1_cont1_div1">
+              <div className="dashBoard_ref_area1_cont1_div1_1">
+                <div className="dashBoard_ref_area1_cont1_div1_cont1">
+                  Total Referrals
+                </div>
+                <div className="dashBoard_ref_area1_cont1_div1_cont2">
+                  {componentLoading ? (
+                    <ShimmerButton size="sm" className="custom_shimmer" />
+                  ) : (
+                    <>
+                      {referalStat.count}{" "}
+                      <span className="dashBoard_ref_area1_cont1_div1_cont2_span">
+                        {" "}
+                        ref(s){" "}
+                      </span>
+                    </>
+                  )}
+                </div>
               </div>
-              <div className="dashBoard_ref_area1_cont1_div1">
-                <div className="dashBoard_ref_area1_cont1_div1_1">
-                  <div className="dashBoard_ref_area1_cont1_div1_cont1">
+            </div>
+          </div>
+        </div>
+        <div className="dashBoard_ref_area2">
+          <div className="dashBoard_ref_area2_cont1">
+            <div className="dashBoard_ref_area2_cont1_head">
+              <span className="leaderBoard_icon_div">
+                <MilitaryTechIcon className="leaderBoard_icon" />
+              </span>
+              Leader board
+            </div>
+            <span className="table_hr"></span>
+            {componentLoading2 ? (
+              <div className="dashBoard_ref_area2_cont1_body">
+                <div className="dashBoard_ref_area2_cont1_body_div_head">
+                  <div className="dashBoard_ref_area2_cont1_body_div_head_cont1 dashBoard_ref_area2_cont1_body_div_head_cont1_first">
+                    Rank
+                  </div>
+                  <div className="dashBoard_ref_area2_cont1_body_div_head_cont1 ">
+                    Username
+                  </div>
+
+                  <div className="dashBoard_ref_area2_cont1_body_div_head_cont1 dashBoard_ref_area2_cont1_body_div_head_cont1_last">
                     Total Referrals
                   </div>
-                  <div className="dashBoard_ref_area1_cont1_div1_cont2">
-                    {componentLoading ? (
+                </div>
+                <div
+                  className="dashBoard_ref_area2_cont1_body_cont"
+                  ref={containerRef}
+                >
+                  <div className="dashBoard_ref_area2_cont1_body_div1">
+                    <div className="dashBoard_ref_area2_cont1_body_div1_cont1 dashBoard_ref_area2_cont1_body_div1_cont1_first">
                       <ShimmerButton size="sm" className="custom_shimmer" />
-                    ) : (
-                      <>
-                        {referalStat.count}{" "}
-                        <span className="dashBoard_ref_area1_cont1_div1_cont2_span">
-                          {" "}
-                          ref(s){" "}
-                        </span>
-                      </>
-                    )}
+                    </div>
+                    <div className="dashBoard_ref_area2_cont1_body_div1_cont1 ">
+                      <ShimmerButton size="sm" className="custom_shimmer" />
+                    </div>
+
+                    <div className="dashBoard_ref_area2_cont1_body_div1_cont1 dashBoard_ref_area2_cont1_body_div1_cont1_last">
+                      <ShimmerButton size="sm" className="custom_shimmer" />
+                    </div>
+                  </div>
+                  <div className="dashBoard_ref_area2_cont1_body_div1">
+                    <div className="dashBoard_ref_area2_cont1_body_div1_cont1 dashBoard_ref_area2_cont1_body_div1_cont1_first">
+                      <ShimmerButton size="sm" className="custom_shimmer" />
+                    </div>
+                    <div className="dashBoard_ref_area2_cont1_body_div1_cont1 ">
+                      <ShimmerButton size="sm" className="custom_shimmer" />
+                    </div>
+
+                    <div className="dashBoard_ref_area2_cont1_body_div1_cont1 dashBoard_ref_area2_cont1_body_div1_cont1_last">
+                      <ShimmerButton size="sm" className="custom_shimmer" />
+                    </div>
+                  </div>
+                  <div className="dashBoard_ref_area2_cont1_body_div1">
+                    <div className="dashBoard_ref_area2_cont1_body_div1_cont1 dashBoard_ref_area2_cont1_body_div1_cont1_first">
+                      <ShimmerButton size="sm" className="custom_shimmer" />
+                    </div>
+                    <div className="dashBoard_ref_area2_cont1_body_div1_cont1 ">
+                      <ShimmerButton size="sm" className="custom_shimmer" />
+                    </div>
+
+                    <div className="dashBoard_ref_area2_cont1_body_div1_cont1 dashBoard_ref_area2_cont1_body_div1_cont1_last">
+                      <ShimmerButton size="sm" className="custom_shimmer" />
+                    </div>
+                  </div>
+                  <div className="dashBoard_ref_area2_cont1_body_div1">
+                    <div className="dashBoard_ref_area2_cont1_body_div1_cont1 dashBoard_ref_area2_cont1_body_div1_cont1_first">
+                      <ShimmerButton size="sm" className="custom_shimmer" />
+                    </div>
+                    <div className="dashBoard_ref_area2_cont1_body_div1_cont1 ">
+                      <ShimmerButton size="sm" className="custom_shimmer" />
+                    </div>
+
+                    <div className="dashBoard_ref_area2_cont1_body_div1_cont1 dashBoard_ref_area2_cont1_body_div1_cont1_last">
+                      <ShimmerButton size="sm" className="custom_shimmer" />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            ) : (
+              <div className="dashBoard_ref_area2_cont1_body">
+                <div className="dashBoard_ref_area2_cont1_body_div_head">
+                  <div className="dashBoard_ref_area2_cont1_body_div_head_cont1 dashBoard_ref_area2_cont1_body_div_head_cont1_first">
+                    Rank
+                  </div>
+                  <div className="dashBoard_ref_area2_cont1_body_div_head_cont1 ">
+                    Username
+                  </div>
+
+                  <div className="dashBoard_ref_area2_cont1_body_div_head_cont1 dashBoard_ref_area2_cont1_body_div_head_cont1_last">
+                    Total Referrals
+                  </div>
+                </div>
+                <div
+                  className="dashBoard_ref_area2_cont1_body_cont"
+                  ref={containerRef}
+                >
+                  {leaderBoard.length <= 0 ? (
+                    <div className="no_loans_div">
+                      <div className="no_loans_div_cont">
+                        <NodataComp />
+                      </div>{" "}
+                    </div>
+                  ) : (
+                    leaderBoard
+                      .slice(0, itemsToShow)
+                      .sort((a, b) => b.refCount - a.refCount)
+                      .map((data, index) => (
+                        <div
+                          className="dashBoard_ref_area2_cont1_body_div1"
+                          // id={data.id}
+                        >
+                          <div className="dashBoard_ref_area2_cont1_body_div1_cont1 dashBoard_ref_area2_cont1_body_div1_cont1_first">
+                            {index == 0 ? (
+                              <MilitaryTechIcon
+                                style={{ color: "#e0ac01" }}
+                                className="rewardTable_body_row_data_first_icon"
+                              />
+                            ) : index == 1 ? (
+                              <MilitaryTechIcon
+                                style={{ color: "#C0C0C0" }}
+                                className="rewardTable_body_row_data_first_icon"
+                              />
+                            ) : index == 2 ? (
+                              <MilitaryTechIcon
+                                style={{ color: "#CD7F32" }}
+                                className="rewardTable_body_row_data_first_icon"
+                              />
+                            ) : (
+                              <MilitaryTechIcon
+                                style={{ color: "#61607d" }}
+                                className="rewardTable_body_row_data_first_icon"
+                              />
+                            )}
+                            {index + 1}
+                          </div>
+                          <div className="dashBoard_ref_area2_cont1_body_div1_cont1 ">
+                            @{data.address.slice(0, 4) + "..."}
+                          </div>
+
+                          <div className="dashBoard_ref_area2_cont1_body_div1_cont1 dashBoard_ref_area2_cont1_body_div1_cont1_last">
+                            {data.refCount} ref(s)
+                          </div>
+                        </div>
+                      ))
+                  )}
+                </div>
+                {itemsToShow < leaderBoard.length && (
+                  <button
+                    onClick={displayNextItems}
+                    className="dashBoard_ref_area2_cont1_body_cont_btn"
+                    disabled={isLoading2}
+                  >
+                    {isLoading2 ? (
+                      <ScaleLoader color="#366e51" height={15} />
+                    ) : (
+                      "  Load More"
+                    )}
+                  </button>
+                )}
+              </div>
+            )}
           </div>
-          <div className="dashBoard_ref_area2">
-            <div className="dashBoard_ref_area2_cont1">
+          <div className="dashBoard_ref_area2_cont2">
+            <div className="dashBoard_ref_area2_cont2_div1">
               <div className="dashBoard_ref_area2_cont1_head">
                 <span className="leaderBoard_icon_div">
-                  <MilitaryTechIcon className="leaderBoard_icon" />
+                  <GroupsIcon className="leaderBoard_icon" />
                 </span>
-                Leader board
+                My Referrals
               </div>
               <span className="table_hr"></span>
-              {componentLoading2 ? (
+              {componentLoading3 ? (
                 <div className="dashBoard_ref_area2_cont1_body">
                   <div className="dashBoard_ref_area2_cont1_body_div_head">
-                    <div className="dashBoard_ref_area2_cont1_body_div_head_cont1 dashBoard_ref_area2_cont1_body_div_head_cont1_first">
-                      Rank
+                    <div className="dashBoard_ref_area2_cont1_body_div_head_cont1_first">
+                      Address
                     </div>
-                    <div className="dashBoard_ref_area2_cont1_body_div_head_cont1 ">
-                      Username
-                    </div>
-
-                    <div className="dashBoard_ref_area2_cont1_body_div_head_cont1 dashBoard_ref_area2_cont1_body_div_head_cont1_last">
-                      Total Referrals
+                    <div className="dashBoard_ref_area2_cont1_body_div_head_cont1_last">
+                      Status
                     </div>
                   </div>
-                  <div
-                    className="dashBoard_ref_area2_cont1_body_cont"
-                    ref={containerRef}
-                  >
-                    <div className="dashBoard_ref_area2_cont1_body_div1">
-                      <div className="dashBoard_ref_area2_cont1_body_div1_cont1 dashBoard_ref_area2_cont1_body_div1_cont1_first">
-                        <ShimmerButton size="sm" className="custom_shimmer" />
-                      </div>
-                      <div className="dashBoard_ref_area2_cont1_body_div1_cont1 ">
-                        <ShimmerButton size="sm" className="custom_shimmer" />
-                      </div>
-
-                      <div className="dashBoard_ref_area2_cont1_body_div1_cont1 dashBoard_ref_area2_cont1_body_div1_cont1_last">
-                        <ShimmerButton size="sm" className="custom_shimmer" />
-                      </div>
+                  <div className="dashBoard_ref_area2_cont1_body_div1">
+                    <div className="dashBoard_ref_area2_cont1_body_div1_cont1_first">
+                      <ShimmerButton size="sm" className="custom_shimmer" />
                     </div>
-                    <div className="dashBoard_ref_area2_cont1_body_div1">
-                      <div className="dashBoard_ref_area2_cont1_body_div1_cont1 dashBoard_ref_area2_cont1_body_div1_cont1_first">
-                        <ShimmerButton size="sm" className="custom_shimmer" />
-                      </div>
-                      <div className="dashBoard_ref_area2_cont1_body_div1_cont1 ">
-                        <ShimmerButton size="sm" className="custom_shimmer" />
-                      </div>
-
-                      <div className="dashBoard_ref_area2_cont1_body_div1_cont1 dashBoard_ref_area2_cont1_body_div1_cont1_last">
-                        <ShimmerButton size="sm" className="custom_shimmer" />
-                      </div>
+                    <div className="dashBoard_ref_area2_cont1_body_div1_cont1_last">
+                      <ShimmerButton size="sm" className="custom_shimmer" />
                     </div>
-                    <div className="dashBoard_ref_area2_cont1_body_div1">
-                      <div className="dashBoard_ref_area2_cont1_body_div1_cont1 dashBoard_ref_area2_cont1_body_div1_cont1_first">
-                        <ShimmerButton size="sm" className="custom_shimmer" />
-                      </div>
-                      <div className="dashBoard_ref_area2_cont1_body_div1_cont1 ">
-                        <ShimmerButton size="sm" className="custom_shimmer" />
-                      </div>
-
-                      <div className="dashBoard_ref_area2_cont1_body_div1_cont1 dashBoard_ref_area2_cont1_body_div1_cont1_last">
-                        <ShimmerButton size="sm" className="custom_shimmer" />
-                      </div>
+                  </div>
+                  <div className="dashBoard_ref_area2_cont1_body_div1">
+                    <div className="dashBoard_ref_area2_cont1_body_div1_cont1_first">
+                      <ShimmerButton size="sm" className="custom_shimmer" />
                     </div>
-                    <div className="dashBoard_ref_area2_cont1_body_div1">
-                      <div className="dashBoard_ref_area2_cont1_body_div1_cont1 dashBoard_ref_area2_cont1_body_div1_cont1_first">
-                        <ShimmerButton size="sm" className="custom_shimmer" />
-                      </div>
-                      <div className="dashBoard_ref_area2_cont1_body_div1_cont1 ">
-                        <ShimmerButton size="sm" className="custom_shimmer" />
-                      </div>
-
-                      <div className="dashBoard_ref_area2_cont1_body_div1_cont1 dashBoard_ref_area2_cont1_body_div1_cont1_last">
-                        <ShimmerButton size="sm" className="custom_shimmer" />
-                      </div>
+                    <div className="dashBoard_ref_area2_cont1_body_div1_cont1_last">
+                      <ShimmerButton size="sm" className="custom_shimmer" />
+                    </div>
+                  </div>
+                  <div className="dashBoard_ref_area2_cont1_body_div1">
+                    <div className="dashBoard_ref_area2_cont1_body_div1_cont1_first">
+                      <ShimmerButton size="sm" className="custom_shimmer" />
+                    </div>
+                    <div className="dashBoard_ref_area2_cont1_body_div1_cont1_last">
+                      <ShimmerButton size="sm" className="custom_shimmer" />
+                    </div>
+                  </div>
+                  <div className="dashBoard_ref_area2_cont1_body_div1">
+                    <div className="dashBoard_ref_area2_cont1_body_div1_cont1_first">
+                      <ShimmerButton size="sm" className="custom_shimmer" />
+                    </div>
+                    <div className="dashBoard_ref_area2_cont1_body_div1_cont1_last">
+                      <ShimmerButton size="sm" className="custom_shimmer" />
                     </div>
                   </div>
                 </div>
               ) : (
                 <div className="dashBoard_ref_area2_cont1_body">
                   <div className="dashBoard_ref_area2_cont1_body_div_head">
-                    <div className="dashBoard_ref_area2_cont1_body_div_head_cont1 dashBoard_ref_area2_cont1_body_div_head_cont1_first">
-                      Rank
-                    </div>
-                    <div className="dashBoard_ref_area2_cont1_body_div_head_cont1 ">
+                    <div className="dashBoard_ref_area2_cont1_body_div_head_cont1_first">
                       Username
                     </div>
-
-                    <div className="dashBoard_ref_area2_cont1_body_div_head_cont1 dashBoard_ref_area2_cont1_body_div_head_cont1_last">
-                      Total Referrals
+                    <div className="dashBoard_ref_area2_cont1_body_div_head_cont1_last">
+                      Status
+                    </div>
+                    <div className="dashBoard_ref_area2_cont1_body_div_head_cont1_last">
+                      Volume
                     </div>
                   </div>
-                  <div
-                    className="dashBoard_ref_area2_cont1_body_cont"
-                    ref={containerRef}
-                  >
-                    {leaderBoard.length <= 0 ? (
-                      <div className="no_loans_div">
-                        <div className="no_loans_div_cont">
-                          <NodataComp />
-                        </div>{" "}
+                  {referalStat.rows.length <= 0 ? (
+                    <div className="no_loans_div">
+                      <div className="no_loans_div_cont">
+                        <NodataComp />
+                      </div>{" "}
+                    </div>
+                  ) : (
+                    referalStat.rows.slice(0, 5).map((data) => (
+                      <div className="dashBoard_ref_area2_cont1_body_div1">
+                        <div className="dashBoard_ref_area2_cont1_body_div1_cont1_first">
+                          @{data.address}
+                        </div>
+                        <div className="dashBoard_ref_area2_cont1_body_div1_cont1_last">
+                          {data.state}
+                        </div>
+                        <div className="dashBoard_ref_area2_cont1_body_div1_cont1_last">
+                          {parseFloat(data.volume).toFixed(2)}
+                        </div>
                       </div>
-                    ) : (
-                      leaderBoard
-                        .slice(0, itemsToShow)
-                        .sort((a, b) => b.refCount - a.refCount)
-                        .map((data, index) => (
-                          <div
-                            className="dashBoard_ref_area2_cont1_body_div1"
-                            // id={data.id}
-                          >
-                            <div className="dashBoard_ref_area2_cont1_body_div1_cont1 dashBoard_ref_area2_cont1_body_div1_cont1_first">
-                              {index == 0 ? (
-                                <MilitaryTechIcon
-                                  style={{ color: "#e0ac01" }}
-                                  className="rewardTable_body_row_data_first_icon"
-                                />
-                              ) : index == 1 ? (
-                                <MilitaryTechIcon
-                                  style={{ color: "#C0C0C0" }}
-                                  className="rewardTable_body_row_data_first_icon"
-                                />
-                              ) : index == 2 ? (
-                                <MilitaryTechIcon
-                                  style={{ color: "#CD7F32" }}
-                                  className="rewardTable_body_row_data_first_icon"
-                                />
-                              ) : (
-                                <MilitaryTechIcon
-                                  style={{ color: "#61607d" }}
-                                  className="rewardTable_body_row_data_first_icon"
-                                />
-                              )}
-                              {index + 1}
-                            </div>
-                            <div className="dashBoard_ref_area2_cont1_body_div1_cont1 ">
-                              @{data.address.slice(0, 4) + "..."}
-                            </div>
-
-                            <div className="dashBoard_ref_area2_cont1_body_div1_cont1 dashBoard_ref_area2_cont1_body_div1_cont1_last">
-                              {data.refCount} ref(s)
-                            </div>
-                          </div>
-                        ))
-                    )}
-                  </div>
-                  {itemsToShow < leaderBoard.length && (
-                    <button
-                      onClick={displayNextItems}
-                      className="dashBoard_ref_area2_cont1_body_cont_btn"
-                      disabled={isLoading2}
-                    >
-                      {isLoading2 ? (
-                        <ScaleLoader color="#366e51" height={15} />
-                      ) : (
-                        "  Load More"
-                      )}
-                    </button>
+                    ))
                   )}
                 </div>
               )}
             </div>
-            <div className="dashBoard_ref_area2_cont2">
-              <div className="dashBoard_ref_area2_cont2_div1">
-                <div className="dashBoard_ref_area2_cont1_head">
-                  <span className="leaderBoard_icon_div">
-                    <GroupsIcon className="leaderBoard_icon" />
-                  </span>
-                  My Referrals
-                </div>
-                <span className="table_hr"></span>
-                {componentLoading3 ? (
-                  <div className="dashBoard_ref_area2_cont1_body">
-                    <div className="dashBoard_ref_area2_cont1_body_div_head">
-                      <div className="dashBoard_ref_area2_cont1_body_div_head_cont1_first">
-                        Address
-                      </div>
-                      <div className="dashBoard_ref_area2_cont1_body_div_head_cont1_last">
-                        Status
-                      </div>
-                    </div>
-                    <div className="dashBoard_ref_area2_cont1_body_div1">
-                      <div className="dashBoard_ref_area2_cont1_body_div1_cont1_first">
-                        <ShimmerButton size="sm" className="custom_shimmer" />
-                      </div>
-                      <div className="dashBoard_ref_area2_cont1_body_div1_cont1_last">
-                        <ShimmerButton size="sm" className="custom_shimmer" />
-                      </div>
-                    </div>
-                    <div className="dashBoard_ref_area2_cont1_body_div1">
-                      <div className="dashBoard_ref_area2_cont1_body_div1_cont1_first">
-                        <ShimmerButton size="sm" className="custom_shimmer" />
-                      </div>
-                      <div className="dashBoard_ref_area2_cont1_body_div1_cont1_last">
-                        <ShimmerButton size="sm" className="custom_shimmer" />
-                      </div>
-                    </div>
-                    <div className="dashBoard_ref_area2_cont1_body_div1">
-                      <div className="dashBoard_ref_area2_cont1_body_div1_cont1_first">
-                        <ShimmerButton size="sm" className="custom_shimmer" />
-                      </div>
-                      <div className="dashBoard_ref_area2_cont1_body_div1_cont1_last">
-                        <ShimmerButton size="sm" className="custom_shimmer" />
-                      </div>
-                    </div>
-                    <div className="dashBoard_ref_area2_cont1_body_div1">
-                      <div className="dashBoard_ref_area2_cont1_body_div1_cont1_first">
-                        <ShimmerButton size="sm" className="custom_shimmer" />
-                      </div>
-                      <div className="dashBoard_ref_area2_cont1_body_div1_cont1_last">
-                        <ShimmerButton size="sm" className="custom_shimmer" />
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="dashBoard_ref_area2_cont1_body">
-                    <div className="dashBoard_ref_area2_cont1_body_div_head">
-                      <div className="dashBoard_ref_area2_cont1_body_div_head_cont1_first">
-                        Username
-                      </div>
-                      <div className="dashBoard_ref_area2_cont1_body_div_head_cont1_last">
-                        Status
-                      </div>
-                      <div className="dashBoard_ref_area2_cont1_body_div_head_cont1_last">
-                        Volume
-                      </div>
-                    </div>
-                    {referalStat.rows.length <= 0 ? (
-                      <div className="no_loans_div">
-                        <div className="no_loans_div_cont">
-                          <NodataComp />
-                        </div>{" "}
-                      </div>
-                    ) : (
-                      referalStat.rows.slice(0, 5).map((data) => (
-                        <div className="dashBoard_ref_area2_cont1_body_div1">
-                          <div className="dashBoard_ref_area2_cont1_body_div1_cont1_first">
-                            @{data.address}
-                          </div>
-                          <div className="dashBoard_ref_area2_cont1_body_div1_cont1_last">
-                            {data.state}
-                          </div>
-                          <div className="dashBoard_ref_area2_cont1_body_div1_cont1_last">
-                            {parseFloat(data.volume).toFixed(2)}
-                          </div>
-                        </div>
-                      ))
-                    )}
-                  </div>
-                )}
+            <div className="dashBoard_ref_area2_cont2_div2">
+              <div className="dashBoard_ref_area2_cont2_div2_head">
+                Copy your referral code and invite friends to earn more.
               </div>
-              <div className="dashBoard_ref_area2_cont2_div2">
-                <div className="dashBoard_ref_area2_cont2_div2_head">
-                  Copy your referral code and invite friends to earn more.
-                </div>
-                <input
-                  type="text"
-                  value={refCode}
-                  className="referral_default_value"
-                  id="myInput"
-                />
-                <div className="refferal_copy_btns">
-                  <button
-                    className="ref_btn"
-                    onClick={copyText}
-                    onMouseOut={outFunc}
-                    disabled={Disable}
-                  >
-                    Copy referral code
-                    <span className="tooltiptext" id="myTooltip"></span>
-                  </button>
-                </div>
+              <input
+                type="text"
+                value={refCode}
+                className="referral_default_value"
+                id="myInput"
+              />
+              <div className="refferal_copy_btns">
+                <button
+                  className="ref_btn"
+                  onClick={copyText}
+                  onMouseOut={outFunc}
+                  disabled={Disable}
+                >
+                  Copy referral code
+                  <span className="tooltiptext" id="myTooltip"></span>
+                </button>
               </div>
             </div>
           </div>
         </div>
-        <div class="background_gradient-parent">
-          <div class="background_gradient"></div>
-        </div>
-        <img
-          src="/img/dark_home_sec_bg.svg"
-          alt=""
-          className="home_div_section1_bg"
-        />
-        {pinModalref ? (
-          <WebPin
-            // isLoading={loading}
-            // btnFunc={() => WithdrawReferralEarn("REFERRAL")}
-            pinTitle="Enter Pin to validate Transaction"
-            pinPara="Input your pin to complete this transaction."
-            btnFuncTxt="Proceed"
-            handleOnComplete={(e) => {
-              const a = e.join("");
-              setPin(a);
-              return;
-            }}
-            toggleWebpin={() => {
-              setPinModalref(false);
-            }}
-          />
-        ) : null}
-        {pinModalsales ? (
-          <WebPin
-            // isLoading={loading}
-            // btnFunc={() => WithdrawReferralEarn("PURCHASE")}
-            pinTitle="Enter Pin to validate Transaction"
-            pinPara="Input your pin to complete this transaction."
-            btnFuncTxt="Proceed"
-            handleOnComplete={(e) => {
-              const a = e.join("");
-              setPin(a);
-              return;
-            }}
-            toggleWebpin={() => {
-              setPinModalsales(false);
-            }}
-          />
-        ) : null}
-        {successModal ? (
-          <SuccessModal
-            SuccesTxt={successTxt}
-            successFunc={() => {
-              window.location.href = "/dashboard/wallet";
-            }}
-          />
-        ) : null}
-        {errorModal ? (
-          <ErrorModal
-            ErrorTxt={errorTxt}
-            errorFunc={() => {
-              setErrorModal(false);
-            }}
-          />
-        ) : null}
       </div>
+      <div class="background_gradient-parent">
+        <div class="background_gradient"></div>
+      </div>
+      <img
+        src="/img/dark_home_sec_bg.svg"
+        alt=""
+        className="home_div_section1_bg"
+      />
+      {pinModalref ? (
+        <WebPin
+          // isLoading={loading}
+          // btnFunc={() => WithdrawReferralEarn("REFERRAL")}
+          pinTitle="Enter Pin to validate Transaction"
+          pinPara="Input your pin to complete this transaction."
+          btnFuncTxt="Proceed"
+          handleOnComplete={(e) => {
+            const a = e.join("");
+            setPin(a);
+            return;
+          }}
+          toggleWebpin={() => {
+            setPinModalref(false);
+          }}
+        />
+      ) : null}
+      {pinModalsales ? (
+        <WebPin
+          // isLoading={loading}
+          // btnFunc={() => WithdrawReferralEarn("PURCHASE")}
+          pinTitle="Enter Pin to validate Transaction"
+          pinPara="Input your pin to complete this transaction."
+          btnFuncTxt="Proceed"
+          handleOnComplete={(e) => {
+            const a = e.join("");
+            setPin(a);
+            return;
+          }}
+          toggleWebpin={() => {
+            setPinModalsales(false);
+          }}
+        />
+      ) : null}
+      {successModal ? (
+        <SuccessModal
+          SuccesTxt={successTxt}
+          successFunc={() => {
+            window.location.href = "/dashboard/wallet";
+          }}
+        />
+      ) : null}
+      {errorModal ? (
+        <ErrorModal
+          ErrorTxt={errorTxt}
+          errorFunc={() => {
+            setErrorModal(false);
+          }}
+        />
+      ) : null}
+
       {pinModalref ? (
         <WebPin
           // isLoading={loading}

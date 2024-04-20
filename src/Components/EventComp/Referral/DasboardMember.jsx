@@ -31,6 +31,11 @@ const DasboardMember = ({ refCode, componentLoading, refAmount }) => {
             <ShimmerButton size="sm" className="custom_shimmer" />
           ) : (
             <>
+              <img
+                src="/img/point_gif_coin.gif"
+                alt=""
+                className="event_sideBar_div_area_last_div_cont1_title_gif"
+              />{" "}
               {parseFloat(refAmount).toFixed(2)}
               <span className="dash_member_sub_div_1_txt_conts_2_span">xp</span>
             </>

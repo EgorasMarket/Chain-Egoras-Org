@@ -7,6 +7,7 @@ import EventHome from "./EventHome";
 import EventSideBar from "./EventSideBar";
 import DashboardReferral from "./Referral/DashboardReferral";
 import LeaderBoard from "./LeaderBoard/LeaderBoard";
+import EventHeader from "./EventHeader";
 const Event = () => {
   return (
     <div className="event_div">
@@ -15,6 +16,9 @@ const Event = () => {
         <div className="event_container">
           <div className="event_div_area">
             <EventSideBar />
+            <div className="event_mobile_header">
+              <EventHeader />
+            </div>
             <div className="event_div_area_body">
               <Routes>
                 <Route path="/event" element={<EventHome />} />

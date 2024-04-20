@@ -97,7 +97,9 @@ const Header = () => {
       {linksActive === "/event" ? null : (
         <div className="header_partial_div">
           Egochain Mainnet Airdrop is live{" "}
-          <button className="header_partial_div_btn">Get started</button>
+          <a href="/join/event">
+            <button className="header_partial_div_btn">Get started</button>
+          </a>
         </div>
       )}
       {linksActive === "/event" ? null : (
@@ -240,7 +242,9 @@ const Header = () => {
                   Developers
                   <CallMadeIcon className="header_div_area_2_link1_icon" />
                 </a>
-                <button className="Airdrop_head_btn">Join Airdrop</button>
+                <a href="/join/event">
+                  <button className="Airdrop_head_btn">Join Airdrop</button>
+                </a>
                 <MenuIcon
                   className="header_div_area_2_menu_icon"
                   onClick={ToggleHeaderMenu}
@@ -352,6 +356,11 @@ const Header = () => {
                     {" "}
                     Stake
                     <CallMadeIcon className="header_div_area_2_link1_icon" />
+                  </a>
+                  <a href="/join/event" style={{ width: "100%" }}>
+                    <button className="Airdrop_head_btn_mobile">
+                      Join Airdrop
+                    </button>
                   </a>
                   {/* <div className="headerMenuDiv_cont_body_div">
                 <a

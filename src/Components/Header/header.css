@@ -264,7 +264,25 @@ button.Airdrop_head_btn {
 /* ================= */
 /* ================= */
 /* ================= */
+.Airdrop_head_btn_mobile {
+  display: none;
+}
 @media (max-width: 999px) {
+  .Airdrop_head_btn {
+    display: none;
+  }
+  .Airdrop_head_btn_mobile {
+    margin-bottom: 5em;
+    padding: 15px 10px;
+    width: 100%;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    background: #fff;
+    border: none;
+    color: #000;
+    display: block;
+  }
   .header_div_area_2_div {
     display: none;
   }
@@ -322,6 +340,7 @@ button.Airdrop_head_btn {
     align-items: center;
     height: 100%;
     margin-top: 1em;
+    overflow: auto;
   }
   .headerMenuDiv_cont_body_link1 {
     width: 100%;
@@ -348,7 +367,17 @@ button.Airdrop_head_btn {
     margin: 0;
   }
   .header_partial_div {
-    padding: 10px 0px;
+    padding: 10px 20px;
+    font-size: 18px;
+    width: -webkit-fill-available;
+  }
+  .header_partial_div_btn {
+    margin-left: 1em;
+    padding: 13px 7px;
+    width: 120px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 500;
     font-size: 14px;
   }
 }

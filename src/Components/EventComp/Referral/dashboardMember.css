@@ -106,6 +106,8 @@
   margin: 10px 0px;
   position: relative;
   z-index: 2;
+  display: flex;
+  align-items: center;
 }
 .dash_member_sub_div_1_txt_conts_2_span {
   font-size: 32px;

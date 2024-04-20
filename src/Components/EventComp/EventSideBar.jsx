@@ -25,6 +25,22 @@ const EventSideBar = () => {
   const ToggleActiveTab = (e) => {
     setActiveTab(e.currentTarget.id);
   };
+  const currentPage = window.location.pathname;
+  useEffect(() => {
+    if (currentPage === "/event") {
+      setActiveTab("home");
+      return;
+    }
+    if (currentPage === "/event/leaderboard") {
+      setActiveTab("rank");
+      return;
+    }
+    if (currentPage === "/event/referral") {
+      setActiveTab("ref");
+      return;
+    }
+  }, [currentPage]);
+
   return (
     <div className="event_sideBar_div">
       <div className="event_sideBar_div_area">

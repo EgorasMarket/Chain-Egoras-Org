@@ -695,6 +695,12 @@
   .welcome_bonus_div {
     align-items: flex-start !important;
   }
+  .dash_member_sub_div_1_txt_conts_2 {
+    font-size: 42px;
+  }
+  .dash_member_sub_div_1_head1 {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 500px) {

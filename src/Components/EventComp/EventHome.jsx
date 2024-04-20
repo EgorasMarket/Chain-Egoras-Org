@@ -108,9 +108,11 @@ const EventHome = () => {
             <div className="eventHome_div_section3_area_cont1_para">
               Bridge any token to egochain with ease on egoswap.io
             </div>
-            <button className="home_div_section1_area_1_div2_btn">
-              Bridge to Egochain
-            </button>
+            <a href="https://egoswap.io" target="_blank">
+              <button className="home_div_section1_area_1_div2_btn">
+                Bridge to Egochain
+              </button>
+            </a>
             <img
               src="/img/bridge_bg.jpeg"
               alt=""
@@ -127,9 +129,12 @@ const EventHome = () => {
             <div className="eventHome_div_section3_area_cont1_para">
               Trade tokens on pluto.ag
             </div>
-            <button className="home_div_section1_area_1_div2_btn">
-              Trade on Pluto
-            </button>
+            <a href="https://pluto.ag" target="_blank">
+              <button className="home_div_section1_area_1_div2_btn">
+                Trade on Pluto
+              </button>
+            </a>
+
             <img
               src="/img/bridge_bg2.jpeg"
               alt=""
