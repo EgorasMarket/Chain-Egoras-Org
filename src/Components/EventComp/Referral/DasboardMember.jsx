@@ -31,10 +31,8 @@ const DasboardMember = ({ refCode, componentLoading, refAmount }) => {
             <ShimmerButton size="sm" className="custom_shimmer" />
           ) : (
             <>
-              {numberWithCommas(parseFloat(refAmount).toFixed(2))}{" "}
-              <span className="dash_member_sub_div_1_txt_conts_2_span">
-                egax
-              </span>
+              {parseFloat(refAmount).toFixed(2)}
+              <span className="dash_member_sub_div_1_txt_conts_2_span">xp</span>
             </>
           )}
         </div>
