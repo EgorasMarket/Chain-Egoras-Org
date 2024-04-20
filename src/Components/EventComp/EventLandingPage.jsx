@@ -33,7 +33,7 @@ const EventLandingPage = () => {
       setIsloading(false);
       localStorage.setItem("wallet", wallet);
 
-      window.location.href = "http://localhost:5173/event";
+      window.location.href = "/event";
       localStorage.setItem("refCode", res.data.userInfo.referralId);
       return;
     }
@@ -203,24 +203,31 @@ const EventLandingPage = () => {
                 onChange={(e) => setRefCode(e.target.value)}
               />
             </div>
-            <button
-              onClick={enrollInEvent}
-              className="eventModal_cont_btn"
-              disabled={wallet.length < 42 ? true : false}
-            >
-              {isLoading ? (
-                <ScaleLoader color="#366e51" height={15} />
-              ) : (
-                <>
-                  {" "}
-                  {wallet.length < 42
-                    ? "Invalid address"
-                    : wallet == ""
-                    ? "input address"
-                    : "Enter"}
-                </>
-              )}
-            </button>
+            {wallet == "" ? (
+              <button className="eventModal_cont_btn" disabled={true}>
+                Input address
+              </button>
+            ) : (
+              <button
+                onClick={enrollInEvent}
+                className="eventModal_cont_btn"
+                disabled={wallet.length < 42 ? true : false}
+              >
+                {isLoading ? (
+                  <ScaleLoader color="#366e51" height={15} />
+                ) : (
+                  <>
+                    {" "}
+                    {wallet.length < 42
+                      ? "Invalid address"
+                      : wallet == ""
+                      ? "input address"
+                      : "Enter"}
+                  </>
+                )}
+              </button>
+            )}
+
             <div className="eventModal_cont_last_para">
               Enter your egochain wallet address to view your points based off
               of volume of transactions your wallet has done on the egochain
