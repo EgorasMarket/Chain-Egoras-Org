@@ -3,6 +3,7 @@ import "./eventlanding.css";
 import Grid from "../Home/Grid";
 import Spline from "@splinetool/react-spline";
 import { CasinoSharp } from "@mui/icons-material";
+import ScaleLoader from "react-spinners/ScaleLoader";
 import CloseIcon from "@mui/icons-material/Close";
 import { ENROLL_EVENT, FETCH_ALL_EVENT_STAT } from "../../constants/api";
 import { useNavigate } from "react-router-dom";
@@ -11,20 +12,36 @@ const EventLandingPage = () => {
   const navigate = useNavigate();
   const [eventModal, setEventModal] = useState(false);
   const [wallet, setWallet] = useState("");
+  const [isLoading, setIsloading] = useState("");
   const [refCode, setRefCode] = useState("");
+  const [stats, setStats] = useState(null);
   const ToggleEventModal = () => {
     setEventModal(!eventModal);
   };
 
   const enrollInEvent = async () => {
+    setIsloading(true);
     if (wallet === "") {
       return;
     }
-    const res = await ENROLL_EVENT({ address: wallet, referralCode: refCode });
-    localStorage.setItem("wallet", wallet);
+    const res = await ENROLL_EVENT({ address: wallet, refCode: refCode });
+
     // localStorage.setItem("refCode", refCode);
-    window.location.href = "http://localhost:5173/event";
+
     console.log(res, "maggi");
+    if (res.code === 200) {
+      setIsloading(false);
+      localStorage.setItem("wallet", wallet);
+
+      window.location.href = "http://localhost:5173/event";
+      localStorage.setItem("refCode", res.data.userInfo.referralId);
+      return;
+    }
+    if (res.code !== 200) {
+      setIsloading(false);
+
+      return;
+    }
   };
 
   const deadline = new Date();
@@ -33,11 +50,16 @@ const EventLandingPage = () => {
   const fetchEventStat = async () => {
     const res = await FETCH_ALL_EVENT_STAT();
     console.log(res, "agba");
+    console.log(res.data.stats, "agba");
+    setStats(res.data.stats[0]);
   };
 
   useEffect(() => {
-    fetchEventStat();
-  }, []);
+    if (stats === null) {
+      fetchEventStat();
+      return;
+    }
+  }, [stats]);
   return (
     <div className="EventLandingPage_div">
       <section className="EventLandingPage_div_section">
@@ -87,20 +109,23 @@ const EventLandingPage = () => {
               </div>
             </div>
             <div className="EventLandingPage_div_cont_stats_div">
-              <div className="EventLandingPage_div_cont_stats_div_1">
+              {/* <div className="EventLandingPage_div_cont_stats_div_1">
                 <div className="EventLandingPage_div_cont_stats_div_1_title">
                   Total Transactions
                 </div>
                 <div className="EventLandingPage_div_cont_stats_div_1_txt">
                   100,000
                 </div>
-              </div>
+              </div> */}
               <div className="EventLandingPage_div_cont_stats_div_1">
                 <div className="EventLandingPage_div_cont_stats_div_1_title">
                   Total Volume
                 </div>
                 <div className="EventLandingPage_div_cont_stats_div_1_txt">
-                  $1,000,000
+                  $
+                  {stats === null
+                    ? 0
+                    : parseFloat(stats.total_volume).toFixed(2)}
                 </div>
               </div>
               <div className="EventLandingPage_div_cont_stats_div_1">
@@ -108,7 +133,7 @@ const EventLandingPage = () => {
                   Total Users
                 </div>
                 <div className="EventLandingPage_div_cont_stats_div_1_txt">
-                  200,000
+                  {stats === null ? 0 : stats.total_records}
                 </div>
               </div>
               <div className="EventLandingPage_div_cont_stats_div_1">
@@ -121,7 +146,7 @@ const EventLandingPage = () => {
                     alt=""
                     className="event_sideBar_div_area_last_div_cont1_title_gif"
                   />{" "}
-                  100,000,000 xp
+                  {stats === null ? 0 : stats.total_points}xp
                 </div>
               </div>
             </div>
@@ -183,11 +208,18 @@ const EventLandingPage = () => {
               className="eventModal_cont_btn"
               disabled={wallet.length < 42 ? true : false}
             >
-              {wallet.length < 42
-                ? "Invalid address"
-                : wallet == ""
-                ? "input address"
-                : "Enter"}
+              {isLoading ? (
+                <ScaleLoader color="#366e51" height={15} />
+              ) : (
+                <>
+                  {" "}
+                  {wallet.length < 42
+                    ? "Invalid address"
+                    : wallet == ""
+                    ? "input address"
+                    : "Enter"}
+                </>
+              )}
             </button>
             <div className="eventModal_cont_last_para">
               Enter your egochain wallet address to view your points based off

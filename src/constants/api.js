@@ -26,7 +26,7 @@ export const FETCH_EVENT_STAT = async (address) => {
 export const FETCH_ALL_EVENT_STAT = async () => {
   try {
     const res = await axios.get(
-      `https://www.saltlake.egoras.com/crypto-event/fetch/all/events`
+      `https://www.saltlake.egoras.com/crypto-event/get/general/stats`
     );
     return res.data;
   } catch (error) {
