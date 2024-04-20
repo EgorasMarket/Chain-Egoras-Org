@@ -4,7 +4,7 @@ import Grid from "../Home/Grid";
 import Spline from "@splinetool/react-spline";
 import { CasinoSharp } from "@mui/icons-material";
 import CloseIcon from "@mui/icons-material/Close";
-import { ENROLL_EVENT } from "../../constants/api";
+import { ENROLL_EVENT, FETCH_ALL_EVENT_STAT } from "../../constants/api";
 import { useNavigate } from "react-router-dom";
 import Timer from "./Timer";
 const EventLandingPage = () => {
@@ -20,16 +20,24 @@ const EventLandingPage = () => {
     if (wallet === "") {
       return;
     }
-    const res = await ENROLL_EVENT({ address: wallet });
+    const res = await ENROLL_EVENT({ address: wallet, referralCode: refCode });
     localStorage.setItem("wallet", wallet);
-    window.location.href = "http://event.localhost:5173/event";
+    // localStorage.setItem("refCode", refCode);
+    window.location.href = "http://localhost:5173/event";
     console.log(res, "maggi");
   };
 
   const deadline = new Date();
   deadline.setHours(14); // 2 PM
   deadline.setMinutes(30); // 30 minutes
+  const fetchEventStat = async () => {
+    const res = await FETCH_ALL_EVENT_STAT();
+    console.log(res, "agba");
+  };
 
+  useEffect(() => {
+    fetchEventStat();
+  }, []);
   return (
     <div className="EventLandingPage_div">
       <section className="EventLandingPage_div_section">
@@ -170,8 +178,16 @@ const EventLandingPage = () => {
                 onChange={(e) => setRefCode(e.target.value)}
               />
             </div>
-            <button onClick={enrollInEvent} className="eventModal_cont_btn">
-              Enter
+            <button
+              onClick={enrollInEvent}
+              className="eventModal_cont_btn"
+              disabled={wallet.length < 42 ? true : false}
+            >
+              {wallet.length < 42
+                ? "Invalid address"
+                : wallet == ""
+                ? "input address"
+                : "Enter"}
             </button>
             <div className="eventModal_cont_last_para">
               Enter your egochain wallet address to view your points based off

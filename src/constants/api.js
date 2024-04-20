@@ -23,6 +23,16 @@ export const FETCH_EVENT_STAT = async (address) => {
     return error.response || error.message;
   }
 };
+export const FETCH_ALL_EVENT_STAT = async () => {
+  try {
+    const res = await axios.get(
+      `https://www.saltlake.egoras.com/crypto-event/fetch/all/events`
+    );
+    return res.data;
+  } catch (error) {
+    return error.response || error.message;
+  }
+};
 export const FETCH_Referral_LEADERBOARD_STAT = async () => {
   try {
     const res = await axios.get(
