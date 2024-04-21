@@ -74,18 +74,17 @@ const EventLandingPage = () => {
                   Bridge to egochain, trade on egochain dapps & refer to earn
                   points and rank up the leaderboard.
                 </div>
-                {deadline < new Date() ? null : (
+                {/* {deadline < new Date() ? null : (
                   <div className="timer_div">
                     <div className="timer_div_txt">Countdown to event</div>
                     <Timer deadline={deadline} />
                   </div>
-                )}
+                )} */}
 
                 <div className="EventLandingPage_div_area_1_title_btns_div">
                   <button
                     className="home_div_section1_area_1_div2_btn"
                     onClick={ToggleEventModal}
-                    disabled={deadline < new Date() ? false : true}
                   >
                     Join Event
                   </button>
