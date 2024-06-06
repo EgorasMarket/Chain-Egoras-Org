@@ -3,6 +3,7 @@ import { Home01Icon } from "hugeicons-react";
 import { Home06Icon } from "hugeicons-react";
 import { RankingIcon } from "hugeicons-react";
 import { Link01Icon } from "hugeicons-react";
+import { TaskDaily01Icon } from "hugeicons-react";
 import { AddTeamIcon } from "hugeicons-react";
 import { CoinsSwapIcon } from "hugeicons-react";
 import Blockies from "react-blockies";
@@ -38,6 +39,10 @@ const EventSideBar = () => {
     }
     if (currentPage === "/event/referral") {
       setActiveTab("ref");
+      return;
+    }
+    if (currentPage === "/event/tasks") {
+      setActiveTab("task");
       return;
     }
   }, [currentPage]);
@@ -136,6 +141,25 @@ const EventSideBar = () => {
               <div className="event_sideBar_div_area_body_cont1_txt">Dex</div>
             </div>
           </div> */}
+          <Link to="/event/tasks" className="event_sideBar_div_area_body_cont1">
+            <div
+              id="task"
+              onClick={ToggleActiveTab}
+              className={
+                activeTab === "task"
+                  ? "event_sideBar_div_area_body_cont1_area_active"
+                  : "event_sideBar_div_area_body_cont1_area"
+              }
+            >
+              <TaskDaily01Icon
+                size={32}
+                className="event_sideBar_div_area_body_cont1_icon"
+              />
+              <div className="event_sideBar_div_area_body_cont1_txt">
+                Quests
+              </div>
+            </div>
+          </Link>
           <Link
             to="/event/referral"
             className="event_sideBar_div_area_body_cont1"

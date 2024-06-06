@@ -138,7 +138,7 @@ const Header = () => {
                     </span> */}
                   </a>
                 </div>
-                <a
+                {/* <a
                   href={
                     window.location.protocol === "http:"
                       ? `http://localhost:${window.location.port}/egax/coin/info`
@@ -147,7 +147,7 @@ const Header = () => {
                   className="header_div_area_2_link1"
                 >
                   EGAX Coin
-                </a>
+                </a> */}
                 <a href="/station" className="header_div_area_2_link1">
                   Ego Station
                 </a>
@@ -268,7 +268,7 @@ const Header = () => {
                   <a href="/station" className="headerMenuDiv_cont_body_link1">
                     Ego Station
                   </a>
-                  <a
+                  {/* <a
                     href={
                       window.location.protocol === "http:"
                         ? `http://localhost:${window.location.port}/egax/coin/info`
@@ -277,7 +277,7 @@ const Header = () => {
                     className="headerMenuDiv_cont_body_link1"
                   >
                     EGAX Coin
-                  </a>
+                  </a> */}
                   {/* <a
                   href={
                     window.location.protocol === "http:"

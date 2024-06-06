@@ -34,6 +34,7 @@ const LeaderBoard = () => {
       setIsLoading2(false);
     }, 2000); // Adjust the delay duration as needed (e.g., 1000 milliseconds or 1 second)
   };
+
   const fetchEventStat = async () => {
     const res = await FETCH_LEADERBOARD_STAT();
     console.log(res, "agba");

@@ -8,6 +8,7 @@ import EventSideBar from "./EventSideBar";
 import DashboardReferral from "./Referral/DashboardReferral";
 import LeaderBoard from "./LeaderBoard/LeaderBoard";
 import EventHeader from "./EventHeader";
+import Tasks from "./Tasks/Tasks";
 const Event = () => {
   return (
     <div className="event_div">
@@ -23,6 +24,7 @@ const Event = () => {
               <Routes>
                 <Route path="/event" element={<EventHome />} />
                 <Route path="/event/referral" element={<DashboardReferral />} />
+                <Route path="/event/tasks" element={<Tasks />} />
                 <Route path="/event/leaderBoard" element={<LeaderBoard />} />
               </Routes>
             </div>

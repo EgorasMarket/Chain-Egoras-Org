@@ -93,7 +93,7 @@ const Footer = () => {
               <div className="footerDiv1_area2_cont1">
                 <div className="footerDiv1_area2_title">Eco-System</div>
                 <div className="footerDiv1_area2_title_subLinks_div">
-                  <a
+                  {/* <a
                     href={
                       window.location.protocol === "http:"
                         ? `http://localhost:${window.location.port}/egax/coin/info`
@@ -102,7 +102,7 @@ const Footer = () => {
                     className="footerDiv1_area2_title_subLinks_div_link1"
                   >
                     EGAX Coin
-                  </a>
+                  </a> */}
                   {/* <a
                     href={
                       window.location.protocol === "http:"

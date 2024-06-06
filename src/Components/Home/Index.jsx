@@ -352,6 +352,7 @@ const Home = () => {
                     Bridge to Egochain
                   </button>
                 </a>
+
                 {/* <a href="https://testnet.egoscan.io/" target="_blank"> */}
                 {/* <button
                   className="home_div_section1_area_1_div2_btn"
@@ -361,6 +362,7 @@ const Home = () => {
                   Play Video
                 </button> */}
                 {/* </a> */}
+
                 <a href="https://www.pluto.ag/swap" target="_blank">
                   <button className="home_div_section1_area_1_div2_btn2">
                     Explore DEX
