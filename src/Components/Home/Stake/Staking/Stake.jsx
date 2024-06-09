@@ -1032,7 +1032,7 @@ const Stake = () => {
           alt=""
           className="home_div_section1_bg"
         />
-        <img src="/img/farm_bg.jpg" alt="" className="earn_section_img" />
+        <img src="/img/farm_bg.png" alt="" className="earn_section_img" />
       </section>
       {/* {errorModal ? (
         <UpdatedErrorModal
