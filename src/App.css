@@ -26,6 +26,9 @@ body::-webkit-scrollbar-thumb {
   padding: 0em 1em;
   height: 100%;
 }
+w3m-modal.open {
+  z-index: 10000;
+}
 button {
   transition: 0.3s ease-in-out;
   cursor: pointer;
@@ -292,7 +295,7 @@ input[type="checkbox"]:checked + .checkBox_agree_div_body_label:before {
   font-weight: 600;
   color: #ffffff;
   text-align: center;
-  background: #fd5623;
+  background: #22ad62;
   /* height: 24px; */
   /* line-height: 1.1; */
 }

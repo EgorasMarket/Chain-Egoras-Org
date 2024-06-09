@@ -148,6 +148,9 @@ const Header = () => {
                 >
                   EGAX Coin
                 </a> */}
+                <a href="/farm" className="header_div_area_2_link1">
+                  EgoFarm
+                </a>
                 <a href="/station" className="header_div_area_2_link1">
                   Ego Station
                 </a>
@@ -183,6 +186,14 @@ const Header = () => {
                     >
                       <DescriptionIcon className="header_div_area_2_link1_icon" />{" "}
                       Whitepaper
+                    </a>
+                    <a
+                      href="https://docs.egochain.org/doc"
+                      className="header_div_area_2_link1"
+                      target="_blank"
+                    >
+                      <DescriptionIcon className="header_div_area_2_link1_icon" />{" "}
+                      Docs
                     </a>
                     <a
                       href="/wallet"
@@ -262,6 +273,9 @@ const Header = () => {
                   />
                 </div>
                 <div className="headerMenuDiv_cont_body">
+                  <a href="/farm" className="headerMenuDiv_cont_body_link1">
+                    EgoFarm
+                  </a>
                   <a href="/wallet" className="headerMenuDiv_cont_body_link1">
                     Ego Wallet
                   </a>

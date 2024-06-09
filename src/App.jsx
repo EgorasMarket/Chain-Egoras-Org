@@ -15,6 +15,9 @@ import Wallet from "./Components/Wallet/Wallet";
 import Egostation from "./Components/Home/EgoStation/Egostation";
 import Event from "./Components/EventComp/Event";
 import EventLandingPage from "./Components/EventComp/EventLandingPage";
+import Stake from "./Components/Home/Stake/Staking/Stake";
+import { Web3ModalProvider } from "./constants/Web3ModalProvider.jsx";
+import Web3Header from "./Components/Header/Web3Header";
 
 function App() {
   const currentPage = window.location.pathname;
@@ -37,26 +40,34 @@ function App() {
   //   );
   // }
   return (
-    <div className="App  dark">
-      {myArr[1] === "event" ? null : <Header />}
-      {myArr[1] === "event" ? (
-        <Event />
-      ) : (
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/wallet" element={<Wallet />} />
-          <Route path="/join/event" element={<EventLandingPage />} />
-          <Route path="/station" element={<Egostation />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/whitepaper" element={<WhitePaper />} />
-          <Route path="/terms" element={<TermsAndConditions />} />
-          <Route path="/egc/coin/info" element={<Egc />} />
-          <Route path="/egax/coin/info" element={<Egax />} />
-          <Route path="/about" element={<RoadMapPage />} />
-        </Routes>
-      )}
-      {myArr[1] === "event" ? null : <Footer />}
-    </div>
+    <Web3ModalProvider>
+      <div className="App  dark">
+        {myArr[1] === "event" ? null : myArr[1] === "farm" ? (
+          <Web3Header />
+        ) : (
+          <Header />
+        )}
+
+        {myArr[1] === "event" ? (
+          <Event />
+        ) : (
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/wallet" element={<Wallet />} />
+            <Route path="/join/event" element={<EventLandingPage />} />
+            <Route path="/station" element={<Egostation />} />
+            <Route path="/farm" element={<Stake />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/whitepaper" element={<WhitePaper />} />
+            <Route path="/terms" element={<TermsAndConditions />} />
+            <Route path="/egc/coin/info" element={<Egc />} />
+            <Route path="/egax/coin/info" element={<Egax />} />
+            <Route path="/about" element={<RoadMapPage />} />
+          </Routes>
+        )}
+        {myArr[1] === "event" ? null : <Footer />}
+      </div>
+    </Web3ModalProvider>
   );
 }
 

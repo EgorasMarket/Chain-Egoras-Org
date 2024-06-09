@@ -1,0 +1,912 @@
+     <div className="lock_container">
+              <div className="lock_container_cont1">
+                <div className="lock_container_cont1_div_contract_overview_div">
+                  <div className="lock_container_cont1_div_contract_overview_div_head">
+                    Contracts
+                  </div>
+                  <div className="lock_container_cont1_div_contract_overview_body">
+                    <div className="lock_container_cont1_div_contract_overview_body_div1">
+                      <div className="lock_container_cont1_div_contract_overview_body_div1_cont1">
+                        egc
+                      </div>
+                      <div className="lock_container_cont1_div_contract_overview_body_div1_cont1_link">
+                        {`${"0x0C30476f66034E11782938DF8e4384970B6c9e8a".slice(
+                          0,
+                          6
+                        )}...${"0x0C30476f66034E11782938DF8e4384970B6c9e8a".slice(
+                          39,
+                          42
+                        )}`}
+                        <OpenInNewIcon className="tx_hash_link_icon" />
+                      </div>
+                    </div>
+                    <div className="lock_container_cont1_div_contract_overview_body_div1">
+                      <div className="lock_container_cont1_div_contract_overview_body_div1_cont1">
+                        EUSD
+                      </div>
+                      <div className="lock_container_cont1_div_contract_overview_body_div1_cont1_link">
+                        {`${"0x0C30476f66034E11782938DF8e4384970B6c9e8a".slice(
+                          0,
+                          6
+                        )}...${"0x0C30476f66034E11782938DF8e4384970B6c9e8a".slice(
+                          39,
+                          42
+                        )}`}
+                        <OpenInNewIcon className="tx_hash_link_icon" />
+                      </div>
+                    </div>
+                    <div className="lock_container_cont1_div_contract_overview_body_div1_last">
+                      <div className="lock_container_cont1_div_contract_overview_body_div1_cont1">
+                        ENGN
+                      </div>
+                      <div className="lock_container_cont1_div_contract_overview_body_div1_cont1_link">
+                        {`${"0x0C30476f66034E11782938DF8e4384970B6c9e8a".slice(
+                          0,
+                          6
+                        )}...${"0x0C30476f66034E11782938DF8e4384970B6c9e8a".slice(
+                          39,
+                          42
+                        )}`}
+                        <OpenInNewIcon className="tx_hash_link_icon" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* ========= */}
+                {/* ========= */}
+                {/* ========= */}
+                {/* ========= */}
+                {/* ========= */}
+                <div className="lock_container_transactions">
+                  <div className="lock_container_transactions_head">
+                    My Transactions
+                  </div>
+                  <div className="lock_container_transactions_body">
+                    <table className="stakingTable_table">
+                      <thead className="stakingTable_titles">
+                        <tr className="stakingTable_title_div">
+                          <th className="stakingTable_heading_titles stakingTable_heading_titles_first">
+                            Action
+                          </th>
+                          <th className="stakingTable_heading_titles">
+                            Amount
+                          </th>
+                          {/* <th className="stakingTable_heading_titles">Address</th> */}
+
+                          <th className="stakingTable_heading_titles stakingTable_heading_titles_last">
+                            Txn Hash
+                          </th>
+                        </tr>
+                      </thead>
+
+                      {/* <div className="table-body-content">
+
+// =====================
+// =====================
+// =====================
+// =====================
+// =====================
+// =====================
+              </div> */}
+                      {UniqueLockedTransactions.length <= 0 ? (
+                        <div className="no_loans_div">
+                          <div className="no_loans_div_cont">
+                            <Nodata />
+                            No Transaction Yet.
+                          </div>{" "}
+                        </div>
+                      ) : (
+                        <tbody
+                          className="stakingTable_body"
+                          id="popular-categories"
+                        >
+                          {" "}
+                          {/* =============== */}
+                          {/* =============== */}
+                          {/* =============== */}
+                          {UniqueLockedTransactions.slice()
+                            .reverse()
+                            .map((data) => {
+                              const date = new Date(data.time);
+                              const day = date
+                                .getUTCDate()
+                                .toString()
+                                .padStart(2, "0");
+                              const month = (date.getUTCMonth() + 1)
+                                .toString()
+                                .padStart(2, "0");
+                              const year = date.getUTCFullYear();
+                              const formattedDate = `${day}/${month}/${year}`;
+                              console.log(formattedDate);
+                              return (
+                                <tr className="stakingTable_body_row ">
+                                  <td className="stakingTable_body_row_data stakingTable_body_row_data_first  ">
+                                    <div className="value_dolls_div">
+                                      {data.status === "STAKE"
+                                        ? "Create Lock"
+                                        : data.status === "UNSTAKE"
+                                        ? "Unlock"
+                                        : null}
+                                      <div className="value_dolls_div_val">
+                                        {formattedDate}
+                                        {/* {data.time} */}
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td className="stakingTable_body_row_data">
+                                    <div className="value_dolls_div2">
+                                      {data.status === "STAKE" ? (
+                                        <span style={{ display: "flex" }}>
+                                          {numberWithCommas(
+                                            parseFloat(data.amount).toFixed(2)
+                                          )}{" "}
+                                          egc
+                                        </span>
+                                      ) : data.status === "UNSTAKE" ? (
+                                        <span style={{ display: "flex" }}>
+                                          {numberWithCommas(
+                                            parseFloat(
+                                              data.unstake_amount
+                                            ).toFixed(2)
+                                          )}{" "}
+                                          egc
+                                        </span>
+                                      ) : null}
+                                    </div>
+                                  </td>
+
+                                  <td className="stakingTable_body_row_data stakingTable_body_row_data_last">
+                                    {`${data.tx.slice(0, 6)}...${data.tx.slice(
+                                      63,
+                                      66
+                                    )}`}
+                                    <OpenInNewIcon className="tx_hash_link_icon" />
+                                  </td>
+                                </tr>
+                              );
+                            })}
+                          {/* =================== */}
+                          {/* =================== */}
+                          {/* =================== */}
+                          {/* =================== */}
+                          {/* =================== */}
+                          {/* =================== */}
+                          {/* =================== */}
+                          {/* =================== */}
+                          {/* =================== */}
+                        </tbody>
+                      )}
+                    </table>
+                  </div>
+                </div>
+
+                {/* ======= */}
+                {/* ======= */}
+                {/* ======= */}
+                <div className="lock_container_cont1_div_locks_overview">
+                  <div className="lock_container_cont1_div_locks_overview_cont1">
+                    <div className="lock_container_cont1_div_locks_overview_cont1_head">
+                      My Locked egc
+                    </div>
+                    <div className="lock_container_cont1_div_locks_overview_cont1_body">
+                      {/* populate with real data */}
+                      <span>
+                        {numberWithCommas(parseFloat(myTotalStaked).toFixed(2))}{" "}
+                        egc{" "}
+                      </span>
+                      {/* <span style={{ fontSize: "10px" }}></span> */}
+                    </div>
+                  </div>
+                  <div className="lock_container_cont1_div_locks_overview_cont1">
+                    <div className="lock_container_cont1_div_locks_overview_cont1_head">
+                      Daily Rewards
+                    </div>
+                    <div className="lock_container_cont1_div_locks_overview_cont1_body">
+                      <span>
+                        {numberWithCommas(parseFloat(dailyReward).toFixed(4))}{" "}
+                        eusd / per day
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="lock_container_cont1_div_locks_overview_cont1"
+                    style={{ border: "none", padding: "0", margin: "0" }}
+                  >
+                    <div className="lock_container_cont1_div_locks_overview_cont1_head">
+                      Claimed Rewards
+                    </div>
+                    <div className="lock_container_cont1_div_locks_overview_cont1_body">
+                      <span>
+                        {numberWithCommas(
+                          parseFloat(TotalClaimedReward).toFixed(4)
+                        )}{" "}
+                        eusd
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                {/* ======= */}
+                {/* ======= */}
+                {/* ======= */}
+                <div className="lock_container_cont1_div1_lock_div">
+                  <div className="lock_container_cont1_div1_lock_div_tabs">
+                    <div
+                      id="lock"
+                      className={
+                        activeTab === "lock"
+                          ? "lock_container_cont1_div1_lock_div_tab1_active"
+                          : "lock_container_cont1_div1_lock_div_tab1"
+                      }
+                      onClick={toggleLockTabs}
+                    >
+                      Lock
+                    </div>
+                    <div
+                      id="claim"
+                      className={
+                        activeTab === "claim"
+                          ? "lock_container_cont1_div1_lock_div_tab1_active"
+                          : "lock_container_cont1_div1_lock_div_tab1"
+                      }
+                      onClick={toggleLockTabs}
+                    >
+                      Claim
+                    </div>
+                    <div
+                      id="unlock"
+                      className={
+                        activeTab === "unlock"
+                          ? "lock_container_cont1_div1_lock_div_tab1_active"
+                          : "lock_container_cont1_div1_lock_div_tab1"
+                      }
+                      onClick={toggleLockTabs}
+                    >
+                      Unlock
+                    </div>
+                  </div>
+                  {/* ======= */}
+                  {/* ======= */}
+                  {/* ======= */}
+                  {activeTab === "lock" ? (
+                    <div className="lock_container_cont1_div1_lock_div_lock_body">
+                      <div className="lock_container_cont1_div1_lock_div_lock_body_input_body">
+                        <div className="lock_container_cont1_div1_lock_div_lock_body_input_body_head">
+                          <span className="lock_container_cont1_div1_lock_div_lock_body_input_body_head_span1">
+                            Amount
+                          </span>
+                          <span className="lock_container_cont1_div1_lock_div_lock_body_input_body_head_span2">
+                            Balance:{parseFloat(coinBalance2).toFixed(3)}
+                          </span>
+                        </div>
+                        <div className="lock_container_cont1_div1_lock_div_lock_body_input_body_cont">
+                          <input
+                            type="number"
+                            value={lockAmount}
+                            placeholder="0.00"
+                            onChange={AmountChange}
+                            className="lock_container_cont1_div1_lock_div_lock_body_input_body_input"
+                          />
+                          <div className="lock_container_cont1_div1_lock_div_lock_body_input_body_cont_amount_div">
+                            <button
+                              className="lock_container_cont1_div1_lock_div_lock_body_input_body_cont_amount_div1_btn"
+                              onClick={maxAmount}
+                            >
+                              MAX
+                            </button>
+                            <div className="lock_container_cont1_div1_lock_div_lock_body_input_body_cont_amount_div2">
+                              egc
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="lock_container_cont1_div1_lock_div_lock_body_input_body">
+                        <div className="lock_container_cont1_div1_lock_div_lock_body_input_body_head">
+                          <span className="lock_container_cont1_div1_lock_div_lock_body_input_body_head_span1">
+                            Duration:{" "}
+                            {SelectedDuration === "monthly" ? (
+                              <> 1 month</>
+                            ) : SelectedDuration === "yearly" ? (
+                              <> 1 year</>
+                            ) : null}
+                          </span>
+                          <span className="lock_container_cont1_div1_lock_div_lock_body_input_body_head_span2">
+                            Expires: {lockDate}
+                          </span>
+                        </div>
+                        <div className="lock_container_cont1_div1_lock_div_lock_body_input_body_cont">
+                          <input
+                            type="text"
+                            value={Duration}
+                            onClick={toggleDurationDrop}
+                            placeholder="MM/DD/YY"
+                            className="lock_container_cont1_div1_lock_div_lock_body_input_body_input"
+                          />
+                          <EventOutlinedIcon
+                            onClick={toggleDurationDrop}
+                            className="lock_container_cont1_div1_lock_div_lock_body_input_body_cont_icon"
+                          />
+                          {durationDrop ? (
+                            <DurationDiv
+                              addMonthly={addMonthly}
+                              // addSemiMonthly={addSemiMonthly}
+                              addYearly={addYearly}
+                              SelectedDuration={SelectedDuration}
+                            />
+                          ) : null}
+                        </div>
+                      </div>
+                      {estimatedRewardDiv ? (
+                        <div className="estRewardDiv">
+                          Estimated Daily Reward:{" "}
+                          <span className="estRewardDiv_span">
+                            {estimatedRewardAmnt} eUSD
+                          </span>
+                        </div>
+                      ) : null}
+
+                      {!account ? (
+                        <>
+                          {" "}
+                          <button
+                            disabled={true}
+                            className="lock_container_cont1_div1_lock_div_lock_body_input_body_btn"
+                          >
+                            Connect wallet
+                          </button>
+                        </>
+                      ) : (
+                        <>
+                          {unlockBtn === false ? (
+                            <button
+                              disabled={Disable}
+                              onClick={UnlockToken}
+                              className="lock_container_cont1_div1_lock_div_lock_body_input_body_btn"
+                            >
+                              {isLoading ? (
+                                <ScaleLoader
+                                  color="#375746"
+                                  size={10}
+                                  height={20}
+                                />
+                              ) : (
+                                <>Approve egc</>
+                              )}
+                            </button>
+                          ) : (
+                            <>
+                              {SelectedDuration === "monthly" &&
+                              lockAmount != "" ? (
+                                <button
+                                  disabled={Disable}
+                                  onClick={StakeMonthly}
+                                  className="lock_container_cont1_div1_lock_div_lock_body_input_body_btn"
+                                >
+                                  {isLoading ? (
+                                    <ScaleLoader
+                                      color="#375746"
+                                      size={10}
+                                      height={20}
+                                    />
+                                  ) : (
+                                    <>Create Lock</>
+                                  )}
+                                </button>
+                              ) : SelectedDuration === "yearly" &&
+                                lockAmount != "" ? (
+                                <button
+                                  disabled={Disable}
+                                  onClick={StakeYearly}
+                                  className="lock_container_cont1_div1_lock_div_lock_body_input_body_btn"
+                                >
+                                  {isLoading ? (
+                                    <ScaleLoader
+                                      color="#375746"
+                                      size={10}
+                                      height={20}
+                                    />
+                                  ) : (
+                                    <>Create Lock</>
+                                  )}
+                                </button>
+                              ) : lockAmount === "" ? (
+                                <button
+                                  disabled
+                                  className="lock_container_cont1_div1_lock_div_lock_body_input_body_btn"
+                                >
+                                  Enter an amount
+                                </button>
+                              ) : (
+                                <button
+                                  disabled
+                                  className="lock_container_cont1_div1_lock_div_lock_body_input_body_btn"
+                                >
+                                  Choose Duration
+                                </button>
+                              )}
+                            </>
+                          )}
+                        </>
+                      )}
+                    </div>
+                  ) : activeTab === "claim" ? (
+                    <div className="lock_container_cont1_div1_lock_div_lock_body">
+                      <div className="lock_container_cont1_div1_lock_div_lock_body_claim_Div1">
+                        <div className="lock_container_cont1_div1_lock_div_lock_body_claim_Div1_head">
+                          Available Reward
+                        </div>
+                        <div className="lock_container_cont1_div1_lock_div_lock_body_claim_Div1_amount">
+                          {parseFloat(availableClaimReward).toFixed(4)} eUsd
+                          {rewardCountDown === true ? (
+                            <div className="lock_container_cont1_div1_lock_div_lock_body_claim_Div1_amount_dollar_equiv">
+                              Claim In the next:
+                              <Timer deadline={nextRewardTakeTime} />
+                            </div>
+                          ) : null}
+                        </div>
+                      </div>
+                      <button
+                        className="lock_container_cont1_div1_lock_div_lock_body_input_body_btn"
+                        onClick={TakeReward}
+                        disabled={ClaimDisable}
+                      >
+                        {isLoading2 ? (
+                          <ScaleLoader color="#375746" size={10} height={20} />
+                        ) : (
+                          <>Claim Reward</>
+                        )}
+                      </button>
+                    </div>
+                  ) : activeTab === "unlock" ? (
+                    <div className="lock_container_cont1_div1_lock_div_lock_body">
+                      <div className="lock_container_cont1_div1_lock_div_lock_body_claim_Div1">
+                        <div className="lock_container_cont1_div1_lock_div_lock_body_claim_Div1_head">
+                          My Locked egc
+                        </div>
+                        <div className="lock_container_cont1_div1_lock_div_lock_body_claim_Div1_amount">
+                          <span className="lock_container_cont1_div1_lock_div_lock_body_claim_Div1_amount_span">
+                            <span className="lock_container_cont1_div1_lock_div_lock_body_claim_Div1_amount_span_span1">
+                              {numberWithCommas(
+                                parseFloat(myTotalStaked).toFixed(2)
+                              )}{" "}
+                              egc
+                            </span>
+                            <span className="lock_container_cont1_div1_lock_div_lock_body_claim_Div1_amount_span_span2">
+                              Max Duration:
+                              <span className="lock_container_cont1_div1_lock_div_lock_body_claim_Div1_amount_span_span2_span">
+                                ({unlockStakeDuration})
+                              </span>
+                            </span>
+                          </span>
+                          {rewardCountDown === true ? (
+                            <div className="lock_container_cont1_div1_lock_div_lock_body_claim_Div1_amount_dollar_equiv">
+                              Unlock In the next:
+                              <Timer deadline={unlockStakeTime} />
+                            </div>
+                          ) : null}
+                        </div>
+                      </div>
+                      {notDueButton ? (
+                        <button
+                          className="lock_container_cont1_div1_lock_div_lock_body_input_body_btn"
+                          onClick={toggleNotDueDiv}
+                          disabled={lockDisable}
+                        >
+                          {isLoading2 ? (
+                            <ScaleLoader
+                              color="#375746"
+                              size={10}
+                              height={20}
+                            />
+                          ) : (
+                            <>Remove Lock </>
+                          )}
+                        </button>
+                      ) : (
+                        <button
+                          className="lock_container_cont1_div1_lock_div_lock_body_input_body_btn"
+                          onClick={UnlockStake}
+                          disabled={lockDisable}
+                        >
+                          {isLoading2 ? (
+                            <ScaleLoader
+                              color="#375746"
+                              size={10}
+                              height={20}
+                            />
+                          ) : (
+                            <>Remove Lock </>
+                          )}
+                        </button>
+                      )}
+                    </div>
+                  ) : null}
+                </div>
+              </div>
+              {/* =========*******=========== */}
+              {/* =========******=========== */}
+              {/* =========******=========== */}
+              {/* ========******============ */}
+              {/* ========******============ */}
+              {/* ========******============ */}
+              {/* =======******============= */}
+              {/* ========******============ */}
+              {/* ========******============ */}
+              {/* =======******============= */}
+              <div className="lock_container_cont2">
+                <div className="lending_area1">
+                  <div className="lending_area1_cont1">
+                    <div className="lending_area1_cont1_body_1">
+                      <div className="lending_area1_cont1_heading">
+                        Total egc Locked
+                      </div>
+                      <div className="lending_area1_cont1_body_txt">
+                        {parseFloat(totalAssetInfo.amount).toFixed(2)} egc
+                      </div>
+                      {/* <div className="lending_area1_cont1_heading">
+                      (32.84% Of egc Supply)
+                    </div> */}
+                    </div>
+                    <div className="lending_area1_cont1_body_1">
+                      <HelpOutlineIcon className="help_outline" />
+                      <div className="helper_txt_div">
+                        This is the total Engn funded to all assets in the
+                        lending pool.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="lending_area1_cont1">
+                    <div className="lending_area1_cont1_body_1">
+                      <div className="lending_area1_cont1_heading">
+                        Total Rewards
+                      </div>
+                      <div className="lending_area1_cont1_body_txt">
+                        {parseFloat(totalAssetInfo.dailyRoyalty).toFixed(2)}{" "}
+                        <span className="usd_sign">eUSD</span>
+                      </div>
+                    </div>
+                    <div className="lending_area1_cont1_body_1">
+                      <HelpOutlineIcon className="help_outline" />
+                      <div className="helper_txt_div">
+                        This is the total value of all the assets in the lending
+                        pool.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="lending_area1_cont1">
+                    <div className="lending_area1_cont1_body_1">
+                      <div className="lending_area1_cont1_heading">
+                        Staking APY
+                      </div>
+                      <div className="lending_area1_cont1_body_txt">
+                        50<span className="usd_sign">%</span>
+                      </div>
+                    </div>
+                    <div className="lending_area1_cont1_body_1">
+                      <HelpOutlineIcon className="help_outline" />
+                      <div className="helper_txt_div">
+                        This is the total value of all the assets in the lending
+                        pool.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="lock_container_cont2_div2_chart_div">
+                  <div className="lock_container_cont2_div2_chart_div_text_area">
+                    Total Locked egc
+                  </div>
+                  <div className="lock_container_cont2_div2_chart_div_text_body">
+                    <div
+                      className="assets_chart_area1"
+                      style={{ width: "100%", height: 320 }}
+                    >
+                      <ResponsiveContainer>
+                        <AreaChart
+                          width={130}
+                          height={10}
+                          data={graphData2}
+                          margin={{
+                            top: 0,
+                            right: 0,
+                            left: 0,
+                            bottom: 0,
+                          }}
+                        >
+                          <defs>
+                            <linearGradient
+                              id="colorUv"
+                              x1="0"
+                              y1="0"
+                              x2="0"
+                              y2="1"
+                            >
+                              <stop
+                                offset="5%"
+                                stopColor="#51cb89"
+                                stopOpacity={0.3}
+                              />
+                              <stop
+                                offset="100%"
+                                stopColor="#51cb89"
+                                stopOpacity={0}
+                              />
+                            </linearGradient>
+                          </defs>
+                          <CartesianGrid
+                            strokeDasharray="1 1"
+                            stroke="#d7d7d7"
+                          />
+                          <XAxis dataKey="time" stroke="0" />
+                          {/* <YAxis stroke="#000" /> */}
+                          <Tooltip />
+                          <Area
+                            type="monotone"
+                            dataKey="amount"
+                            stroke="#22ad62"
+                            fillOpacity={1}
+                            fill="url(#colorUv)"
+                            strokeWidth={2}
+                          />
+                        </AreaChart>
+                      </ResponsiveContainer>
+                    </div>
+                    <div
+                      className="assets_chart_area2"
+                      style={{ width: "100%", height: 320 }}
+                    >
+                      <ResponsiveContainer>
+                        <AreaChart
+                          width={130}
+                          height={10}
+                          data={graphData2}
+                          margin={{
+                            top: 0,
+                            right: 0,
+                            left: 0,
+                            bottom: 0,
+                          }}
+                        >
+                          <defs>
+                            <linearGradient
+                              id="colorUv"
+                              x1="0"
+                              y1="0"
+                              x2="0"
+                              y2="1"
+                            >
+                              <stop
+                                offset="5%"
+                                stopColor="#fff"
+                                stopOpacity={0.3}
+                              />
+                              <stop
+                                offset="100%"
+                                stopColor="#fff"
+                                stopOpacity={0}
+                              />
+                            </linearGradient>
+                          </defs>
+                          <CartesianGrid
+                            strokeDasharray="1 1"
+                            stroke="#1d1c2c"
+                          />
+                          <XAxis dataKey="time" stroke="0" />
+                          {/* <YAxis stroke="#fff" /> */}
+                          <Tooltip />
+                          <Area
+                            type="monotone"
+                            dataKey="amount"
+                            stroke="#fff"
+                            fillOpacity={1}
+                            fill="url(#colorUv)"
+                            strokeWidth={2}
+                          />
+                        </AreaChart>
+                      </ResponsiveContainer>
+                    </div>
+                  </div>
+                </div>
+                {/* ======== */}
+                {/* ======== */}
+                {/* ======== */}
+                <div className="lock_container_transactions">
+                  <div className="lock_container_transactions_head">
+                    All Transactions
+                  </div>
+                  <div className="lock_container_transactions_body_all">
+                    <table className="stakingTable_table">
+                      <thead className="stakingTable_titles">
+                        <tr className="stakingTable_title_div">
+                          <th className="stakingTable_heading_titles stakingTable_heading_titles_first">
+                            Action
+                          </th>
+                          <th className="stakingTable_heading_titles">
+                            Amount
+                          </th>
+                          <th className="stakingTable_heading_titles">
+                            Address
+                          </th>
+
+                          <th className="stakingTable_heading_titles stakingTable_heading_titles_last">
+                            Txn Hash
+                          </th>
+                        </tr>
+                      </thead>
+
+                      {/* <div className="table-body-content">
+
+// =====================
+// =====================
+// =====================
+// =====================
+// =====================
+// =====================
+              </div> */}
+                      {LockedTransactions.length <= 0 ? (
+                        <div className="no_loans_div">
+                          <div className="no_loans_div_cont">
+                            <Nodata />
+                            No Transaction Yet.
+                          </div>{" "}
+                        </div>
+                      ) : (
+                        <tbody
+                          className="stakingTable_body"
+                          id="popular-categories"
+                        >
+                          {" "}
+                          {/* =============== */}
+                          {/* =============== */}
+                          {/* =============== */}
+                          {LockedTransactions.slice()
+                            .reverse()
+                            .map((data) => {
+                              // const date = new Date(data.time);
+                              // const day = date
+                              //   .getUTCDate()
+                              //   .toString()
+                              //   .padStart(2, "0");
+                              // const month = (date.getUTCMonth() + 1)
+                              //   .toString()
+                              //   .padStart(2, "0");
+                              // const year = date.getUTCFullYear();
+                              // const formattedDate = `${day}/${month}/${year}`;
+                              // console.log(formattedDate);
+                              return (
+                                <tr className="stakingTable_body_row ">
+                                  <td className="stakingTable_body_row_data stakingTable_body_row_data_first  ">
+                                    <div className="value_dolls_div">
+                                      {data.status === "STAKE"
+                                        ? "Create Lock"
+                                        : data.status === "UNSTAKE"
+                                        ? "Unlock"
+                                        : null}
+
+                                      <div className="value_dolls_div_val">
+                                        {/* {formattedDate} */}
+                                        {data.time}
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td className="stakingTable_body_row_data">
+                                    <div className="value_dolls_div2">
+                                      {data.status === "STAKE" ? (
+                                        <span style={{ display: "flex" }}>
+                                          {numberWithCommas(
+                                            parseFloat(data.amount).toFixed(2)
+                                          )}{" "}
+                                          egc
+                                        </span>
+                                      ) : data.status === "UNSTAKE" ? (
+                                        <span style={{ display: "flex" }}>
+                                          {numberWithCommas(
+                                            parseFloat(
+                                              data.unstake_amount
+                                            ).toFixed(2)
+                                          )}{" "}
+                                          egc
+                                        </span>
+                                      ) : null}
+                                    </div>
+                                  </td>
+                                  <td className="stakingTable_body_row_data">
+                                    <div className="stakingTable_body_row_data_blockies_">
+                                      <Blockies
+                                        seed={data.user}
+                                        size={8}
+                                        scale={4}
+                                        className="blockies_icon"
+                                      />
+                                      {`${data.user.slice(
+                                        0,
+                                        6
+                                      )}...${data.user.slice(39, 42)}`}
+                                    </div>
+                                  </td>
+                                  <td className="stakingTable_body_row_data stakingTable_body_row_data_last">
+                                    {`${data.tx.slice(0, 6)}...${data.tx.slice(
+                                      63,
+                                      66
+                                    )}`}
+                                    <OpenInNewIcon className="tx_hash_link_icon" />
+                                  </td>
+                                </tr>
+                              );
+                            })}
+                          {/* =================== */}
+                          {/* =================== */}
+                          {/* =================== */}
+                          {/* =================== */}
+                          {/* =================== */}
+                          {/* =================== */}
+                          {/* =================== */}
+                          {/* =================== */}
+                          {/* =================== */}
+                        </tbody>
+                      )}
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="faq_container">
+              <div className="faq_container_title">
+                Frequently asked questions
+              </div>
+              <div className="faq_container_body">
+                <Accordion>
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
+                  >
+                    <Typography>
+                      What happens to my tokens when I stake?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <div className="faq_container_body_details">
+                      Upon staking, the smart contract utilizes the staked egc
+                      tokens as collateral to generate EUSD, which can be
+                      utilized for purchasing items instantly on the protocol.
+                    </div>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
+                  >
+                    <Typography>How much is my reward when I stake?</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <div className="faq_container_body_details">
+                      The protocol offers a fixed annual percentage yield of 50%
+                      (APY), which is computed based on the USD equivalent of
+                      the staked egc.
+                    </div>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
+                  >
+                    <Typography>
+                      Can I unstake my token before the maturity date?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <div className="faq_container_body_details">
+                      Yes, users are allowed to unstake their egc tokens before
+                      the maturity date, but it incurs a penalty fee of 10% of
+                      the total staked amount.
+                    </div>
+                  </AccordionDetails>
+                </Accordion>
+              </div>
+            </div>

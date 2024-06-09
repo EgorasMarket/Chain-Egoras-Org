@@ -344,12 +344,12 @@ const Home = () => {
               </div>
               <div className="home_div_section1_area_1_div2">
                 <a
-                  href="https://egoswap.io"
+                  href="https://docs.egochain.org/doc"
                   target="_blank"
                   // style={{ width: "100%" }}
                 >
                   <button className="home_div_section1_area_1_div2_btn">
-                    Bridge to Egochain
+                    Read Docs
                   </button>
                 </a>
 
@@ -363,9 +363,12 @@ const Home = () => {
                 </button> */}
                 {/* </a> */}
 
-                <a href="https://www.pluto.ag/swap" target="_blank">
+                <a
+                  href="https://www.mexc.com/exchange/EGAX_USDT?_from=search_spot_trade"
+                  target="_blank"
+                >
                   <button className="home_div_section1_area_1_div2_btn2">
-                    Explore DEX
+                    Trade on Mexc
                   </button>
                 </a>
                 {/* <a

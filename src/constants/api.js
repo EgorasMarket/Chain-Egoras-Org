@@ -63,3 +63,13 @@ export const FETCH_REFERRAL_STAT = async (address) => {
     return error.response || error.message;
   }
 };
+export const FETCH_USER_FARM_TRANSACTIONS = async (address) => {
+  try {
+    const res = await axios.get(
+      `https://dataseed.egoras.com/web3/fetch/transactions/${address}`
+    );
+    return res.data;
+  } catch (error) {
+    return error.response || error.message;
+  }
+};

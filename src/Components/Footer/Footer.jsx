@@ -114,11 +114,17 @@ const Footer = () => {
                     EGC Coin
                   </a> */}
                   <a
-                    href="https://github.com/EgorasMarket"
+                    href="/farm"
+                    className="footerDiv1_area2_title_subLinks_div_link1"
+                  >
+                    Farm
+                  </a>
+                  <a
+                    href="https://docs.egochain.org/doc"
                     className="footerDiv1_area2_title_subLinks_div_link1"
                     target="_blank"
                   >
-                    Developers
+                    Docs
                     <CallMadeIcon className="header_div_area_2_link1_icon" />
                   </a>
                   <a
