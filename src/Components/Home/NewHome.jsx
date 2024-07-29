@@ -174,12 +174,13 @@ const NewHome = () => {
                     className="newHome_div_section2_area_2_body_div1_img"
                   />
                   <div className="newHome_div_section2_area_2_body_div1_title">
-                    Border-less and inclusive platform
+                    Unlock secondary liquidity
                   </div>
                   <div className="newHome_div_section2_area_2_body_div1_para">
-                    Participate in the market from anywhere in the world.
-                    Whether you’re buying any of our carbon-free product,
-                    investing in fractional ownership, or exploring the market.
+                    Enhance your investments with secondary liquidity solutions,
+                    providing growth opportunities and flexibility for your
+                    portfolio by creating liquidity in typically illiquid
+                    assets.
                   </div>
                 </div>
                 <div className="newHome_div_section2_area_2_body_div1">
@@ -189,12 +190,13 @@ const NewHome = () => {
                     className="newHome_div_section2_area_2_body_div1_img"
                   />
                   <div className="newHome_div_section2_area_2_body_div1_title">
-                    Border-less and inclusive platform
+                    Diversify your portfolio
                   </div>
                   <div className="newHome_div_section2_area_2_body_div1_para">
-                    Participate in the market from anywhere in the world.
-                    Whether you’re buying any of our carbon-free product,
-                    investing in fractional ownership, or exploring the market.
+                    Say goodbye to traditional way of acquiring properties. Our
+                    RWA marketplace opens up new avenue for investment -
+                    allowing you to diversify your portfolio by owing fractions
+                    of high-value vehicles/properties.
                   </div>
                 </div>
                 <div className="newHome_div_section2_area_2_body_div1">
@@ -204,12 +206,13 @@ const NewHome = () => {
                     className="newHome_div_section2_area_2_body_div1_img"
                   />
                   <div className="newHome_div_section2_area_2_body_div1_title">
-                    Border-less and inclusive platform
+                    Friction-less and secure transaction
                   </div>
                   <div className="newHome_div_section2_area_2_body_div1_para">
-                    Participate in the market from anywhere in the world.
-                    Whether you’re buying any of our carbon-free product,
-                    investing in fractional ownership, or exploring the market.
+                    EgoChain's integration of the EgoUSD stablecoin guarantees
+                    fast, secure transactions free from cryptocurrency
+                    volatility, simplifying confident buying, selling, and
+                    investing.
                   </div>
                 </div>
               </div>
