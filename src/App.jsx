@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import Home from "./Components/Home/Index";
+// import Home from "./Components/Home/Index";
 import { Route, Routes, Navigate } from "react-router-dom";
 import Egc from "./Components/Home/Egc";
 import Header from "./Components/Header/Header";
@@ -18,6 +18,9 @@ import EventLandingPage from "./Components/EventComp/EventLandingPage";
 import Stake from "./Components/Home/Stake/Staking/Stake";
 import { Web3ModalProvider } from "./constants/Web3ModalProvider.jsx";
 import Web3Header from "./Components/Header/Web3Header";
+import NewHome from "./Components/Home/NewHome";
+import NewHeader from "./Components/Header/NewHeader";
+import NewFooter from "./Components/Footer/NewFooter";
 
 function App() {
   const currentPage = window.location.pathname;
@@ -45,14 +48,15 @@ function App() {
         {myArr[1] === "event" ? null : myArr[1] === "farm" ? (
           <Web3Header />
         ) : (
-          <Header />
+          <NewHeader />
         )}
 
         {myArr[1] === "event" ? (
           <Event />
         ) : (
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<NewHome />} />
+            {/* <Route path="/" element={<Home />} /> */}
             <Route path="/wallet" element={<Wallet />} />
             <Route path="/join/event" element={<EventLandingPage />} />
             <Route path="/station" element={<Egostation />} />
@@ -65,7 +69,7 @@ function App() {
             <Route path="/about" element={<RoadMapPage />} />
           </Routes>
         )}
-        {myArr[1] === "event" ? null : <Footer />}
+        {myArr[1] === "event" ? null : <NewFooter />}
       </div>
     </Web3ModalProvider>
   );

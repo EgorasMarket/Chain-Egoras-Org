@@ -60,6 +60,7 @@ const EventLandingPage = () => {
       return;
     }
   }, [stats]);
+
   return (
     <div className="EventLandingPage_div">
       <section className="EventLandingPage_div_section">
@@ -80,7 +81,6 @@ const EventLandingPage = () => {
                     <Timer deadline={deadline} />
                   </div>
                 )} */}
-
                 <div className="EventLandingPage_div_area_1_title_btns_div">
                   <button
                     className="home_div_section1_area_1_div2_btn"
