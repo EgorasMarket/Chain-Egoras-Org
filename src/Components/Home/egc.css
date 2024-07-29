@@ -130,7 +130,7 @@
   position: relative;
 }
 .home_div_section1_area_2_img {
-  position: absolute;
+  position: relative;
   width: 100%;
   z-index: 1;
   left: 0;
@@ -351,6 +351,9 @@
 .mobile_supply_div {
   display: none;
 }
+.home_div_section1_area_2_spline_scene {
+  display: none;
+}
 /* ============ */
 /* ============ */
 /* ============ */
@@ -392,6 +395,16 @@
   .egox_token_div_section2_area_1_head_para {
     font-size: 18px;
     margin-top: 10px;
+  }
+  .home_div_section1_area_2_img {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
   }
 }
 @media (max-width: 767px) {

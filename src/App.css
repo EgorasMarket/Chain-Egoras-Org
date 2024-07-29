@@ -327,4 +327,8 @@ input[type="checkbox"]:checked + .checkBox_agree_div_body_label:before {
   left: 0;
   width: 100%;
   opacity: 0.2;
+  height: 100%;
+}
+a {
+  color: #000;
 }
