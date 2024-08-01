@@ -478,6 +478,14 @@ const Stake = () => {
       value: parseEther(lockAmount.toString(), "wei").toString(),
     });
   };
+  const AddFunds = () => {
+    writeContract({
+      abi: farmStakeAbi.abi,
+      address: contractAddress.address,
+      functionName: "addLabourers",
+      args: [number_of_labourers],
+    });
+  };
   const clearFarm = () => {
     writeContract({
       abi: farmStakeAbi.abi,
@@ -1075,7 +1083,7 @@ const Stake = () => {
           successMessage={successMessage}
           btnClose={true}
           closeModal={() => {
-            window.location.href = "/stake";
+            window.location.href = "/farm";
           }}
           txnHashDiv={true}
           TxnHash={txHash}

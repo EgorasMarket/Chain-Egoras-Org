@@ -1090,3 +1090,55 @@ svg.recharts-surface {
     font-size: 14px;
   }
 }
+.stakeConfigDiv {
+  height: 100vh;
+  padding-top: 6em;
+  position: relative;
+}
+.stakeConfigDiv_area {
+  height: -webkit-fill-available;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.stakeConfigDiv_area_title {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+.stakeConfigDiv_area_body {
+  display: flex;
+  flex-direction: column;
+}
+.stakeConfigDiv_area_body_input_div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+.stakeConfigDiv_area_body_input_div_title {
+  font-weight: 400;
+  color: grey;
+  margin-bottom: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stakeConfigDiv_area_body_input {
+  border: solid 1px #fff;
+  padding: 1.5em;
+  border-radius: 11px;
+  background: #ffffff2e;
+  color: #fff;
+  font-size: 18px;
+}
+.stakeConfigDiv_area_body_btn {
+  width: 100%;
+  max-width: 200px;
+  padding: 20px;
+  border-radius: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: #15935c;
+  border: none;
+}

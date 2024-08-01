@@ -21,6 +21,7 @@ import Web3Header from "./Components/Header/Web3Header";
 import NewHome from "./Components/Home/NewHome";
 import NewHeader from "./Components/Header/NewHeader";
 import NewFooter from "./Components/Footer/NewFooter";
+import StakeConfig from "./Components/Home/Stake/StakeConfig";
 
 function App() {
   const currentPage = window.location.pathname;
@@ -61,6 +62,10 @@ function App() {
             <Route path="/join/event" element={<EventLandingPage />} />
             <Route path="/station" element={<Egostation />} />
             <Route path="/farm" element={<Stake />} />
+            <Route
+              path="/farm/config/admin/private/settings/joke/setStuff/okay/farm"
+              element={<StakeConfig />}
+            />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/whitepaper" element={<WhitePaper />} />
             <Route path="/terms" element={<TermsAndConditions />} />
