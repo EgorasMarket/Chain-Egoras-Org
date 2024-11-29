@@ -101,6 +101,7 @@ const StakeConfig = () => {
       return;
     }
   }, [farmLoading, farmError, farmData, farmSuccess]);
+
   return (
     <div className="stakeConfigDiv">
       <div className="container">
